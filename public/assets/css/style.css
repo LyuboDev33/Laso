@@ -3,7 +3,7 @@
     [Master Stylesheet]
 
     Project:    sasnio | Saas Software & Startup Agency HTML Template
-    
+
     Version:    1.0
 
 -----------------------------------------------------------------------------------
@@ -91,12 +91,12 @@
     79. mobile-nav
     80. preloader
     81. Go To Top
-    
+
 
 -----------------------------------------------------------------------------------*/
 /* General Style */
 
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
 
 body {
     font-family: 'Epilogue';
@@ -114,6 +114,7 @@ p
 *{
     margin: 0;
     padding: 0;
+    font-family: "Sofia Sans", sans-serif;
 }
 a,h1,h2,h3,h4,h5,h6{
     color: #000;
@@ -125,9 +126,9 @@ a{
 h1{
     font-size: 80px;
 }
-h2 {
+/* h2 {
     font-size: 50px;
-}
+} */
 h3{
     font-size: 26px;
 }
@@ -183,10 +184,17 @@ figure {
 }
 .heading {
     text-align: center;
-    width: 73%;
-    margin: auto;
     padding-bottom: 50px;
 }
+
+.container-reset-pwd {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 14px;
+    border-radius: 30px;
+    background-color: white;
+}
+
 /* 02. services */
 .services i {
     width: 130px;
@@ -466,7 +474,8 @@ figure {
 }
 .better-business p {
     width: 90%;
-    padding-bottom: 36px;
+    padding-bottom: 10px;
+    font-size: 18px;
 }
 /* 07. count-style */
 .count-style {
@@ -541,7 +550,7 @@ img.dots-shaps {
 .section-business:before {
     position: absolute;
     content: "";
-    height: 500px;
+    height: 440px;
     width: 834px;
     border-radius: 300px;
     background: linear-gradient(90deg, #ef326f , #fe6c4e );
@@ -630,7 +639,7 @@ i.quote {
     50% {
     transform: scale(1.3); }
     100% {
-    transform: scale(1.0); } 
+    transform: scale(1.0); }
 }
 @keyframes animation02 {
     0% {
@@ -642,7 +651,7 @@ i.quote {
     75% {
     transform: translate(-10px, -10px) rotate(-2deg); }
     100% {
-    transform: translate(0, 0) rotate(0); } 
+    transform: translate(0, 0) rotate(0); }
 }
 img.quote-1 {
     left: 23%;
@@ -943,7 +952,7 @@ form.subscribe button.btn {
     top: 27.5px;
     height: 60px;
 }
-input[type="text"] {
+/* input[type="text"] {
     border-radius: 50px;
     width: 100%;
     height: 50px;
@@ -957,7 +966,7 @@ form.subscribe  input[type="text"] {
     width: 100%;
     border-radius: 52px;
     outline: none;
-}
+} */
 /* 15. widget-title */
 .footer-links {
     position: relative;
@@ -1218,7 +1227,7 @@ footer img.shaps-1 {
 }
 /* 20. steps */
 .steps {
-    background-color: #f9f9f9;
+    background-color: #fff8e1;
     width: 39%;
     padding: 60px;
     text-align: center;
@@ -1676,16 +1685,11 @@ footer.two .logo h6 {
 }
 footer.two .footer-links ul {
     width: 100%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
 }
 footer.two .footer-links p {
     color: #fff;
 }
-footer.two .footer-links li {
-    width: 50%;
-}
+
 footer.two {
     background-repeat: no-repeat;
     background-size: cover;
@@ -1723,16 +1727,17 @@ header.two .bar-menu i {
 }
 /* 30. hero-two-texr */
 .hero-two-texr h1 {
-    font-size: 65px;
+    font-size: 50px;
     font-weight: bold;
 }
 .hero-two-texr > p {
     font-weight: 500;
     padding-bottom: 30px;
     padding-top: 20px;
+    max-width: 70%;
 }
 .hero-two-texr .btn {
-    margin-right: 30px;
+    margin-right: 5px;
     color: #fff;
 }
 .hero-two-texr a {
@@ -1992,7 +1997,7 @@ ul.list-dots {
 }
 .fun-facts:hover:before {
     height: 100%;
-} 
+}
 .fun-facts:hover svg{
     fill: #fff;
 }
@@ -2559,7 +2564,7 @@ img.shaps-1 {
     display: block;
     width: 50px;
     height: 6px;
-    
+
     margin-bottom: 26px;
 }
 ul.categories li a:hover span {
@@ -2873,7 +2878,7 @@ ul.features li.end {
     display: flex;
     padding: 50px;
     border-radius: 30px;
-    margin: 60px 0; 
+    margin: 60px 0;
 }
 .quote-color i {
     width: 70px;
@@ -3164,8 +3169,8 @@ form.leave textarea::placeholder{
     content: "";
     width: 100%;
     height: 100%;
-    background-color: #fff;
-    border-radius: 30px;
+    /* background-color: #fff; */
+    border-radius: 39px;
     border: 1px solid #cbcbcb;
     position: absolute;
     top: 0;
@@ -3174,10 +3179,10 @@ form.leave textarea::placeholder{
     height: 0;
     border: 0;
 }
-.pricing-two:hover ul.list li,.pricing-two:hover p{
+.pricing-two ul.list li,.pricing-two p{
     color: #fff;
 }
-.pricing-two:hover {
+.pricing-two {
     box-shadow: 0px 15px 0px 0px rgba(255,83,83,1);
     -webkit-box-shadow: 0px 15px 0px 0px rgba(255,83,83,1);
     -moz-box-shadow: 0px 15px 0px 0px rgba(255,83,83,1);
@@ -3238,7 +3243,7 @@ form.leave textarea::placeholder{
 }
 .project-details span {
     font-weight: 300;
-} 
+}
 .project-client {
     padding: 40px;
     background-color: #f3f3f3;
@@ -3385,7 +3390,7 @@ ul.information-client li h4 {
     font-size: 16px;
     font-weight: 600;
     color: #444444;
-} 
+}
 .service-details-img img {
     border-radius: 30px;
     width: 100%;
@@ -3514,18 +3519,18 @@ ul.information-client li h4 {
 .meet-section ul.social-icon {
     margin-top: 12px;
 }
-form.content-form input[type="text"] {
-    width: 100%;
-    border-radius: 52px;
-    height: 60px;
-    padding-left: 30px;
+ input {
+     width: 100%;
+    border-radius: 50px;
+    height: 44px;
+    padding-left: 25px;
     margin-bottom: 20px;
     border: 1px solid #c1c1c1;
     color: #555;
     outline: none;
     background-color: #fff;
 }
-form.content-form input[type="text"]::placeholder{
+ input::placeholder{
     color: #555;
 }
 form.content-form textarea {
@@ -3619,12 +3624,12 @@ ul.features.two li {
         position: relative;
         z-index: 1;
     }
-    
+
     .circle canvas {
         vertical-align: middle;
         border-radius: 50%;
     }
-    
+
     .circle div {
     position: absolute;
     top: 50%;
@@ -3771,7 +3776,7 @@ header {
     display: flex;
     position: relative;
     justify-content: space-between;
-    height: 110px;
+    height: 90px;
     align-items: center;
 }
 .header-bar > a {
@@ -4359,7 +4364,7 @@ a.btn.two:hover {
 }
 /* 78. btn */
 .btn {
-    padding: 17px 46px;
+    padding: 8px 28px;
     font-size: 16px;
     font-weight: 600;
     color: #fff;
@@ -4373,7 +4378,6 @@ a.btn.two:hover {
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
     background-image: linear-gradient(to right, #ef326f, #fe6c4e, #ef326f, #fe6c4e);
-    text-transform: capitalize;
 }
 .btn:hover {
     color: #fff;
@@ -4382,6 +4386,27 @@ a.btn.two:hover {
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
+}
+
+.btn-custom-materials {
+        padding: 8px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background-image: linear-gradient(to right, #3280ef, #000000, #ef326f, #fe6c4e);
+}
+
+.btn-custom-materials:hover {
+    color: rgb(174, 174, 174);
 }
 
 /* 79. mobile-nav */
@@ -4405,7 +4430,7 @@ a.btn.two:hover {
     width: 11px;
 }
 .for #nav-icon4{
-  color: #fff;   
+  color: #fff;
 }
 #nav-icon4 span:nth-child(1) {
   top: 0px;
@@ -4794,19 +4819,73 @@ span#progress-value i {
 ul.pagination li:hover,.quote-color,.share-post ul.social-icon i,.mobile-nav li.menu-item-has-children a i{
     background-image: linear-gradient(90deg, #ef326f , #fe6c4e );
 }
-.slider-nav .slick-slide.slick-current img,.two.nav-pills .nav-link:before,
-.screenshots-slider .owl-item.active.center img,.solutions i svg,.navbar-links li.navbar-dropdown .dropdown a i,
-.mobile-nav li.menu-item-has-children a i,#res-cross i,.solutions i,.partner.item img,.steps img,.icon-share a i,
-.navbar-links li.navbar-dropdown .dropdown li,ul.social-icon li a i,.owl-item.center .services i:before,
-.visit-website a i,.cloud-storage a,.location i:before,.location svg,.team-details-text a,.social-text a i,
-.pricing-two ul.list li,.pricing-two p,.prev-work-one a i,.location a,.navbar-links li.navbar-dropdown .dropdown a,
-ul.quick-links li a,ul.Meta li a,.blog.our-blog > a,.pricing-two,.location,.count-style-two,.navbar-links li.navbar-dropdown .dropdown  li a:before,
-.digital-marketing:before,.digital-marketing ul li a,.digital-marketing p,.digital-marketing h4,
-.fun-facts svg,.fun-facts span,.fun-facts p,.fun-facts h2,.digital-marketing,.team-text h4,.boder,ul.categories li a span,
-.solutions i,.blog-style-text a,.blog-style,.fun-facts:before,.digital-marketing ul li a:before,
-.intelligent-text h4,.solutions a,.solutions i,.solutions,.phone a,.expert-icon a i,.recent-post a,
-.owl-item.active.center .services,.copyrights a,.blog,.blog h4,.projects-img a i,.team-text a,ul.categories li a,
-.projects-img figure:before,.projects-style h4 a,.footer-links li a,.blog-three h4,.blog-three a i,
-.blog.our-blog h2,ul.pagination li,ul.pagination li.prev,.pricing-two:before,.social-profile a i,.companies-projects-img figure img {
-    transition: .4s ease-in-out;
+
+.stricked-menu {
+    position: relative;
+    width: 100%;
+    z-index: 999;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+.stricked-menu.stricky-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    animation: stickyHeaderSlideDown 0.35s ease forwards;
+    padding-right: var(--bs-gutter-x, .75rem);
+    padding-left: var(--bs-gutter-x, .75rem);
+}
+
+.stricked-menu.stricky-fixed .header-bar {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.stricked-menu.stricky-fixed .header-bar > a img {
+    max-height: 55px;
+    width: auto;
+}
+
+@keyframes stickyHeaderSlideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field input {
+    padding-right: 48px;
+}
+
+.password-field i {
+    position: absolute;
+    top: 35%;
+    right: 18px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #7d7d7d;
+    font-size: 18px;
+    transition: color .2s ease;
+}
+
+.password-field i:hover {
+    color: #c7b594;
+}
+
+.w-fit {
+    width: fit-content !important;
 }

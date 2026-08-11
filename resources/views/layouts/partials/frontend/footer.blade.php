@@ -1,59 +1,192 @@
-  <footer class="gap no-bottom two" style="background-image: url(assets/img/footer-2.jpg);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="assets/img/logo.png" alt="log">
-                        </a>
-                        <p>Best solution for your it startup business co nsecteturadipiscing elit. Scelerisque amet o
-                            dio velit auctor. nam elit nulla.</p>
-                        <img src="https://placehold.co/171x61" alt="imgs">
-                        <h6>60 Million User Use This App</h6>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer-links">
-                        <h3>Useful Links</h3>
-                        <div class="boder"></div>
-                        <ul>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="contact.html">Contact Us</a></li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="javascript:void(0)">Privacy Policy</a>
-                            </li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="javascript:void(0)">App Download</a>
-                            </li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="javascript:void(0)">Features</a></li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="javascript:void(0)">Gallery</a></li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="javascript:void(0)">App Download</a>
-                            </li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="javascript:void(0)">How It Works</a>
-                            </li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="services.html">Services</a></li>
-                            <li><i class="fa-solid fa-angle-right"></i><a href="javascript:void(0)">Terms &
-                                    Conditions</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer-links">
-                        <h3>Subscribe Newsletter</h3>
-                        <div class="boder"></div>
-                        <p>Receive fresh blog content and invites to our webinars.</p>
-                        <form class="subscribe">
-                            <input type="text" name="Enter Your Email" placeholder="Enter Your Email Address...">
-                            <button class="btn">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="copyrights">
-                <p>Copyright © <a href="#">Laso</a> 2026г. Всички права запазени</p>
-                <ul class="social-icon">
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
-            </div>
+<footer class="gap no-bottom two" style="background-image: url(/assets/img/footer-2.jpg);">
+
+    <div class="container">
+
+     <div class="row">
+
+    {{-- COLUMN 1 - LASO --}}
+    <div class="col-lg-4">
+
+        <div class="logo">
+
+            <a href="/">
+                <img src="assets/img/logo.png" alt="LASO">
+            </a>
+
+            <p>
+                LASO е абонаментна услуга за lead generation реклами в Meta,
+                създадена специално за малкия бизнес в сферата на услугите.
+                Ние се грижим за рекламата, а вие се фокусирате върху бизнеса си.
+            </p>
+
+            <img src="https://placehold.co/171x61" alt="LASO клиенти">
+
+            <h6>
+                Реклама, създадена да генерира реални запитвания
+            </h6>
+
         </div>
-    </footer>
+
+    </div>
+
+
+    {{-- COLUMN 2 - USEFUL LINKS --}}
+    <div class="col-lg-4">
+
+        <div class="footer-links">
+
+            <h3>
+                Полезни връзки
+            </h3>
+
+            <div class="boder"></div>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="contact.html">
+                        Свържете се с нас
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="javascript:void(0)">
+                        Абонаментни планове
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="javascript:void(0)">
+                        Какво получавате
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="javascript:void(0)">
+                        За кого е подходящ LASO
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="javascript:void(0)">
+                        Как работи LASO
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    {{-- COLUMN 3 - INFORMATION --}}
+    <div class="col-lg-4">
+
+        <div class="footer-links">
+
+            <h3>
+                Информация
+            </h3>
+
+            <div class="boder"></div>
+
+            <ul>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="javascript:void(0)">
+                        Какво представлява LASO
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="services.html">
+                        Услуги
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="javascript:void(0)">
+                        Политика за поверителност
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+
+                    <a href="javascript:void(0)">
+                        Общи условия
+                    </a>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-angle-right"></i>
+                    <a href="javascript:void(0)">
+                        Често задавани въпроси
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+        <div class="copyrights">
+
+            <p>
+                Авторски права © <a href="#">LASO</a> 2026 г. Всички права запазени.
+            </p>
+
+            <ul class="social-icon">
+
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</footer>

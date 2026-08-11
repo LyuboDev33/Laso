@@ -25,7 +25,10 @@ class FrontEndController extends Controller
         return view('Frontend.contact');
     }
 
+    /** Show the pricing route */
+    public function pricing ()  {
+        return view('Frontend.pricing');
+    }
 
 
-    
 }

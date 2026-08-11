@@ -7,419 +7,311 @@
 -----------------------------------------------------------------------------------
 
     [Table of contents]
-    
-    01. logodata
-    02. client-slider
-    03. services-slider
-    04. screenshots-slider
-    05. companie
-    06. mobile-nav
-    07. count
-    08. slider-for
-    09. accordion
-    10. progressbar
-    11. Navbar Menu
-    12. scrollTop
+
+    01. Owl Carousels
+    02. Mobile Navigation
+    03. Count
+    04. Accordion
+    05. Navbar Menu
+    06. Fullscreen Menu
+    07. Scroll Animation
 
 -----------------------------------------------------------------------------------*/
-/*- 01. logodata -*/ 
 
-jQuery(document).ready(function($){
-    if ( $.isFunction($.fn.owlCarousel) ) {
-    $('.logodata').owlCarousel({
-        loop:true,
-        dot:false,
-        nav:false,
-        autoplay:true,
-        autoplayTimeout:3000,
-        responsive:{
-        0:{
-            items:1
-        },
-        480:{
-            items:2
-        },
-        800:{
-            items:3
-        },
-        1000:{
-            items:4
-        },
-        1200:{
-            items:5
-        }
-      }
-    })
-
-/*- 02. client-slider -*/ 
-
-    $('.client-slider').owlCarousel({
-        loop:true,
-        dot:true,
-        nav:false,
-        center:true,
-        // autoplay:true,
-        // autoplayTimeout:3000,
-        items:1,
-    })
-
-/*- 03. services-slider -*/ 
-
-    $('.services-slider').owlCarousel({
-        loop:true,
-        dot:false,
-        nav:false,
-        center:true,
-        // autoplay:true,
-        // autoplayTimeout:3000,
-        responsive:{
-        0:{
-            items:1
-        },
-        1000:{
-            items:2
-        },
-        1200:{
-            items:3
-        }
-      }
-    })
-
-/*- 04. screenshots-slider -*/ 
-
-    $('.screenshots-slider').owlCarousel({
-        loop:true,
-        dot:false,
-        nav:true,
-        center:true,
-        autoplay:true,
-        autoplayTimeout:3000,
-        navText: ["<i class='fa-solid fa-arrow-left'></i>","<i class='fa-solid fa-arrow-right'></i>"],
-        responsive:{
-        0:{
-            items:1
-        },
-        1000:{
-            items:2
-        },
-        1200:{
-            items:3
-        }
-      }
-    })
-
-/*- 05. companie -*/ 
-
-    $('.companie').owlCarousel({
-        loop:true,
-        dot:false,
-        nav:false,
-        center:true,
-        autoplay:true,
-        autoplayTimeout:5000,
-        responsive:{
-        0:{
-            items:1
-        },
-        773:{
-            items:2,
-            center:false
-        },
-        1200:{
-            items:3
-        }
-      }
-    })
-
-/*- 06. mobile-nav -*/ 
-
-    jQuery('.mobile-nav .menu-item-has-children').on('click', function($) {
-
-          jQuery(this).toggleClass('active');
-
-        }); 
-
-        jQuery('#nav-icon4').click(function($){
-
-            jQuery('#mobile-nav').toggleClass('open');
-
-        });
-
-        jQuery('#res-cross').click(function($){
-
-           jQuery('#mobile-nav').removeClass('open');
-
-        });
+jQuery(document).ready(function ($) {
+    initializeMobileNavigation($);
+    initializeCounters();
+    initializeAccordion($);
+    initializeNavbarMenu($);
+    initializeFullscreenMenu($);
 
 
-        jQuery('.bar-menu').click(function($){
+    $(window).on('scroll', addStickyToHeader);
 
-            jQuery('#mobile-nav').toggleClass('open');
-            jQuery('#mobile-nav').toggleClass('hmburger-menu');
-            jQuery('#mobile-nav').show();
-
-        });
-
-        jQuery('#res-cross').click(function($){
-
-           jQuery('#mobile-nav').removeClass('open');
-
-        });
-}
 });
 
+/**
+ * Show / Hide password
+ */
+function inputEyeLash(element) {
 
+    const wrapper = element.closest('.password-field');
 
-/* 07. count */
-let count = document.querySelectorAll(".count");
-let arr = Array.from(count);
+    const input = wrapper.querySelector('input');
 
-arr.map(function (item) {
-  let startnumber = 0;
+    if (input.type === 'password') {
 
-  function counterup() {
-    startnumber++;
-    item.innerHTML = startnumber;
+        input.type = 'text';
 
-    if (startnumber == item.dataset.number) {
-      clearInterval(stop);
+        element.classList.remove('fa-eye');
+        element.classList.add('fa-eye-slash');
+
+    } else {
+
+        input.type = 'password';
+
+        element.classList.remove('fa-eye-slash');
+        element.classList.add('fa-eye');
+
     }
-  }
-  let stop = setInterval(function () {
-    counterup();
-  }, 10);
-});
+}
 
-// count end
+/** Make the header sticky on scroll  */
+function addStickyToHeader() {
+    const strickyMenu = $('.stricked-menu');
 
-/*- 08. slider-for -*/ 
+    if (!strickyMenu.length) {
+        return;
+    }
 
-if ( $.isFunction($.fn.slick) ) {
-    $('.slider-for').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        fade: true,
-        asNavFor: '.slider-nav'
-    });
-        $('.slider-nav').slick({
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            asNavFor: '.slider-for',
-            dots: true,
-            centerMode: false,
-            focusOnSelect: true,
-            responsive: [
-                    {
-                        breakpoint: 993,
-                        settings: {
-                        slidesToShow: 3,
-                        }
-                    },
-                    {
-                        breakpoint: 576,
-                        settings: {
-                        slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                        slidesToShow: 1,
-                    }
-                }
-                ]
-        });
+    const headerScrollPos = 1000;
+    const currentScrollPosition = $(window).scrollTop();
+
+    console.log(currentScrollPosition);
+
+
+    if (currentScrollPosition > headerScrollPos) {
+        strickyMenu.addClass('stricky-fixed shadow');
+    } else {
+        strickyMenu.removeClass('stricky-fixed shadow');
+    }
+
 }
 
 
-/* 09. accordion */
-    $('.accordion-item .heading').on('click', function(e) {
-        e.preventDefault();
-
-        // Add the correct active class
-        if($(this).closest('.accordion-item').hasClass('active')) {
-            // Remove active classes
-            $('.accordion-item').removeClass('active');
-        } else {
-            // Remove active classes
-            $('.accordion-item').removeClass('active');
-
-            // Add the active class
-            $(this).closest('.accordion-item').addClass('active');
-        }
-
-        // Show the content
-        var $content = $(this).next();
-        $content.slideToggle(300);
-        $('.accordion-item .content').not($content).slideUp('fast');
+/**
+ * Mobile navigation
+ */
+function initializeMobileNavigation($) {
+    $('.mobile-nav .menu-item-has-children').on('click', function () {
+        $(this).toggleClass('active');
     });
 
-/* 10. progressbar */
-  {
-    function animateElements() {
-      $('.progressbar').each(function () {
-        var elementPos = $(this).offset().top;
-        var topOfWindow = $(window).scrollTop();
-        var percent = $(this).find('.circle').attr('data-percent');
-        var percentage = parseInt(percent, 10) / parseInt(100, 10);
-        var animate = $(this).data('animate');
-        if (elementPos < topOfWindow + $(window).height() - 10 && !animate) {
-          $(this).data('animate', true);
-          $(this).find('.circle').circleProgress({
-            startAngle: -Math.PI / 2,
-            value: percent / 100,
-            size: 270,
-            thickness: 6,
-            emptyFill: "#fef0db",
-            fill: {
-              color: '#fe3379'
+    $('#nav-icon4').on('click', function () {
+        $('#mobile-nav').toggleClass('open');
+    });
+
+    $('.bar-menu').on('click', function () {
+        $('#mobile-nav')
+            .toggleClass('open')
+            .toggleClass('hmburger-menu')
+            .show();
+    });
+
+    $('#res-cross').on('click', function () {
+        $('#mobile-nav')
+            .removeClass('open')
+            .addClass('hmburger-menu');
+    });
+}
+
+
+/**
+ * Number counters
+ */
+function initializeCounters() {
+    const counters = document.querySelectorAll('.count');
+    const countersArray = Array.from(counters);
+
+    countersArray.map(function (item) {
+        let startNumber = 0;
+
+        function counterUp() {
+            startNumber++;
+            item.innerHTML = startNumber;
+
+            if (startNumber == item.dataset.number) {
+                clearInterval(stop);
             }
-          }).on('circle-animation-progress', function (event, progress, stepValue) {
-            $(this).find('div').text((stepValue*100).toFixed() + "%");
-          }).stop();
         }
-      });
-    }
 
-    // Show animated elements
-    animateElements();
-    $(window).scroll(animateElements);
-  };
-
-/* 11. Navbar Menu  */
-
-    $('.navbar .dropdown').hover(function () {
-        $(this).find('.dropdown-menu').addClass('show');
-    }, function () {
-        $(this).find('.dropdown-menu').removeClass('show')
+        const stop = setInterval(function () {
+            counterUp();
+        }, 10);
     });
+}
 
-    $('.navbar .dropdown-item').hover(function () {
-        $(this).find('.dropdown-side').addClass('show');
-    }, function () {
-        $(this).find('.dropdown-side').removeClass('show')
-    });
 
-    $(".navbar .search-form").on("click", ".search-icon", function () {
+/**
+ * Accordion
+ */
+function initializeAccordion($) {
+    $('.accordion-item .heading').on('click', function (event) {
+        event.preventDefault();
 
-        $(".navbar .search-form").toggleClass("open");
+        const accordionItem = $(this).closest('.accordion-item');
 
-        if ($(".navbar .search-form").hasClass('open')) {
-
-            $(".search-form .close-search").slideDown();
-
+        if (accordionItem.hasClass('active')) {
+            $('.accordion-item').removeClass('active');
         } else {
+            $('.accordion-item').removeClass('active');
+            accordionItem.addClass('active');
+        }
 
-            $(".search-form .close-search").slideUp();
+        const content = $(this).next();
+
+        content.slideToggle(300);
+
+        $('.accordion-item .content')
+            .not(content)
+            .slideUp('fast');
+    });
+}
+
+
+/**
+ * Navbar dropdowns, search and collapse
+ */
+function initializeNavbarMenu($) {
+    $('.navbar .dropdown').hover(
+        function () {
+            $(this)
+                .find('.dropdown-menu')
+                .addClass('show');
+        },
+
+        function () {
+            $(this)
+                .find('.dropdown-menu')
+                .removeClass('show');
+        }
+    );
+
+    $('.navbar .dropdown-item').hover(
+        function () {
+            $(this)
+                .find('.dropdown-side')
+                .addClass('show');
+        },
+
+        function () {
+            $(this)
+                .find('.dropdown-side')
+                .removeClass('show');
+        }
+    );
+
+    $('.navbar .search-form').on('click', '.search-icon', function () {
+        const searchForm = $('.navbar .search-form');
+
+        searchForm.toggleClass('open');
+
+        if (searchForm.hasClass('open')) {
+            $('.search-form .close-search').slideDown();
+        } else {
+            $('.search-form .close-search').slideUp();
         }
     });
 
-    $(".navbar").on("click", ".navbar-toggler", function () {
-
-        $(".navbar .navbar-collapse").toggleClass("show");
+    $('.navbar').on('click', '.navbar-toggler', function () {
+        $('.navbar .navbar-collapse').toggleClass('show');
     });
+}
 
-    function noScroll() {
-        window.scrollTo(0, 0);
-    }
 
-    var open = false,
-        navDark = $(".topnav.dark"),
-        logoChan = $(".topnav.dark .logo img");
+/**
+ * Fullscreen hamburger menu
+ */
+function initializeFullscreenMenu($) {
+    let isOpen = false;
+
+    const navDark = $('.topnav.dark');
+    const logo = $('.topnav.dark .logo img');
 
     $('.topnav .menu-icon').on('click', function () {
-        open = !open;
+        isOpen = !isOpen;
 
-        $('.hamenu').toggleClass("open");
+        $('.hamenu').toggleClass('open');
 
-        if (open) {
-
-            $('.hamenu').animate({ top: 0 });
+        if (isOpen) {
+            $('.hamenu').animate({
+                top: 0
+            });
 
             $('.topnav .menu-icon').addClass('open');
 
-            navDark.addClass("navlit");
-            logoChan.attr('src', 'img/logo-light.png');
+            navDark.addClass('navlit');
 
-
+            logo.attr('src', 'img/logo-light.png');
         } else {
-
-            $('.hamenu').delay(300).animate({ top: "-100%" });
+            $('.hamenu')
+                .delay(300)
+                .animate({
+                    top: '-100%'
+                });
 
             $('.topnav .menu-icon').removeClass('open');
 
-            navDark.removeClass("navlit");
-            logoChan.attr('src', 'img/logo-dark.png');
+            navDark.removeClass('navlit');
 
+            logo.attr('src', 'img/logo-dark.png');
         }
     });
 
-    $('.hamenu .menu-links .main-menu > li .animsition-link').on('click', function () {
-        $('.hamenu').removeClass("open");
-    });
+    $('.hamenu .menu-links .main-menu > li .animsition-link').on(
+        'click',
+        function () {
+            $('.hamenu').removeClass('open');
+            $('.topnav .menu-icon').removeClass('open');
 
-/* 12. scrollTop */
+            isOpen = false;
+        }
+    );
+}
 
+
+/**
+ * Check whether an element is visible
+ */
 function inVisible(element) {
-  var WindowTop = $(window).scrollTop();
-  var WindowBottom = WindowTop + $(window).height();
-  var ElementTop = element.offset().top;
-  var ElementBottom = ElementTop + element.height();
-  if ((ElementBottom <= WindowBottom) && ElementTop >= WindowTop)
-    animate(element);
+    const windowTop = jQuery(window).scrollTop();
+    const windowBottom = windowTop + jQuery(window).height();
+    const elementTop = element.offset().top;
+    const elementBottom = elementTop + element.height();
+
+    if (
+        elementBottom <= windowBottom &&
+        elementTop >= windowTop
+    ) {
+        animateElement(element);
+    }
 }
 
-function animate(element) {
-  if (!element.hasClass('ms-animated')) {
-    var maxval = element.data('max');
-    var html = element.html();
-    element.addClass("ms-animated");
-    $({
-      countNum: element.html()
-    }).animate({
-      countNum: maxval
-    }, {
-      duration: 5000,
-      easing: 'linear',
-      step: function() {
-        element.html(Math.floor(this.countNum) + html);
-      },
-      complete: function() {
-        element.html(this.countNum + html);
-      }
-    });
-  }
 
+/**
+ * Animate numeric element
+ */
+function animateElement(element) {
+    if (element.hasClass('ms-animated')) {
+        return;
+    }
+
+    const maxValue = element.data('max');
+    const originalHtml = element.html();
+
+    element.addClass('ms-animated');
+
+    jQuery({
+        countNum: element.html()
+    }).animate(
+        {
+            countNum: maxValue
+        },
+        {
+            duration: 5000,
+            easing: 'linear',
+
+            step: function () {
+                element.html(
+                    Math.floor(this.countNum) + originalHtml
+                );
+            },
+
+            complete: function () {
+                element.html(
+                    this.countNum + originalHtml
+                );
+            }
+        }
+    );
 }
-
-$(function() {
-  $(window).scroll(function() {
-    $("h2[data-max]").each(function() {
-      inVisible($(this));
-    });
-  })
-});
- let calcScrollValue = () => {
-  let scrollProgress = document.getElementById("progress");
-  let progressValue = document.getElementById("progress-value");
-  let pos = document.documentElement.scrollTop;
-  let calcHeight =
-    document.documentElement.scrollHeight -
-    document.documentElement.clientHeight;
-  let scrollValue = Math.round((pos * 100) / calcHeight);
-  if (pos > 100) {
-    scrollProgress.style.display = "grid";
-  } else {
-    scrollProgress.style.display = "none";
-  }
-  scrollProgress.addEventListener("click", () => {
-    document.documentElement.scrollTop = 0;
-  });
-  scrollProgress.style.background = `conic-gradient(#f0346e ${scrollValue}%, #fff ${scrollValue}%)`;
-};
-
-window.onscroll = calcScrollValue;
-window.onload = calcScrollValue;
-
-// end

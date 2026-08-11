@@ -13,34 +13,18 @@
     <meta name="robots" content="noindex,nofollow">
 
     <meta property="og:title" content="Вход | Оптика Valente">
-    <meta property="og:description"
-        content="Влезте в своя профил и продължете оттам, докъдето сте стигнали.">
+    <meta property="og:description" content="Влезте в своя профил и продължете оттам, докъдето сте стигнали.">
     <meta property="og:type" content="website">
 
-    {{-- FAVICONS --}}
-    <link rel="icon" type="image/png"
-        href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>"
-        sizes="96x96" />
 
-    <link rel="icon" type="image/svg+xml"
-        href="/assets/images/favicons/transparent-image.png?v=<?php echo time(); ?>" />
-
-    <link rel="shortcut icon"
-        href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>" />
-
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="/assets/images/favicons/apple-touch-icon.png?v=<?php echo time(); ?>" />
-
-    <link rel="manifest"
-        href="/assets/images/favicons/site.webmanifest?v=<?php echo time(); ?>" />
 
     {{-- CSS --}}
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="/assets/css/font-awesome-all.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/style.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="/assets/css/responsive.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/custom.css?v=<?php echo time(); ?>" />
-        <link rel="stylesheet" href="/assets/css/shop.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="/assets/css/auth.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="/assets/css/style.css?v=<?php echo time(); ?>" />
+
 
 </head>
 
@@ -68,8 +52,7 @@
                         </p>
                     </div>
 
-                    <form action="{{ route('login') }}"
-                        method="post">
+                    <form action="{{ route('login') }}" method="post" class="content-form auth__content-form">
                         @csrf
 
                         <div class="auth__field">
@@ -78,14 +61,8 @@
                             </label>
 
                             <div class="auth__input-wrapper">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="formEmail"
-                                    class="auth__input"
-                                    placeholder="Имейл адрес"
-                                    value="{{ old('email') }}"
-                                    required>
+                                <input type="email" name="email" id="formEmail" placeholder="Имейл адрес"
+                                    value="{{ old('email') }}" required>
                             </div>
 
                             @error('email')
@@ -99,19 +76,11 @@
                             </label>
 
                             <div class="auth__input-wrapper">
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="formPassword"
-                                    class="auth__input auth__input--with-addon"
-                                    placeholder="Парола"
-                                    required>
+                                <input type="password" name="password" id="formPassword" class="auth__password-input"
+                                    placeholder="Парола" required>
 
-                                <button
-                                    type="button"
-                                    class="auth__input-addon"
-                                    data-toggle-password="formPassword">
-
+                                <button type="button" class="auth__input-addon" data-toggle-password="formPassword"
+                                    aria-label="Покажи или скрий паролата">
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
@@ -129,10 +98,8 @@
                             </div>
                         @endif
 
-
-
                         <div class="auth__submit">
-                            <button type="submit" class="auth__button">
+                            <button type="submit" class="btn auth__submit-button">
                                 Вход
                             </button>
                         </div>
@@ -146,17 +113,15 @@
                                 </a>
                             </p>
                         @endif
-
                     </form>
 
                 </div>
             </div>
 
             {{-- ДЯСНА ЧАСТ --}}
-            <div
-                class="auth__side auth__side--right"
+            <div class="auth__side auth__side--right"
                 style="
-                    background-image:url('{{ asset('/assets/images/login-illustration.jpg') }}');
+                    background-image:url('{{ asset('/assets/img/auth/login-illustrate.svg') }}');
                     background-size:cover;
                     background-position:top;
                 ">
@@ -166,4 +131,5 @@
     </div>
 
 </body>
+
 </html>

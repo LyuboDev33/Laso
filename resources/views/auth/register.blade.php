@@ -13,34 +13,30 @@
     <meta name="robots" content="noindex,nofollow">
 
     <meta property="og:title" content="Регистрация | Оптика Valente">
-    <meta property="og:description"
-        content="Създайте своя профил за бързи поръчки и резервации.">
+    <meta property="og:description" content="Създайте своя профил за бързи поръчки и резервации.">
     <meta property="og:type" content="website">
 
     {{-- FAVICONS --}}
-    <link rel="icon" type="image/png"
-        href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>"
+    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>"
         sizes="96x96" />
 
     <link rel="icon" type="image/svg+xml"
         href="/assets/images/favicons/transparent-image.png?v=<?php echo time(); ?>" />
 
-    <link rel="shortcut icon"
-        href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>" />
+    <link rel="shortcut icon" href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>" />
 
     <link rel="apple-touch-icon" sizes="180x180"
         href="/assets/images/favicons/apple-touch-icon.png?v=<?php echo time(); ?>" />
 
-    <link rel="manifest"
-        href="/assets/images/favicons/site.webmanifest?v=<?php echo time(); ?>" />
+    <link rel="manifest" href="/assets/images/favicons/site.webmanifest?v=<?php echo time(); ?>" />
 
     {{-- CSS --}}
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="/assets/css/font-awesome-all.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="/assets/css/style.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="/assets/css/responsive.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/custom.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/shop.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" href="/assets/css/auth.css?v=<?php echo time(); ?>" />
+
 </head>
 
 <body>
@@ -72,15 +68,8 @@
                             </label>
 
                             <div class="auth__input-wrapper">
-                                <input
-                                    type="text"
-                                    name="name"
-                                    id="formName"
-                                    class="auth__input"
-                                    placeholder="Вашето име"
-                                    value="{{ old('name') }}"
-                                    autocomplete="name"
-                                    autofocus
+                                <input type="text" name="name" id="formName" class="auth__input"
+                                    placeholder="Вашето име" value="{{ old('name') }}" autocomplete="name" autofocus
                                     required>
                             </div>
 
@@ -96,14 +85,8 @@
                             </label>
 
                             <div class="auth__input-wrapper">
-                                <input
-                                    type="email"
-                                    name="email"
-                                    id="formEmail"
-                                    class="auth__input"
-                                    placeholder="Имейл адрес"
-                                    value="{{ old('email') }}"
-                                    autocomplete="username"
+                                <input type="email" name="email" id="formEmail" class="auth__input"
+                                    placeholder="Имейл адрес" value="{{ old('email') }}" autocomplete="username"
                                     required>
                             </div>
 
@@ -119,19 +102,11 @@
                             </label>
 
                             <div class="auth__input-wrapper">
-                                <input
-                                    type="password"
-                                    name="password"
-                                    id="formPassword"
-                                    class="auth__input auth__input--with-addon"
-                                    placeholder="Парола"
-                                    autocomplete="new-password"
-                                    required>
+                                <input type="password" name="password" id="formPassword"
+                                    class="auth__input auth__input--with-addon" placeholder="Парола"
+                                    autocomplete="new-password" required>
 
-                                <button
-                                    type="button"
-                                    class="auth__input-addon"
-                                    data-toggle-password="formPassword">
+                                <button type="button" class="auth__input-addon" data-toggle-password="formPassword">
 
                                     <i class="fas fa-eye"></i>
                                 </button>
@@ -149,18 +124,11 @@
                             </label>
 
                             <div class="auth__input-wrapper">
-                                <input
-                                    type="password"
-                                    name="password_confirmation"
-                                    id="formPasswordConfirmation"
-                                    class="auth__input auth__input--with-addon"
-                                    placeholder="Повторете паролата"
-                                    autocomplete="new-password"
-                                    required>
+                                <input type="password" name="password_confirmation" id="formPasswordConfirmation"
+                                    class="auth__input auth__input--with-addon" placeholder="Повторете паролата"
+                                    autocomplete="new-password" required>
 
-                                <button
-                                    type="button"
-                                    class="auth__input-addon"
+                                <button type="button" class="auth__input-addon"
                                     data-toggle-password="formPasswordConfirmation">
 
                                     <i class="fas fa-eye"></i>
@@ -192,10 +160,9 @@
             </div>
 
             {{-- ДЯСНА ЧАСТ --}}
-            <div
-                class="auth__side auth__side--right"
+            <div class="auth__side auth__side--right"
                 style="
-                    background-image:url('{{ asset('/assets/images/register-girl.jpg') }}');
+                    background-image:url('{{ asset('/assets/img/auth/register-illustrate.svg') }}');
                     background-size:cover;
                     background-position:top;
                 ">

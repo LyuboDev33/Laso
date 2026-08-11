@@ -1,39 +1,83 @@
-<x-guest-layout>
-    <form method="POST" action="{{ route('password.store') }}">
-        @csrf
+<x-frontend>
 
-        <!-- Password Reset Token -->
-        <input type="hidden" name="token" value="{{ $request->route('token') }}">
+    @section('SEO')
+        <title>Смяна на парола</title>
+    @endsection
 
-        <!-- Email Address -->
+    <section class="py-5 projects" style="background-image: url(/assets/img/background.png); background-color: #faf9f5;">
+
         <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email', $request->email)" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            <div class="container">
+
+                <div class="row align-items-center">
+
+                    {{-- LEFT SIDE - Reset Password Form --}}
+                    <div class="container-reset-pwd shadow">
+
+                        <div class="heading two">
+                            <h6>ВЪЗСТАНОВЯВАНЕ НА ПАРОЛА</h6>
+
+                            <h2>Създайте нова парола</h2>
+
+                            <p class="pt-lg-3 pt-md-2">
+                                Въведете вашата нова парола и я потвърдете,
+                                за да завършите възстановяването на профила си.
+                            </p>
+                        </div>
+
+                        <form class="content-form" method="POST" action="{{ route('password.update') }}">
+                            @csrf
+                            @method('PUT')
+
+                            {{-- Password Reset Token --}}
+                            <input type="hidden" name="token" value="{{ $request->route('token') }}">
+
+                            {{-- Email --}}
+                            <input id="email" type="email" name="email"
+                                value="{{ old('email', $request->email) }}" placeholder="Имейл адрес" required autofocus
+                                autocomplete="username">
+
+                            @error('email')
+                                <div class="text-danger mb-3">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            {{-- New Password --}}
+                            <input id="password" type="password" name="password" placeholder="Нова парола" required
+                                autocomplete="new-password">
+
+                            @error('password')
+                                <div class="text-danger mb-3">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            {{-- Confirm New Password --}}
+                            <input id="password_confirmation" type="password" name="password_confirmation"
+                                placeholder="Потвърдете новата парола" required autocomplete="new-password">
+
+                            @error('password_confirmation')
+                                <div class="text-danger mb-3">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            <button type="submit" class="btn">
+                                Смени паролата
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
         </div>
 
-        <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
-        </div>
+    </section>
 
-        <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-            <x-text-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required autocomplete="new-password" />
-
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-        </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Reset Password') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+</x-frontend>

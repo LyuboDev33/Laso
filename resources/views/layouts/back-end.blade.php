@@ -1,73 +1,56 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Табло за управление | Оптика Valente</title>
-
-    <meta name="robots" content="noindex,nofollow">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    {{-- FAVICONS --}}
-    <link rel="icon" type="image/png" href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>"
-        sizes="96x96" />
-    <link rel="icon" type="image/svg+xml"
-        href="/assets/images/favicons/transparent-image.png?v=<?php echo time(); ?>" />
-    <link rel="shortcut icon" href="/assets/images/favicons/favicon-96x96.png?v=<?php echo time(); ?>" />
-    <link rel="apple-touch-icon" sizes="180x180"
-        href="/assets/images/favicons/apple-touch-icon.png?v=<?php echo time(); ?>" />
-    <link rel="manifest" href="/assets/images/favicons/site.webmanifest?v=<?php echo time(); ?>" />
+    @yield('SEO')
 
-    {{-- CORE CSS --}}
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/animate.min.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/custom-animate.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/swiper.min.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/font-awesome-all.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/jarallax.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/flaticon.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css?v=<?php echo time(); ?>" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
 
-    {{-- MODULE CSS --}}
-    <link rel="stylesheet" href="/assets/css/module-css/slider.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/footer.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/counter.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/services.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/about.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/brand.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/gallery.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/faq.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/testimonial.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/team.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/contact.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/pricing.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/blog.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/sliding-text.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/cta.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/feature.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/module-css/banner.css?v=<?php echo time(); ?>" />
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/shop.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/responsive.css?v=<?php echo time(); ?>" />
-    <link rel="stylesheet" href="/assets/css/custom.css?v=<?php echo time(); ?>" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css?v=<?= time() ?>">
 
-    <link rel="stylesheet" href="/assets/css/dashboard.css?v=<?php echo time(); ?>" />
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 
-    <script src="https://cdn.tiny.cloud/1/daj9dftxtp56iiymy0p7tr418kjkhmf54509unx3enwwzrca/tinymce/8/tinymce.min.js"
-        referrerpolicy="origin" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.css">
 
-    <script src="/assets/js/jquery-3.6.0.min.js?v=<?php echo time(); ?>"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
 
+    <!-- style -->
+    <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>">
+
+    <!-- responsive -->
+    <link rel="stylesheet" href="/assets/css/responsive.css?v=<?= time() ?>">
+
+    <!-- color -->
+    <link rel="stylesheet" href="/assets/css/color.css?v=<?= time() ?>">
+
+      <!-- color -->
+    <link rel="stylesheet" href="/assets/css/dashboard.css?v=<?= time() ?>">
+
+    <!-- jQuery -->
+    <script src="/assets/js/jquery-3.6.0.min.js?v=<?= time() ?>"></script>
+
+    <!-- Preloader -->
+    <script src="/assets/js/preloader.js?v=<?= time() ?>"></script>
+
+    <script src="https://unpkg.com/lenis@1.3.23/dist/lenis.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
 </head>
 
-<body class="dashboard-body">
+<body>
+
 
     <div class="dashboard-shell">
 
@@ -84,20 +67,54 @@
         </div>
 
     </div>
-    <script src="/assets/js/bootstrap.bundle.min.js?v=<?php echo time(); ?>"></script>
-    <script src="/assets/js/jarallax.min.js?v=<?php echo time(); ?>"></script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.1/dist/fancybox/fancybox.umd.js"></script>
 
-
+    <!-- template js -->
+    <script src="/assets/js/custom.js?v=<?= time() ?>"></script>
+    <!-- bootstrap -->
+    <script src="/assets/js/bootstrap.min.js?v=<?= time() ?>"></script>
 
     <script>
-        $(document).ready(function() {
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeFancybox();
+            initializeLenis();
             initDashboardDropdown();
             initSidebarToggle();
-            initTinyMce();
         });
+
+        function initializeFancybox() {
+            if (typeof Fancybox === 'undefined') {
+                return;
+            }
+
+            const fancyboxElements = document.querySelectorAll('[data-fancybox]');
+
+            if (!fancyboxElements.length) {
+                return;
+            }
+
+            Fancybox.bind('[data-fancybox]', {});
+        }
+
+        function initializeLenis() {
+
+            const lenis = new Lenis({
+                duration: 1,
+                smoothWheel: true,
+                wheelMultiplier: 0.8,
+                touchMultiplier: 0.8,
+                lerp: 0.5
+            });
+
+            function lenisAnimationFrame(time) {
+                lenis.raf(time);
+                requestAnimationFrame(lenisAnimationFrame);
+            }
+
+            requestAnimationFrame(lenisAnimationFrame);
+        }
+
 
         function initDashboardDropdown() {
             document.addEventListener('click', function(e) {
@@ -166,11 +183,6 @@
         }
     </script>
 
-
-
-
-
 </body>
-
 
 </html>

@@ -1,540 +1,804 @@
 <x-frontend>
 
     @section('SEO')
-        <title>За нас | Valente Optic</title>
+        <title>За нас | LASO</title>
+
         <meta name="description"
-            content="Valente Optic — семеен бизнес с над 10 години история и над 19 години опит в оптиката. Качествени очила, индивидуално отношение и професионална консултация в Бургас и Равда.">
+            content="Научете повече за LASO — абонаментна услуга за управление на lead generation реклами в Meta, създадена за малкия бизнес в сферата на услугите.">
+
         <meta name="keywords"
-            content="за нас, Valente Optic, семейна оптика, дипломиран оптик, Бургас, Равда, опит в оптиката">
+            content="LASO, за нас, Meta реклами, lead generation, реклама за малък бизнес, Facebook реклами, генериране на запитвания">
     @endsection
 
 
-
-    <!--About Five Start -->
-    <section class="about-five pb-5">
+    {{-- ABOUT LASO --}}
+    <section class="gap">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="about-five__left">
-                        <div class="section-title text-left sec-title-animation animation-style2">
-                            <div class="section-title__tagline-box">
-                                <span class="section-title__tagline">За нас</span>
-                            </div>
-                            <h2 class="section-title__title title-animation">
-                                Над 20 години професионална грижа за вашето зрение
-                            </h2>
-                        </div>
 
-                        <p class="about-five__text-1">
-                            <strong>Valente Optic</strong> е семеен бизнес с над 20 години опит в сферата на
-                            оптиката. Предлагаме <strong>професионални очни прегледи, консултации,
-                                компютърна диагностика, изработка и сервиз на очила</strong>, съобразени
-                            с индивидуалните нужди на всеки клиент.
-                        </p>
-
-                        <p class="about-five__text-1">
-                            Можете да ни посетите в нашите оптики в <strong>Бургас</strong> и
-                            <strong>Равда</strong>, както и да разгледате и закупите диоптрични рамки,
-                            слънчеви очила и други продукти директно от нашия
-                            <strong>онлайн магазин</strong>.
-                        </p>
-
-                        {{-- <ul class="list-unstyled about-five__points">
-                            <li>
-                                <div class="icon">
-                                    <span class="icon-double-arrow-right"></span>
-                                </div>
-                                <div class="text">
-                                    <p>Над 20 години професионален опит и лично отношение</p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="icon">
-                                    <span class="icon-double-arrow-right"></span>
-                                </div>
-                                <div class="text">
-                                    <p>Оптични услуги и индивидуални решения за добро зрение</p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="icon">
-                                    <span class="icon-double-arrow-right"></span>
-                                </div>
-                                <div class="text">
-                                    <p>Онлайн магазин за рамки, очила и оптични продукти</p>
-                                </div>
-                            </li>
-
-                            <li>
-                                <div class="icon">
-                                    <span class="icon-double-arrow-right"></span>
-                                </div>
-                                <div class="text">
-                                    <p>Физически обекти в Бургас и Равда</p>
-                                </div>
-                            </li>
-                        </ul> --}}
-                    </div>
-                </div>
+            <div class="row align-items-center">
 
                 <div class="col-lg-6">
-                    <div class="about-five__right">
-                        <div class="about-five__img-box">
-                            <div class="about-five__img">
-                                <img src="/assets/images/about/about-all.jpg" alt="Valente Optic" />
+
+                    <div class="intelligent">
+
+                        <h2>
+                            Рекламата за малкия бизнес
+                            не трябва да бъде сложна.
+                        </h2>
+
+                        <img src="https://placehold.co/589x658?text=LASO"
+                            alt="LASO - реклама за малкия бизнес">
+
+
+
+                        <img src="assets/img/shaps-1.png"
+                            alt="shaps-1"
+                            class="shaps-1">
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="intelligent-text">
+
+                        <p>
+                            LASO е създаден с една проста идея:
+                            малкият бизнес трябва да има достъп до професионално
+                            управлявана реклама, без това да означава сложни процеси,
+                            неясни цени и огромен месечен бюджет.
+                            <br><br>
+
+                            Затова превърнахме управлението на реклама в
+                            <strong>ясна абонаментна услуга.</strong>
+                            Избирате план, плащате фиксирана месечна сума
+                            и ние се грижим за рекламната ви кампания.
+                            <br><br>
+
+                            Но LASO не е създаден просто за показвания,
+                            реакции и харесвания.
+                            Фокусът ни е върху
+                            <strong>lead generation рекламите</strong> —
+                            реклами, чиято цел е да генерират реални запитвания
+                            от потенциални клиенти за вашия бизнес.
+                        </p>
+
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+
+                                <i>
+                                    <img src="assets/img/intelligent-icon-1.png"
+                                        alt="Фиксиран месечен абонамент">
+                                </i>
+
+                                <a href="javascript:void(0)">
+                                    <h4>Предвидима месечна цена</h4>
+                                </a>
+
+                                <p>
+                                    Знаете предварително какво плащате и
+                                    какво включва вашият абонамент.
+                                </p>
+
                             </div>
 
-                            <div class="">
-                                <div class="about-five__shope-box-bg-shape">
-                                </div>
+
+                            <div class="col-md-6">
+
+                                <i class="two">
+                                    <img src="assets/img/intelligent-icon-2.png"
+                                        alt="Lead generation реклама">
+                                </i>
+
+                                <a href="javascript:void(0)">
+                                    <h4>Фокус върху запитванията</h4>
+                                </a>
+
+                                <p>
+                                    Рекламата е изградена с цел да достига
+                                    до хора, които могат да се превърнат
+                                    във ваши клиенти.
+                                </p>
+
                             </div>
+
                         </div>
+
+
+                        <div class="video position-relative">
+
+                            {{-- TODO: Добави реалното LASO видео --}}
+                            <a data-fancybox=""
+                                href="https://www.youtube.com/watch?v=YOUR_VIDEO">
+
+                                <i>
+                                    <svg width="11"
+                                        height="17"
+                                        viewBox="0 0 11 17"
+                                        fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+
+                                        <path
+                                            d="M11 8.49951L0.5 0.27227L0.5 16.7268L11 8.49951Z"
+                                            fill="#fff">
+                                        </path>
+
+                                    </svg>
+                                </i>
+
+                            </a>
+
+                            <img src="https://placehold.co/636x348?text=LASO+VIDEO"
+                                alt="Какво представлява LASO">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    {{-- ABOUT LASO END --}}
+
+
+
+    {{-- WHY LASO EXISTS --}}
+    <div class="gap section-business">
+
+        <div class="container">
+
+            <h3>LASO</h3>
+
+            <div class="row align-items-end">
+
+                <div class="col-lg-6">
+
+                    <div class="heading two">
+
+                        <h6>
+                            ЗАЩО СЪЗДАДОХМЕ LASO
+                        </h6>
+
+                        <h2>
+                            Рекламата трябва да работи
+                            за бизнеса ви, а не да бъде
+                            още една задача за вас.
+                        </h2>
+
+                    </div>
+
+
+                    <div class="better-business">
+
+                        <p>
+                            За много собственици на малък бизнес дигиталната
+                            реклама изглежда ненужно сложна.
+                            Business Manager, рекламни акаунти, аудитории,
+                            кампании, бюджети, оптимизации и постоянно
+                            следене на резултатите.
+                            <br><br>
+
+                            В същото време наемането на традиционна рекламна
+                            агенция често означава разход, който не е
+                            реалистичен за по-малък бизнес.
+                            <br><br>
+
+                            <strong>LASO е нашият отговор на този проблем.</strong>
+                            <br><br>
+
+                            Искаме управлението на рекламата да бъде толкова
+                            разбираемо, колкото всеки друг месечен абонамент:
+                            избирате подходящия план, предоставяте необходимата
+                            информация и достъпи, а ние поемаме работата
+                            по рекламата.
+                        </p>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <div class="business-img">
+
+                        <img src="https://placehold.co/670x528?text=Why+LASO"
+                            alt="Защо създадохме LASO">
+
+
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!--About Five End -->
+
+    </div>
+    {{-- WHY LASO EXISTS END --}}
 
 
-    <!--Counter One Start -->
-    <section class="counter-one counter-three">
+
+    {{-- WHAT MAKES LASO DIFFERENT --}}
+    <section class="gap blog-section"
+        style="background-image: url(assets/img/background-1.png);">
+
         <div class="container">
-            <div class="counter-one__inner">
-                <ul class="list-unstyled counter-one__list">
-                    <li>
-                        <div class="counter-one__single">
-                            <div class="counter-one__count-box">
-                                <h3 class="odometer" data-count="19">20</h3>
-                                <span>+</span>
-                            </div>
-                            <p class="counter-one__text">Години опит</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="counter-one__single">
-                            <div class="counter-one__count-box">
-                                <h3 class="odometer" data-count="5">5000</h3>
-                                <span>+</span>
-                            </div>
-                            <p class="counter-one__text">Доволни клиенти</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="counter-one__single">
-                            <div class="counter-one__count-box">
-                                <h3 class="odometer" data-count="2">2</h3>
-                                <span></span>
-                            </div>
-                            <p class="counter-one__text">Локации в България</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="counter-one__single">
-                            <div class="counter-one__count-box">
-                                <h3 class="odometer" data-count="500">4000</h3>
-                                <span>+</span>
-                            </div>
-                            <p class="counter-one__text">Налични модели</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!--Counter One End -->
 
+            <div class="heading">
 
+                <img src="assets/img/heading-img.png"
+                    alt="LASO">
 
-   <!-- Brand Marquee Start -->
-    <section class="brand-marquee">
-        <div class="brand-marquee__viewport">
-            <div class="brand-marquee__track">
+                <h6>
+                    НАШИЯТ ПОДХОД
+                </h6>
 
-                <div class="brand-marquee__group">
-                    @foreach ($brands as $brand)
-                        <div class="brand-marquee__item">
-                            <img src="{{ asset('assets/images/brands/' . $brand->getFilename()) }}"
-                                alt="{{ pathinfo($brand->getFilename(), PATHINFO_FILENAME) }}">
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="brand-marquee__group" aria-hidden="true">
-                    @foreach ($brands as $brand)
-                        <div class="brand-marquee__item">
-                            <img src="{{ asset('assets/images/brands/' . $brand->getFilename()) }}" alt="">
-                        </div>
-                    @endforeach
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Brand Marquee End -->
-       <!-- Brand Marquee Start -->
-    <section class="brand-marquee">
-        <div class="brand-marquee__viewport">
-            <div class="brand-marquee__track-backwards">
-
-                <div class="brand-marquee__group">
-                    @foreach ($brands2 as $brand)
-                        <div class="brand-marquee__item">
-                            <img src="{{ asset('assets/images/brands_2/' . $brand->getFilename()) }}"
-                                alt="{{ pathinfo($brand->getFilename(), PATHINFO_FILENAME) }}">
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="brand-marquee__group" aria-hidden="true">
-                    @foreach ($brands2 as $brand)
-                        <div class="brand-marquee__item">
-                            <img src="{{ asset('assets/images/brands_2/' . $brand->getFilename()) }}"
-                             alt="{{ pathinfo($brand->getFilename(), PATHINFO_FILENAME) }}">
-                        </div>
-                    @endforeach
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- Brand Marquee End -->
-
-    <!--About Maria Start -->
-    <section class="about-five pb-5">
-        <div class="container">
-            <div class="row flex-row-reverse">
-                <div class="col-xl-6">
-                    <div class="about-five__left">
-                        <div class="section-title text-left sec-title-animation animation-style2">
-                            <div class="section-title__tagline-box">
-                                <span class="section-title__tagline">За собственика</span>
-                            </div>
-
-                            <h2 class="section-title__title title-animation">
-                                Мария Рашева
-                            </h2>
-                        </div>
-
-                        <p class="about-five__text-1">
-                            <strong>Дипломиран оптик с над 19 години професионален опит.</strong>
-                            През годините съм помогнала на хиляди клиенти да открият
-                            най-подходящите очила и диоптрични стъкла според своите
-                            индивидуални нужди, начин на живот и стил.
-                        </p>
-
-                        <p class="about-five__text-1">
-                            В работата си вярвам, че доброто зрение започва с
-                            <strong>правилната консултация и внимателното отношение</strong>
-                            към всеки човек. Затова отделям необходимото време, за да
-                            изслушам клиента и да му помогна да избере най-доброто решение
-                            за своя комфорт и ежедневие.
-                        </p>
-
-                        <p class="about-five__text-1">
-                            Днес продължавам да развивам семейния бизнес
-                            <strong>Valente Optic</strong>, като съчетавам дългогодишния си
-                            опит с модерни решения и индивидуален подход към всеки клиент.
-                        </p>
-
-                        <p class="about-five__text-1">
-                            За мен най-голямото удовлетворение е доверието на хората,
-                            които се връщат отново и отново и ме препоръчват на своите
-                            близки и приятели.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-xl-6">
-                    <div>
-                        <div class="about-five__img-box">
-                            <div class="about-five__img">
-                                <img src="/assets/images/about/about-mariya.jpg"
-                                    alt="Мария Рашева – дипломиран оптик и собственик на Valente Optic" />
-                            </div>
-
-                            <div>
-                                <div class="about-five__shope-box-bg-shape"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--About Maria End -->
-
-    <!--Services Two Start -->
-    <section class="services-two services-five">
-        <div class="container">
-            <div class="section-title text-center sec-title-animation animation-style1">
-                <div class="section-title__tagline-box">
-                    <span class="section-title__tagline">Нашите услуги</span>
-                </div>
-                <h2 class="section-title__title title-animation">
-                    Професионална грижа <br />
-                    за вашето зрение
+                <h2>
+                    Какво прави LASO различен?
                 </h2>
+
+                <p>
+                    Не ви даваме още един инструмент, който сами трябва
+                    да разучавате. Ние поемаме управлението на рекламата
+                    вместо вас.
+                </p>
+
             </div>
+
 
             <div class="row">
-                <!--Services Two Single Start-->
-                <div class="col-xl-4 col-lg-4">
 
-                    <div class="services-two__single">
-                        <div class="services-two__icon">
-                            <i class="fa-solid fa-glasses"></i>
-                        </div>
+                {{-- FEATURE 1 --}}
+                <div class="col-lg-4">
 
-                        <h3 class="services-two__title">
-                            <a href="/service/konsultaciy-za-ochila">Консултация за очила</a>
-                        </h3>
+                    <div class="solutions">
 
-                        <p class="services-two__text">
-                            Индивидуална консултация за избор на рамки и стъкла според вашето зрение, стил и ежедневие.
+                        <i class="fa-solid fa-bullseye"></i>
+
+                        <a href="javascript:void(0)">
+                            Lead generation фокус
+                        </a>
+
+                        <p>
+                            Кампаниите ни са насочени към генериране
+                            на реални запитвания от потенциални клиенти,
+                            а не просто към показвания и харесвания.
                         </p>
+
                     </div>
 
-                    <div class="services-two__single">
-                        <div class="services-two__icon">
-                            <i class="fa-solid fa-eye"></i>
-                        </div>
 
-                        <h3 class="services-two__title">
-                            <a href="/service/kompiutarna-diagnostika">Компютърна диагностика</a>
-                        </h3>
+                    <div class="solutions two mb-0">
 
-                        <p class="services-two__text">
-                            Прецизно измерване на зрението с модерна апаратура за точно определяне на необходимата
-                            корекция.
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                        <a href="javascript:void(0)">
+                            Постоянна оптимизация
+                        </a>
+
+                        <p>
+                            След старта работата не приключва.
+                            Следим представянето на рекламата и
+                            извършваме постоянни оптимизации.
                         </p>
+
                     </div>
 
                 </div>
-                <!--Services Two Single End-->
 
-                <!--Services Two Single Start-->
-                <div class="col-xl-4 col-lg-4">
-                    <div class="services-two__img">
-                        <img class="rounded-5" src="/assets/images/about/woman-portrait.jpg" alt="Valente Optic екип" />
-                    </div>
-                </div>
-                <!--Services Two Single End-->
 
-                <!--Services Two Single Start-->
-                <div class="col-xl-4 col-lg-4">
+                {{-- CENTER IMAGE --}}
+                <div class="col-lg-4">
 
-                    <div class="services-two__single">
-                        <div class="services-two__icon">
-                            <i class="fa-solid fa-screwdriver-wrench"></i>
-                        </div>
+                    <div class="solutions-img">
 
-                        <h3 class="services-two__title">
-                            <a href="/service/izrabotka-ochila">Изработка на очила</a>
-                        </h3>
+                        <img src="https://placehold.co/423x356?text=LASO"
+                            alt="LASO Meta реклама">
 
-                        <p class="services-two__text">
-                            Изработка на очила по индивидуална поръчка с качествени материали и прецизен монтаж.
-                        </p>
                     </div>
 
-                    <div class="services-two__single">
-                        <div class="services-two__icon">
-                            <i class="fa-solid fa-toolbox"></i>
-                        </div>
 
-                        <h3 class="services-two__title">
-                            <a href="/service/regulirane-serviz-ochila">Регулиране и сервиз</a>
-                        </h3>
+                    <div class="solutions">
 
-                        <p class="services-two__text">
-                            Настройка, ремонт и профилактика на очила за по-добър комфорт и по-дълъг живот на рамките.
+                        <i class="fa-solid fa-user-tie"></i>
+
+                        <a href="javascript:void(0)">
+                            Реален специалист
+                        </a>
+
+                        <p>
+                            LASO не е автоматична система без човешка намеса.
+                            Реален специалист работи по рекламната ви кампания.
                         </p>
+
                     </div>
 
                 </div>
-                <!--Services Two Single End-->
+
+
+                {{-- FEATURE 3 --}}
+                <div class="col-lg-4">
+
+                    <div class="solutions three">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <a href="javascript:void(0)">
+                            Ясен процес
+                        </a>
+
+                        <p>
+                            Следите статуса на проекта си през вашия
+                            клиентски профил и знаете на какъв етап
+                            се намира кампанията.
+                        </p>
+
+                    </div>
+
+
+                    <div class="solutions for mb-0">
+
+                        <i class="fa-solid fa-wallet"></i>
+
+                        <a href="javascript:void(0)">
+                            Предвидим разход
+                        </a>
+
+                        <p>
+                            Един фиксиран месечен абонамент,
+                            без дългосрочен договор и без
+                            изненадващи такси за управление.
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
+
         </div>
+
     </section>
-    <!--Services Two End -->
+    {{-- WHAT MAKES LASO DIFFERENT END --}}
 
-    <!--Testimonial Two Start -->
-    <section class="testimonial-two">
-        <div class="testimonial-two__inner">
-            {{-- <div class="testimonial-two__shape-1"></div> --}}
 
-            {{-- <div class="testimonial-two__shape-2">
-                <img src="/assets/images/shapes/testimonial-two-shape-2.png" alt="" />
-            </div>
 
-            <div class="testimonial-two__shape-3">
-                <img src="/assets/images/shapes/testimonial-two-shape-3.png" alt="" />
-            </div>
+    {{-- WHO LASO IS FOR --}}
+    <section class="gap">
 
-            <div class="testimonial-two__shape-4">
-                <img src="/assets/images/shapes/testimonial-two-shape-4.png" alt="" />
-            </div> --}}
+        <div class="container">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="testimonial-two__left">
-                            <h3 class="testimonial-two__title">Отзиви от клиенти</h3>
+            <div class="row align-items-center">
 
-                            <section class="splide testimonial-two__splide" id="testimonialSplide"
-                                aria-label="Отзиви от клиенти">
-                                <div class="splide__track">
-                                    <ul class="splide__list">
+                <div class="col-lg-6">
 
-                                        <!--Testimonial Two Single Start -->
-                                        <li class="splide__slide">
-                                            <div class="testimonial-two__single">
-                                                <div class="testimonial-two__quote">
-                                                    <i class="fal fa-quote-right"></i>
-                                                </div>
+                    <div class="accordio-img-style">
 
-                                                <div class="testimonial-two__name-box">
-                                                    <h4 class="testimonial-two__name">
-                                                        <a href="#">Стоянка Михайлова</a>
-                                                    </h4>
+                        <img src="https://placehold.co/383x414?text=Small+Business"
+                            alt="LASO за малкия бизнес"
+                            class="accordio-img-1">
 
-                                                    <p class="testimonial-two__sub-title">
-                                                        Клиент, Бургас
-                                                    </p>
-                                                </div>
+                        <img src="https://placehold.co/383x414?text=Lead+Generation"
+                            alt="Lead generation реклама"
+                            class="accordio-img-2">
 
-                                                <p class="testimonial-two__text">
-                                                    Изключително професионално отношение! Помогнаха ми с избора
-                                                    на прогресивни стъкла и сега виждам перфектно както отблизо,
-                                                    така и отдалече. Препоръчвам Valente Optic с пълна увереност.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <!--Testimonial Two Single End -->
+                    </div>
 
-                                        <!--Testimonial Two Single Start -->
-                                        <li class="splide__slide">
-                                            <div class="testimonial-two__single">
-                                                <div class="testimonial-two__quote">
-                                                    <i class="fal fa-quote-right"></i>
-                                                </div>
+                </div>
 
-                                                <div class="testimonial-two__name-box">
-                                                    <h4 class="testimonial-two__name">
-                                                        <a href="#">Мария Тодорова</a>
-                                                    </h4>
 
-                                                    <p class="testimonial-two__sub-title">
-                                                        Клиент, Равда
-                                                    </p>
-                                                </div>
+                <div class="col-lg-6">
 
-                                                <p class="testimonial-two__text">
-                                                    Поръчах слънчеви очила с поляризация и съм изключително
-                                                    доволна от качеството. Бърза изработка, внимателно обслужване
-                                                    и винаги усмихнат екип, който помни своите клиенти.
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <!--Testimonial Two Single End -->
+                    <div class="heading two">
 
-                                        <!--Testimonial Two Single Start -->
-                                        <li class="splide__slide">
-                                            <div class="testimonial-two__single">
-                                                <div class="testimonial-two__quote">
-                                                    <i class="fal fa-quote-right"></i>
-                                                </div>
+                        <h6>
+                            СЪЗДАДЕНО ЗА БИЗНЕСА В СФЕРАТА НА УСЛУГИТЕ
+                        </h6>
 
-                                                <div class="testimonial-two__name-box">
-                                                    <h4 class="testimonial-two__name">
-                                                        <a href="#">Иван Георгиев</a>
-                                                    </h4>
+                        <h2>
+                            За кого е създаден LASO?
+                        </h2>
 
-                                                    <p class="testimonial-two__sub-title">
-                                                        Доволен родител
-                                                    </p>
-                                                </div>
+                    </div>
 
-                                                <p class="testimonial-two__text">
-                                                    Дъщеря ми получи първите си очила във Valente Optic.
-                                                    Екипът намери идеалната рамка за нея, прояви огромно търпение
-                                                    и сега тя обича да ги носи. Благодаря за професионализма!
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <!--Testimonial Two Single End -->
 
-                                        <!--Testimonial Two Single Start -->
-                                        <li class="splide__slide">
-                                            <div class="testimonial-two__single">
-                                                <div class="testimonial-two__quote">
-                                                    <i class="fal fa-quote-right"></i>
-                                                </div>
+                    <p>
+                        LASO е създаден специално за малкия бизнес
+                        в сферата на услугите — там, където едно
+                        ново запитване може директно да се превърне
+                        в нов клиент.
+                    </p>
 
-                                                <div class="testimonial-two__name-box">
-                                                    <h4 class="testimonial-two__name">
-                                                        <a href="#">Петър Колев</a>
-                                                    </h4>
 
-                                                    <p class="testimonial-two__sub-title">
-                                                        Редовен клиент
-                                                    </p>
-                                                </div>
+                    <div class="accordion two">
 
-                                                <p class="testimonial-two__text">
-                                                    Стъклата с Blue Control защита промениха работата ми пред
-                                                    компютъра. Никаква умора в очите дори след дълги часове.
-                                                    Благодаря за съвета и за качествената изработка!
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <!--Testimonial Two Single End -->
+                        <div class="accordion-item active">
 
-                                    </ul>
+                            <a href="javascript:void(0)"
+                                class="heading">
+
+                                <div class="icon"></div>
+
+                                <div class="title">
+                                    Бизнеси в сферата на услугите
                                 </div>
-                            </section>
-                        </div>
-                    </div>
 
-                    <div class="col-xl-6 col-lg-6">
-                        <div class="testimonial-two__right">
-                            <div class="testimonial-two__img">
-                                <img src="/assets/images/testimonial/test-girl.jpg"
-                                    alt="Отзиви Valente Optic" />
+                            </a>
+
+                            <div class="content"
+                                style="display: block;">
+
+                                <p>
+                                    Салони за красота, медицински кабинети,
+                                    автосервизи, фитнеси, образователни услуги,
+                                    домашни услуги, недвижими имоти и много други.
+                                </p>
+
                             </div>
+
                         </div>
+
+
+                        <div class="accordion-item">
+
+                            <a href="javascript:void(0)"
+                                class="heading">
+
+                                <div class="icon"></div>
+
+                                <div class="title">
+                                    Бизнеси, които искат повече запитвания
+                                </div>
+
+                            </a>
+
+                            <div class="content">
+
+                                <p>
+                                    LASO е подходящ за бизнеси, при които
+                                    разговорът, обаждането или изпратеното
+                                    запитване е първата стъпка към продажбата.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accordion-item">
+
+                            <a href="javascript:void(0)"
+                                class="heading">
+
+                                <div class="icon"></div>
+
+                                <div class="title">
+                                    Собственици, които нямат време за Meta Ads
+                                </div>
+
+                            </a>
+
+                            <div class="content">
+
+                                <p>
+                                    Не е необходимо сами да изучавате
+                                    рекламната платформа, да изграждате кампании
+                                    или постоянно да следите тяхното представяне.
+                                    Ние поемаме тази работа.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="accordion-item">
+
+                            <a href="javascript:void(0)"
+                                class="heading">
+
+                                <div class="icon"></div>
+
+                                <div class="title">
+                                    Бизнеси, които искат ясен месечен разход
+                                </div>
+
+                            </a>
+
+                            <div class="content">
+
+                                <p>
+                                    Вместо сложна услуга с неясно ценообразуване,
+                                    LASO работи чрез месечни абонаментни планове
+                                    с ясно описано съдържание.
+                                </p>
+
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
-    <!--Testimonial Two End -->
+    {{-- WHO LASO IS FOR END --}}
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const testimonialSplide = document.getElementById('testimonialSplide');
 
-            if (!testimonialSplide) {
-                return;
-            }
 
-            new Splide(testimonialSplide, {
-                type: 'loop',
-                perPage: 1,
-                perMove: 1,
-                gap: '20px',
-                arrows: true,
-                pagination: true,
-                autoplay: false,
-                interval: 5000,
-                pauseOnHover: false,
-                pauseOnFocus: false,
-                speed: 800,
-            }).mount();
-        });
-    </script>
+
+    {{-- WHAT WE BELIEVE --}}
+    <section class="gap">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <img src="assets/img/heading-img.png"
+                    alt="Философията на LASO">
+
+                <h6>
+                    В КАКВО ВЯРВАМЕ
+                </h6>
+
+                <h2>
+                    По-малко сложност. Повече фокус върху бизнеса.
+                </h2>
+
+            </div>
+
+
+            <div class="row">
+
+                <div class="col-lg-4">
+
+                    <div class="solutions">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        <a href="javascript:void(0)">
+                            Яснота
+                        </a>
+
+                        <p>
+                            Трябва да знаете какво получавате,
+                            колко плащате и какво се случва
+                            с вашата рекламна кампания.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="solutions">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                        <a href="javascript:void(0)">
+                            Реалистични очаквания
+                        </a>
+
+                        <p>
+                            Не обещаваме магически резултати или
+                            гарантиран брой продажби.
+                            Работим чрез добри практики, анализ
+                            и постоянна оптимизация.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="solutions">
+
+                        <i class="fa-solid fa-chart-simple"></i>
+
+                        <a href="javascript:void(0)">
+                            Резултат с бизнес стойност
+                        </a>
+
+                        <p>
+                            За нас успехът не е просто повече
+                            харесвания. Целта е рекламата да създава
+                            възможности за реални нови клиенти.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    {{-- WHAT WE BELIEVE END --}}
+
+
+
+    {{-- TESTIMONIALS --}}
+    <section class="gap client-reviews">
+
+        <div class="container">
+
+            <div class="heading">
+
+                <img src="assets/img/heading-img.png"
+                    alt="LASO клиенти">
+
+                <h6>
+                    КАКВО КАЗВАТ КЛИЕНТИТЕ
+                </h6>
+
+                <h2>
+                    Реални бизнеси. Реални запитвания.
+                </h2>
+
+            </div>
+
+
+            <div class="client">
+
+                <div class="client-text">
+
+                    <i class="quote">
+                        <img src="assets/img/quote.png"
+                            alt="quote">
+                    </i>
+
+
+                    <div class="client-slider owl-carousel owl-theme">
+
+                        {{-- TODO: Замени с реален testimonial --}}
+                        <div class="item">
+
+                            <ul class="star">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+
+                            <p>
+                                Тук ще бъде добавен реален отзив
+                                от бизнес, който използва LASO.
+                            </p>
+
+                            <h4>
+                                Име на клиент
+                            </h4>
+
+                            <span>
+                                Име на бизнес / Индустрия
+                            </span>
+
+                        </div>
+
+
+                        {{-- TODO: Замени с реален testimonial --}}
+                        <div class="item">
+
+                            <ul class="star">
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                            </ul>
+
+                            <p>
+                                Тук ще бъде добавен втори реален отзив,
+                                за предпочитане с конкретен резултат
+                                или брой получени запитвания.
+                            </p>
+
+                            <h4>
+                                Име на клиент
+                            </h4>
+
+                            <span>
+                                Име на бизнес / Индустрия
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <img src="https://placehold.co/84x84"
+            class="quote-1"
+            alt="LASO клиент">
+
+        <img src="https://placehold.co/84x84"
+            class="quote-2"
+            alt="LASO клиент">
+
+        <img src="https://placehold.co/84x84"
+            class="quote-3"
+            alt="LASO клиент">
+
+        <img src="https://placehold.co/84x84"
+            class="quote-4"
+            alt="LASO клиент">
+
+        <img src="https://placehold.co/84x84"
+            class="quote-5"
+            alt="LASO клиент">
+
+    </section>
+    {{-- TESTIMONIALS END --}}
+
+
+
+    {{-- TRUSTED BUSINESSES --}}
+    <div class="gap no-top">
+
+        <div class="container">
+
+            <div class="trusted-by">
+
+                <h5>
+                    Бизнеси, които се доверяват на
+                    <span>LASO</span>
+                </h5>
+
+
+                <div class="logodata owl-carousel owl-theme">
+
+                    <div class="partner item">
+                        <img alt="LASO клиент"
+                            src="https://placehold.co/172x80?text=Client+1">
+                    </div>
+
+                    <div class="partner item">
+                        <img alt="LASO клиент"
+                            src="https://placehold.co/172x80?text=Client+2">
+                    </div>
+
+                    <div class="partner item">
+                        <img alt="LASO клиент"
+                            src="https://placehold.co/172x80?text=Client+3">
+                    </div>
+
+                    <div class="partner item">
+                        <img alt="LASO клиент"
+                            src="https://placehold.co/172x80?text=Client+4">
+                    </div>
+
+                    <div class="partner item">
+                        <img alt="LASO клиент"
+                            src="https://placehold.co/172x80?text=Client+5">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    {{-- TRUSTED BUSINESSES END --}}
+
 
 </x-frontend>

@@ -13,7 +13,7 @@
             <div class="dashboard-dropdown">
                 <a href="#" class="dashboard-dropdown__toggle" data-dropdown-toggle>
                     <span class="dashboard-dropdown__avatar">
-                        <img src="{{ Auth::user()->profile_pic ?? '/assets/images/avatar-default.png' }}"
+                        <img src="{{ $profilePicture }}"
                              alt="{{ Auth::user()->name }}" />
                     </span>
                     <span class="dashboard-dropdown__name">
