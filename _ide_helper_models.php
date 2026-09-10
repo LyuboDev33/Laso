@@ -11,6 +11,48 @@
  */
 
 
+namespace App\Models\Admin\API{
+/**
+ * @property int $id
+ * @property int $user_id
+ * @property string $facebook_lead_id
+ * @property string $facebook_form_id
+ * @property string|null $facebook_ad_id
+ * @property string|null $full_name
+ * @property string|null $email
+ * @property string|null $phone
+ * @property string|null $questions
+ * @property string|null $facebook_created_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereFacebookAdId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereFacebookCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereFacebookFormId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereFacebookLeadId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereFullName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereQuestions($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Lead whereUserId($value)
+ */
+	class Lead extends \Eloquent {}
+}
+
+namespace App\Models\Admin{
+/**
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeadForm newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeadForm newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|LeadForm query()
+ */
+	class LeadForm extends \Eloquent {}
+}
+
 namespace App\Models{
 /**
  * @property int $id
@@ -55,6 +97,7 @@ namespace App\Models{
  * @property string $name
  * @property string $email
  * @property string|null $profile_pic
+ * @property string|null $facebook_page
  * @property \Illuminate\Support\Carbon|null $email_verified_at
  * @property string $password
  * @property string|null $remember_token
@@ -79,6 +122,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereEmail($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereFacebookPage($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User wherePassword($value)
@@ -91,5 +135,46 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereUpdatedAt($value)
  */
 	class User extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * @property int $id
+ * @property int $user_id
+ * @property string $company_name
+ * @property string $business_description
+ * @property string|null $website
+ * @property string $city
+ * @property string $phone
+ * @property string|null $brand_information
+ * @property string|null $logo
+ * @property array<array-key, mixed>|null $images
+ * @property array<array-key, mixed>|null $videos
+ * @property string|null $voice_recording
+ * @property string|null $video_ad_requirements
+ * @property string|null $additional_notes
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereAdditionalNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereBrandInformation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereBusinessDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereCompanyName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereImages($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereLogo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereVideoAdRequirements($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereVideos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereVoiceRecording($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserDetail whereWebsite($value)
+ */
+	class UserDetail extends \Eloquent {}
 }
 

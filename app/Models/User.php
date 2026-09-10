@@ -3,6 +3,9 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use App\Models\Admin\API\Lead;
+use App\Models\Admin\LeadForm;
 use App\Models\Role;
 use App\Notifications\ResetPasswordNotification;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
@@ -33,7 +36,7 @@ class User extends Authenticatable
         ];
     }
 
-      /**
+    /**
      * The roles that belong to the user.
      */
     public function roles(): BelongsToMany
@@ -42,14 +45,19 @@ class User extends Authenticatable
     }
 
 
-   /** Send an email when a user requests password reset */
+    /** Send an email when a user requests password reset */
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new ResetPasswordNotification($token));
     }
 
+    public function facebookForms()
+    {
+        return $this->hasMany(LeadForm::class);
+    }
 
-
-
-
+    public function leads()
+    {
+        return $this->hasMany(Lead::class);
+    }
 }

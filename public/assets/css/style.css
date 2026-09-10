@@ -4889,3 +4889,318 @@ ul.pagination li:hover,.quote-color,.share-post ul.social-icon i,.mobile-nav li.
 .w-fit {
     width: fit-content !important;
 }
+
+/* ========================================
+   LEADS ADMIN
+======================================== */
+
+.leads-admin-table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: -10px;
+}
+
+.leads-admin-table > thead > tr > th {
+    padding: 14px 18px;
+    border: 0;
+    background: #f5f6f8;
+    color: #6c757d;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.leads-admin-table > thead > tr > th:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.leads-admin-table > thead > tr > th:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.leads-admin-table > tbody > tr > td {
+    padding: 16px 18px;
+    border: 0;
+    vertical-align: middle;
+}
+
+.leads-admin-table > tbody > tr:nth-child(3n + 1) > td {
+    background: #fff;
+    border-top: 1px solid #eceff3;
+    border-bottom: 1px solid #eceff3;
+}
+
+.leads-admin-table > tbody > tr:nth-child(3n + 1) > td:first-child {
+    border-left: 1px solid #eceff3;
+    border-radius: 12px 0 0 12px;
+}
+
+.leads-admin-table > tbody > tr:nth-child(3n + 1) > td:last-child {
+    border-right: 1px solid #eceff3;
+    border-radius: 0 12px 12px 0;
+}
+
+
+/* ========================================
+   INPUTS
+======================================== */
+
+.leads-admin-table .form-control {
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid #dfe3e8;
+    border-radius: 9px;
+    background: #fff;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.leads-admin-table .form-control:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+}
+
+.leads-admin-table .form-control::placeholder {
+    color: #a0a6ad;
+}
+
+
+/* ========================================
+   BUTTONS
+======================================== */
+
+.leads-admin-table .btn {
+    min-height: 42px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.leads-admin-table .btn:hover {
+    transform: translateY(-1px);
+}
+
+.leads-admin-table .btn-success {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.leads-admin-table .btn-danger {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+/* ========================================
+   SAVED FACEBOOK FORMS
+======================================== */
+
+.leads-admin-table > tbody > tr:nth-child(3n + 2) > td {
+    padding-top: 8px;
+    padding-bottom: 18px;
+}
+
+.leads-admin-table > tbody > tr:nth-child(3n + 2) > td > div {
+    padding: 18px;
+    border: 1px solid #edf0f3;
+    border-radius: 12px;
+    background: #fafbfc;
+}
+
+.leads-admin-table > tbody > tr:nth-child(3n + 2) strong.d-block {
+    color: #343a40;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+
+/* ========================================
+   LEADS ACCORDION
+======================================== */
+
+.leads-admin-table details {
+    overflow: hidden;
+    border: 1px solid #e7eaee;
+    border-radius: 12px;
+    background: #fff;
+    transition: box-shadow 0.2s ease;
+}
+
+.leads-admin-table details:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.leads-admin-table details[open] {
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+.leads-admin-table details summary {
+    position: relative;
+    min-height: 58px;
+    padding: 16px 55px 16px 20px !important;
+    background: #f8f9fa;
+    list-style: none;
+    user-select: none;
+    transition: background 0.2s ease;
+}
+
+.leads-admin-table details summary:hover {
+    background: #f1f3f5;
+}
+
+.leads-admin-table details summary::-webkit-details-marker {
+    display: none;
+}
+
+.leads-admin-table details summary::after {
+    content: "\f078";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+    transition: transform 0.25s ease;
+}
+
+.leads-admin-table details[open] summary::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.leads-admin-table details summary strong {
+    display: flex;
+    align-items: center;
+    color: #343a40;
+    font-size: 15px;
+}
+
+.leads-admin-table details summary .badge {
+    min-width: 32px;
+    padding: 7px 10px;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   LEADS CONTENT
+======================================== */
+
+.leads-admin-table details > div {
+    padding: 20px !important;
+}
+
+.leads-admin-table details .table-responsive {
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+}
+
+.leads-admin-table details table {
+    margin: 0;
+    font-size: 13px;
+}
+
+.leads-admin-table details table thead th {
+    padding: 12px 14px;
+    border: 0;
+    border-bottom: 1px solid #dee2e6;
+    background: #f5f6f8;
+    color: #6c757d;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+}
+
+.leads-admin-table details table tbody td {
+    padding: 14px;
+    border-color: #edf0f2;
+    background: #fff;
+    vertical-align: top;
+}
+
+.leads-admin-table details table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.leads-admin-table details table tbody tr:hover td {
+    background: #fafbfc;
+}
+
+
+/* ========================================
+   QUESTIONS
+======================================== */
+
+.leads-admin-table details table td div.mb-2 {
+    padding: 8px 10px;
+    margin-bottom: 6px !important;
+    border-radius: 7px;
+    background: #f6f7f9;
+}
+
+.leads-admin-table details table td div.mb-2 strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #6c757d;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.leads-admin-table details table td div.mb-2 > div {
+    color: #343a40;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   EMPTY STATES
+======================================== */
+
+.leads-admin-table .alert {
+    border: 0;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 991px) {
+
+    .leads-admin-table > tbody > tr > td {
+        padding: 12px;
+    }
+
+    .leads-admin-table .d-flex.gap-2 {
+        align-items: stretch !important;
+        flex-direction: column;
+    }
+
+    .leads-admin-table .d-flex.gap-2 form {
+        width: 100%;
+    }
+
+    .leads-admin-table .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .leads-admin-table details summary {
+        padding: 14px 45px 14px 15px !important;
+    }
+
+    .leads-admin-table details > div {
+        padding: 12px !important;
+    }
+}

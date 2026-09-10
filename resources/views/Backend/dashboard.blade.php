@@ -453,7 +453,7 @@
 
 
             {{-- USER ALREADY SUBSCRIBED --}}
-            <section class="profile-section mb-5">
+            <section class="profile-section">
 
                 <div class="heading two">
 
@@ -462,16 +462,344 @@
                     </h6>
 
                     <h2>
-                        Вече имате активен абонамент
+                        Нека подготвим вашата рекламна кампания
                     </h2>
 
                     <p class="pt-lg-3 pt-md-2">
-                        Вашият профил вече има активен абонаментен план.
-                        Можете да продължите към останалите стъпки от процеса
-                        по онбординг и подготовка на вашата рекламна кампания.
+                        Вашият абонамент е активен. Следващата стъпка е да ни предоставите
+                        необходимата информация и материали за вашия бизнес.
+                    </p>
+
+                    <p>
+                        Тази информация ще ни помогне да разберем по-добре вашата дейност,
+                        услугите, които предлагате, вашия бранд и начина, по който искате
+                        да бъде представен във видео рекламите.
+                        Моля, попълнете задължителните полета възможно най-подробно.
                     </p>
 
                 </div>
+
+
+                <hr class="my-5">
+
+
+                <div class="heading two mb-4">
+
+                    <h6>
+                        ИНФОРМАЦИЯ ЗА БИЗНЕСА
+                    </h6>
+
+                    <h2>
+                        Разкажете ни повече за вашия бизнес
+                    </h2>
+
+                    <p class="pt-lg-3 pt-md-2">
+                        Полетата, отбелязани със <strong>*</strong>, са задължителни.
+                        Останалите полета можете да попълните, ако разполагате
+                        със съответната информация или материали.
+                    </p>
+
+                </div>
+
+
+                <form class="content-form mb-5"
+                    action="{{route('user.details.create', Auth::user() )}}"
+                    method="POST"
+                    enctype="multipart/form-data">
+
+                    @csrf
+
+
+                    <div class="row">
+
+                        {{-- COMPANY NAME --}}
+                        <div class="col-lg-4 mb-4">
+
+                            <label for="company_name" class="mb-2">
+                                Име на компанията / услугата *
+                            </label>
+
+                            <input id="company_name" type="text" name="company_name"
+                                value="{{ old('company_name') }}" placeholder="Пример: LASO" required>
+
+                            @error('company_name')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- WEBSITE --}}
+                        <div class="col-lg-4 mb-4">
+
+                            <label for="website" class="mb-2">
+                                Уебсайт
+                            </label>
+
+                            <input id="website" type="url" name="website" value="{{ old('website') }}"
+                                placeholder="Пример: https://example.com">
+
+                            @error('website')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- CITY --}}
+                        <div class="col-lg-4 mb-4">
+
+                            <label for="city" class="mb-2">
+                                Град *
+                            </label>
+
+                            <input id="city" type="text" name="city" value="{{ old('city') }}"
+                                placeholder="Пример: София" required>
+
+                            @error('city')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- PHONE --}}
+                        <div class="col-lg-4 mb-4">
+
+                            <label for="phone" class="mb-2">
+                                Телефонен номер *
+                            </label>
+
+                            <input id="phone" type="tel" name="phone" value="{{ old('phone') }}"
+                                placeholder="Пример: +359 88 123 4567" required>
+
+                            @error('phone')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- BUSINESS DESCRIPTION --}}
+                        <div class="col-4 mb-4">
+
+                            <label for="business_description" class="mb-2">
+                                Описание на бизнеса *
+                            </label>
+
+                            <textarea id="business_description" name="business_description" rows="7"
+                                placeholder="Опишете с какво се занимава вашият бизнес." required>{{ old('business_description') }}</textarea>
+
+
+                            @error('business_description')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- BRAND INFORMATION --}}
+                        <div class="col-4 mb-4">
+
+                            <label for="brand_information" class="mb-2">
+                                Информация за бранда
+                            </label>
+
+                            <textarea id="brand_information" name="brand_information" rows="5"
+                                placeholder="Разкажете ни повече за вашия бранд – стил на комуникация, ценности, послания, цветове, визуална идентичност или друга информация, която трябва да имаме предвид.">{{ old('brand_information') }}</textarea>
+
+                            @error('brand_information')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- LOGO --}}
+                        <div class="col-lg-3 mb-4">
+
+                            <label for="logo" class="mb-2">
+                                Лого
+                            </label>
+
+                            <input id="logo" type="file" name="logo" accept="image/*">
+
+                            <p class="mt-2 mb-0">
+                                Ако разполагате с лого на вашия бизнес, можете да го
+                                прикачите тук.
+                            </p>
+
+                            @error('logo')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- IMAGES --}}
+                        <div class="col-lg-3 mb-4">
+
+                            <label for="images" class="mb-2">
+                                Изображения
+                            </label>
+
+                            <input id="images" type="file" name="images[]" accept="image/*" multiple>
+
+                            <p class="mt-2 mb-0">
+                                Можете да качите снимки на продукти, услуги, обекти,
+                                екип или други изображения, които бихте искали
+                                да използваме при подготовката на рекламата.
+                            </p>
+
+                            @error('images')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            @error('images.*')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- VIDEOS --}}
+                        <div class="col-lg-3 mb-4">
+
+                            <label for="videos" class="mb-2">
+                                Видеа
+                            </label>
+
+                            <input id="videos" type="file" name="videos[]" accept="video/*" multiple>
+
+                            <p class="mt-2 mb-0">
+                                Ако разполагате с готови видеа, заснет материал,
+                                представяне на продукт или друг подходящ видеоматериал,
+                                можете да го предоставите тук.
+                            </p>
+
+                            @error('videos')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                            @error('videos.*')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- VOICE RECORDING --}}
+                        <div class="col-lg-3 mb-4">
+
+                            <label for="voice_recording" class="mb-2">
+                                Запис на глас
+                            </label>
+
+                            <input id="voice_recording" type="file" name="voice_recording" accept="audio/*">
+
+                            <p class="mt-2 mb-0">
+                                По желание можете да предоставите запис на вашия глас
+                                с продължителност до 1 минута. Записът може да бъде
+                                използван с цел клониране на гласа за създаване
+                                на рекламното съдържание.
+                            </p>
+
+                            @error('voice_recording')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- VIDEO AD REQUIREMENTS --}}
+                        <div class="col-12 mb-4">
+
+                            <label for="video_ad_requirements" class="mb-2">
+                                Допълнителни изисквания към видео рекламата
+                            </label>
+
+                            <textarea id="video_ad_requirements" name="video_ad_requirements" rows="6"
+                                placeholder="Опишете конкретни желания относно рекламата – стил, послание, сценарий, музика, начин на представяне, продукти или услуги, които задължително искате да присъстват, или други специфични изисквания.">{{ old('video_ad_requirements') }}</textarea>
+
+                            <p class="mt-2 mb-0">
+                                Ако имате конкретна идея или изисквания за това как
+                                трябва да изглежда видео рекламата, опишете ги тук.
+                            </p>
+
+                            @error('video_ad_requirements')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+
+                        {{-- ADDITIONAL NOTES --}}
+                        <div class="col-12 mb-4">
+
+                            <label for="additional_notes" class="mb-2">
+                                Допълнителни бележки
+                            </label>
+
+                            <textarea id="additional_notes" name="additional_notes" rows="5"
+                                placeholder="Добавете всякаква друга информация, която смятате, че ще бъде полезна при подготовката на вашата рекламна кампания.">{{ old('additional_notes') }}</textarea>
+
+                            @error('additional_notes')
+                                <div class="text-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="alert alert-info mb-4">
+
+                        <strong>
+                            Какво следва след попълването?
+                        </strong>
+
+                        <p class="mb-0 mt-2">
+                            След като получим информацията и материалите за вашия бизнес,
+                            нашият екип ще ги прегледа и ще ги използва при подготовката
+                            на вашата рекламна кампания.
+                        </p>
+
+                    </div>
+
+
+                    <button type="submit" class="btn">
+                        Запази и продължи
+                    </button>
+
+                </form>
 
             </section>
             {{-- USER ALREADY SUBSCRIBED END --}}

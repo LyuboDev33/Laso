@@ -20,6 +20,14 @@
                     <p class="text-center">Админски част </p>
 
                     <li>
+                        <a href="{{ route('leads.index') }}"
+                            class="{{ request()->routeIs('leads.index*') ? 'is-active' : '' }}">
+                            <i class="fa-solid fa-user-shield"></i>
+                            <span>Лиидове</span>
+                        </a>
+                    </li>
+
+                    <li>
                         <a href="{{ route('admin.users.index') }}"
                             class="{{ request()->routeIs('admin.users.index*') ||
                                     request()->routeIs('admin.users.show*') ? 'is-active' : '' }}">
@@ -27,7 +35,7 @@
                             <span>Всички потребители</span>
                         </a>
                     </li>
-                     <hr>
+                    <hr>
                 @endif
 
 

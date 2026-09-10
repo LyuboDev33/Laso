@@ -3,6 +3,7 @@
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\OnlinePaymentsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserDetailsController;
 use Illuminate\Support\Facades\Route;
 
 Route::fallback(function () {
@@ -33,6 +34,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/fail', [OnlinePaymentsController::class, 'fail'])->name('subscription.fail');
     });
 
+    Route::prefix('/details')->group(function () {
+        Route::get('/', [UserDetailsController::class, 'index'])->name('details.index');
+        Route::post('/create/{user}', [UserDetailsController::class, 'createUserDetails'])->name('user.details.create');
+    });
+
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -42,3 +48,4 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/admin.php';
+require __DIR__ . '/api.php';
