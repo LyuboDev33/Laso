@@ -45,4 +45,24 @@ class AdminUsersController extends Controller
             'subscription' => $subscription,
         ]);
     }
+
+
+    /**
+     * Display the user's details.
+     *
+     * @param User $user
+     */
+    public function showDetails(User $user)
+    {
+        $user->load('details');
+
+        $details = $user->details;
+
+        return view('admin.Users.Details', [
+            'user' => $user,
+            'details' => $details,
+        ]);
+    }
+
+
 }

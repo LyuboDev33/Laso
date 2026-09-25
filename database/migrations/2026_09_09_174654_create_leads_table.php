@@ -18,9 +18,14 @@ return new class extends Migration
                 ->constrained()
                 ->cascadeOnDelete();
 
+            $table->foreignId('lead_form_id')
+                ->constrained('lead_forms')
+                ->cascadeOnDelete();
+
             $table->string('facebook_lead_id')->unique();
-            $table->string('facebook_form_id');
             $table->string('facebook_ad_id')->nullable();
+
+            $table->boolean('is_seen')->default(false);
 
             $table->string('full_name')->nullable();
             $table->string('email')->nullable();
@@ -31,6 +36,8 @@ return new class extends Migration
             $table->timestamp('facebook_created_at')->nullable();
 
             $table->timestamps();
+
+            $table->index(['user_id', 'facebook_created_at']);
         });
     }
 

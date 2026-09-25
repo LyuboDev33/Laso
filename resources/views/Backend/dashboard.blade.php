@@ -71,7 +71,7 @@
                 </div>
 
 
-                <div class="alert alert-warning mb-4">
+                {{-- <div class="alert alert-warning mb-4">
 
                     <h5 class="mb-3">
                         Важно относно Meta Business Manager
@@ -94,10 +94,10 @@
                         необходимата проверка вместо вас.
                     </p>
 
-                </div>
+                </div> --}}
 
 
-                <div class="alert alert-danger mb-4">
+                {{-- <div class="alert alert-danger mb-4">
 
                     <h5 class="mb-3">
                         Какво се случва, ако Meta акаунтът има ограничения?
@@ -111,7 +111,7 @@
                         платената сума ще ви бъде възстановена.
                     </p>
 
-                </div>
+                </div> --}}
 
 
                 <form method="POST" action="{{ route('profile.facebook-page.update') }}" class="content-form mb-2">
@@ -184,267 +184,8 @@
                 </div>
 
 
-                <div class="row">
+                @include('Frontend.partials.pricing-plans')
 
-
-                    {{-- BASIC PLAN --}}
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="pricing-two" style="background-image: url(/assets/img/background-p.png);">
-
-                            <div class="month">
-
-                                <h5>
-                                    Basic Plan
-                                </h5>
-
-                                <h4>
-                                    $64.<span>00</span><sub>/Month</sub>
-                                </h4>
-
-                            </div>
-
-
-                            <div class="pricing-two-text">
-
-                                <p>
-                                    Подходящ план за бизнеси, които искат да започнат
-                                    с професионално управлявана Meta реклама.
-                                </p>
-
-
-                                <ul class="list">
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Управление на Meta реклама
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Lead generation кампания
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Оптимизация на кампанията
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Клиентски профил
-                                    </li>
-
-                                </ul>
-
-
-                                <form
-                                    action="{{ route('subscription.create', [
-                                        'priceId' => 'BASIC_PRICE_ID',
-                                        'plan' => 'basic',
-                                    ]) }}"
-                                    method="POST">
-
-                                    @csrf
-
-                                    <input type="hidden" name="facebook_page_url" class="facebook-page-url-hidden">
-
-                                    @if (Auth::user()->facebook_page)
-                                        <button type="submit" class="btn subscription-button">
-                                            Избери план
-                                        </button>
-                                    @else
-                                        <p class="alert alert-danger text-danger rounded-3">За да си купите план, моля
-                                            оставете линк към
-                                            вашата Facebook страница.</p>
-                                    @endif
-
-                                </form>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    {{-- BASIC PLAN END --}}
-
-                    {{-- PROFESSIONAL PLAN --}}
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="pricing-two" style="background-image: url(/assets/img/background-p.png);">
-
-                            <div class="month">
-
-                                <h5>
-                                    Professional Plan
-                                </h5>
-
-                                <h4>
-                                    $120.<span>00</span><sub>/Month</sub>
-                                </h4>
-
-                            </div>
-
-
-                            <div class="pricing-two-text">
-
-                                <p>
-                                    Подходящ за бизнеси, които искат по-активно управление
-                                    и постоянно развитие на рекламните кампании.
-                                </p>
-
-
-                                <ul class="list">
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Управление на Meta реклама
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Lead generation кампания
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Постоянна оптимизация
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Приоритетна поддръжка
-                                    </li>
-
-                                </ul>
-
-
-                                <form
-                                    action="{{ route('subscription.create', [
-                                        'priceId' => 'price_1U1rN30XJPJxSgBOzr2SkEE6',
-                                        'plan' => 'premium',
-                                    ]) }}"
-                                    method="POST">
-
-                                    @csrf
-
-                                    <input type="hidden" name="facebook_page_url" class="facebook-page-url-hidden">
-
-
-                                    @if (Auth::user()->facebook_page)
-                                        <button type="submit" class="btn subscription-button">
-                                            Избери план
-                                        </button>
-                                    @else
-                                        <p class="alert alert-danger text-danger rounded-3">За да си купите план, моля
-                                            оставете линк към
-                                            вашата Facebook страница.</p>
-                                    @endif
-
-                                </form>
-
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    {{-- PROFESSIONAL PLAN END --}}
-
-                    {{-- BUSINESS PLAN --}}
-                    <div class="col-lg-4 col-md-6">
-
-                        <div class="pricing-two mb-0" style="background-image: url(/assets/img/background-p.png);">
-
-                            <div class="month">
-
-                                <h5>
-                                    Business Plan
-                                </h5>
-
-                                <h4>
-                                    $184.<span>00</span><sub>/Month</sub>
-                                </h4>
-
-                            </div>
-
-
-                            <div class="pricing-two-text">
-
-                                <p>
-                                    Разширен план за бизнеси, които искат повече подкрепа,
-                                    развитие и по-интензивна работа по рекламата.
-                                </p>
-
-
-                                <ul class="list">
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Управление на Meta реклама
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Lead generation кампания
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Разширена оптимизация
-                                    </li>
-
-                                    <li>
-                                        <img src="/assets/img/check.png" alt="check">
-
-                                        Разширена поддръжка
-                                    </li>
-
-                                </ul>
-
-
-                                <form
-                                    action="{{ route('subscription.create', [
-                                        'priceId' => 'BUSINESS_PRICE_ID',
-                                        'plan' => 'business',
-                                    ]) }}"
-                                    method="POST">
-
-                                    @csrf
-
-                                    <input type="hidden" name="facebook_page_url" class="facebook-page-url-hidden">
-
-                                    @if (Auth::user()->facebook_page)
-                                        <button type="submit" class="btn subscription-button">
-                                            Избери план
-                                        </button>
-                                    @else
-                                        <p class="alert alert-danger text-danger rounded-3">За да си купите план, моля
-                                            оставете линк към
-                                            вашата Facebook страница.</p>
-                                    @endif
-
-                                </form>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-                    {{-- BUSINESS PLAN END --}}
-
-                </div>
 
             </section>
             {{-- PRICING END --}}
@@ -502,9 +243,7 @@
                 </div>
 
 
-                <form class="content-form mb-5"
-                    action="{{route('user.details.create', Auth::user() )}}"
-                    method="POST"
+                <form class="content-form mb-5" action="{{ route('user.details.create', Auth::user()) }}" method="POST"
                     enctype="multipart/form-data">
 
                     @csrf
@@ -520,7 +259,8 @@
                             </label>
 
                             <input id="company_name" type="text" name="company_name"
-                                value="{{ old('company_name') }}" placeholder="Пример: LASO" required>
+                                value="{{ old('company_name', $details?->company_name) }}" placeholder="Пример: LASO"
+                                required>
 
                             @error('company_name')
                                 <div class="text-danger mt-2">
@@ -538,7 +278,8 @@
                                 Уебсайт
                             </label>
 
-                            <input id="website" type="url" name="website" value="{{ old('website') }}"
+                            <input id="website" type="url" name="website"
+                                value="{{ old('website', $details?->website) }}"
                                 placeholder="Пример: https://example.com">
 
                             @error('website')
@@ -557,8 +298,8 @@
                                 Град *
                             </label>
 
-                            <input id="city" type="text" name="city" value="{{ old('city') }}"
-                                placeholder="Пример: София" required>
+                            <input id="city" type="text" name="city"
+                                value="{{ old('city', $details?->city) }}" placeholder="Пример: София" required>
 
                             @error('city')
                                 <div class="text-danger mt-2">
@@ -576,8 +317,9 @@
                                 Телефонен номер *
                             </label>
 
-                            <input id="phone" type="tel" name="phone" value="{{ old('phone') }}"
-                                placeholder="Пример: +359 88 123 4567" required>
+                            <input id="phone" type="tel" name="phone"
+                                value="{{ old('phone', $details?->phone) }}" placeholder="Пример: +359 88 123 4567"
+                                required>
 
                             @error('phone')
                                 <div class="text-danger mt-2">
@@ -596,8 +338,7 @@
                             </label>
 
                             <textarea id="business_description" name="business_description" rows="7"
-                                placeholder="Опишете с какво се занимава вашият бизнес." required>{{ old('business_description') }}</textarea>
-
+                                placeholder="Опишете с какво се занимава вашият бизнес." required>{{ old('business_description', $details?->business_description) }}</textarea>
 
                             @error('business_description')
                                 <div class="text-danger mt-2">
@@ -616,7 +357,7 @@
                             </label>
 
                             <textarea id="brand_information" name="brand_information" rows="5"
-                                placeholder="Разкажете ни повече за вашия бранд – стил на комуникация, ценности, послания, цветове, визуална идентичност или друга информация, която трябва да имаме предвид.">{{ old('brand_information') }}</textarea>
+                                placeholder="Разкажете ни повече за вашия бранд – стил на комуникация, ценности, послания, цветове, визуална идентичност или друга информация, която трябва да имаме предвид.">{{ old('brand_information', $details?->brand_information) }}</textarea>
 
                             @error('brand_information')
                                 <div class="text-danger mt-2">
@@ -635,6 +376,17 @@
                             </label>
 
                             <input id="logo" type="file" name="logo" accept="image/*">
+
+                            @if ($details?->logo)
+                                <div class="mt-3">
+                                    <p class="mb-2">
+                                        Текущо лого:
+                                    </p>
+
+                                    <img src="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
+                                        alt="Business Logo" style="max-width: 150px; height: auto;">
+                                </div>
+                            @endif
 
                             <p class="mt-2 mb-0">
                                 Ако разполагате с лого на вашия бизнес, можете да го
@@ -658,6 +410,30 @@
                             </label>
 
                             <input id="images" type="file" name="images[]" accept="image/*" multiple>
+
+                            @if ($details?->images)
+                                <div class="mt-3">
+
+                                    <p class="mb-2">
+                                        Текущи изображения:
+                                    </p>
+
+                                    <div class="d-flex flex-wrap gap-2">
+
+                                        @foreach ($details->images as $image)
+                                            <img src="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
+                                                alt="Business Image"
+                                                style="
+                                    width: 80px;
+                                    height: 80px;
+                                    object-fit: cover;
+                                ">
+                                        @endforeach
+
+                                    </div>
+
+                                </div>
+                            @endif
 
                             <p class="mt-2 mb-0">
                                 Можете да качите снимки на продукти, услуги, обекти,
@@ -689,6 +465,30 @@
 
                             <input id="videos" type="file" name="videos[]" accept="video/*" multiple>
 
+                            @if ($details?->videos)
+                                <div class="mt-3">
+
+                                    <p class="mb-2">
+                                        Текущи видеа:
+                                    </p>
+
+                                    @foreach ($details->videos as $video)
+                                        <video controls
+                                            style="
+                                width: 100%;
+                                max-width: 200px;
+                                margin-bottom: 10px;
+                            ">
+
+                                            <source
+                                                src="{{ asset('assets/img/dashboard/business_video/' . $video) }}">
+
+                                        </video>
+                                    @endforeach
+
+                                </div>
+                            @endif
+
                             <p class="mt-2 mb-0">
                                 Ако разполагате с готови видеа, заснет материал,
                                 представяне на продукт или друг подходящ видеоматериал,
@@ -719,6 +519,21 @@
 
                             <input id="voice_recording" type="file" name="voice_recording" accept="audio/*">
 
+                            @if ($details?->voice_recording)
+                                <div class="mt-3">
+
+                                    <p class="mb-2">
+                                        Текущ запис:
+                                    </p>
+
+                                    <audio controls style="width: 100%;">
+                                        <source
+                                            src="{{ asset('assets/img/dashboard/business_audio/' . $details->voice_recording) }}">
+                                    </audio>
+
+                                </div>
+                            @endif
+
                             <p class="mt-2 mb-0">
                                 По желание можете да предоставите запис на вашия глас
                                 с продължителност до 1 минута. Записът може да бъде
@@ -743,7 +558,7 @@
                             </label>
 
                             <textarea id="video_ad_requirements" name="video_ad_requirements" rows="6"
-                                placeholder="Опишете конкретни желания относно рекламата – стил, послание, сценарий, музика, начин на представяне, продукти или услуги, които задължително искате да присъстват, или други специфични изисквания.">{{ old('video_ad_requirements') }}</textarea>
+                                placeholder="Опишете конкретни желания относно рекламата – стил, послание, сценарий, музика, начин на представяне, продукти или услуги, които задължително искате да присъстват, или други специфични изисквания.">{{ old('video_ad_requirements', $details?->video_ad_requirements) }}</textarea>
 
                             <p class="mt-2 mb-0">
                                 Ако имате конкретна идея или изисквания за това как
@@ -767,7 +582,7 @@
                             </label>
 
                             <textarea id="additional_notes" name="additional_notes" rows="5"
-                                placeholder="Добавете всякаква друга информация, която смятате, че ще бъде полезна при подготовката на вашата рекламна кампания.">{{ old('additional_notes') }}</textarea>
+                                placeholder="Добавете всякаква друга информация, която смятате, че ще бъде полезна при подготовката на вашата рекламна кампания.">{{ old('additional_notes', $details?->additional_notes) }}</textarea>
 
                             @error('additional_notes')
                                 <div class="text-danger mt-2">
@@ -796,7 +611,13 @@
 
 
                     <button type="submit" class="btn">
-                        Запази и продължи
+
+                        @if ($details)
+                            Обнови информацията
+                        @else
+                            Запази и продължи
+                        @endif
+
                     </button>
 
                 </form>

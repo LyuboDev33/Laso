@@ -60,4 +60,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Lead::class);
     }
+
+    public function details() {
+        return $this->hasOne(UserDetail::class);
+    }
 }

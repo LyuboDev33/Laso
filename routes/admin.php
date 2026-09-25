@@ -22,6 +22,8 @@ Route::middleware(['super_admin', 'auth'])->group(function () {
             Route::get('/{user}', [AdminUsersController::class, 'show'])->name('admin.users.show');
             Route::get('/{user}/details', [AdminUsersController::class, 'showDetails'])->name('admin.users.details.show');
         });
+
+        
     });
     /** End of admin Prefix */
 });

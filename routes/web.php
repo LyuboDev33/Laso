@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\API\FacebookLeadsController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\OnlinePaymentsController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserDetailsController;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::fallback(function () {
@@ -22,9 +25,17 @@ Route::post('/create/{priceId}/{plan}', [OnlinePaymentsController::class, 'creat
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', function () {
+        $user = Auth::user()->load('details');
 
-        return view('Backend.dashboard');
+        $details = $user->load('details');
+
+        return view('Backend.dashboard', [
+            'user' => $user,
+            'details' => $details,
+        ]);
     })->name('dashboard');
+
+    Route::get('/myleads', [FacebookLeadsController::class, 'myLeads'])->name('myleads.index');
 
     /** All Subscription Routing  */
     Route::prefix('/subscription')->group(function () {

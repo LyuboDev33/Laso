@@ -67,9 +67,6 @@ function addStickyToHeader() {
     const headerScrollPos = 1000;
     const currentScrollPosition = $(window).scrollTop();
 
-    console.log(currentScrollPosition);
-
-
     if (currentScrollPosition > headerScrollPos) {
         strickyMenu.addClass('stricky-fixed shadow');
     } else {

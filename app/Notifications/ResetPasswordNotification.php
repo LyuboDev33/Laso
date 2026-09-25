@@ -42,7 +42,7 @@ class ResetPasswordNotification extends Notification
 
         return (new MailMessage)
             ->subject('Laso - Смяна на парола')
-            ->from('admin@rabotazamen.bg', 'Laso - Известие за смяна на паролата')
+            ->from('noreply@lasoads.com', 'Laso - Известие за смяна на паролата')
             ->view('emails.reset-password', [
                 'url' => $url,
                 'appURL' => env('APP_URL'),

@@ -25,18 +25,18 @@
                         </h1>
 
                         <p>
-                            Представете си абонамент за реклама, който не струва много повече
-                            от месечния ви абонамент за телефон или телевизия.
+Представете си АБОНАМЕНТ за РЕКЛАМА, който струва колкото месечния ви абонамент за телефон и телевизия.
+
                             <br><br>
 
-                            Това е LASO — абонаментна услуга за
-                            <strong>lead generation реклами</strong> в Meta,
-                            създадена специално за малкия бизнес.
+                            LASO е абонаментна услуга за  <strong>
+                              Meta  lead generation реклама</strong>, създадена основно за малкия бизнес в сферата на услугите.
+
                         </p>
 
-                        <a href="#pricing" class="btn">
+                        {{-- <a href="#pricing" class="btn">
                             Започни
-                        </a>
+                        </a> --}}
 
                         <a class="btn" href="#how-it-works">
                             Как работи
@@ -45,25 +45,6 @@
 
                         <ul class="star">
 
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
-
-                            <li>
-                                <i class="fa-solid fa-star"></i>
-                            </li>
 
                             <li>
                                 <p>Реклама, насочена към реални запитвания</p>
@@ -82,16 +63,16 @@
 
                     <div class="hero-two-img">
 
-                        <img src="/assets/img/welcome/hero-mobil.png" alt="LASO клиентски профил">
+                        <img src="/assets/img/welcome/hero-m.png" alt="LASO клиентски профил">
 
                         <img src="/assets/img/hero-icon.png" alt="LASO" class="hero-icon">
 
                         <div class="use-app">
 
-                            <img src="https://placehold.co/171x61" alt="LASO клиенти">
+                            <img src="/assets/img/welcome/welcome-clients.jpeg" alt="LASO клиенти">
 
                             <h6>
-                                Реклама без излишна сложност
+                                Десетки компании използват услугата
                             </h6>
 
                         </div>
@@ -104,6 +85,29 @@
         </div>
     </section>
     {{-- HERO END --}}
+
+    {{-- <section class="hero-section-one">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-one-text">
+                    <h1>We Focus on Growing Your Brand Online</h1>
+                    <h5>Web design &amp; development is an umbrella term that describes the process of creating a website</h5>
+                    <div><a href="#" class="btn">Get Started</a>
+                        <a href="#" class="btn two">find out more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-one-img">
+                    <img src="assets/img/hero-one-img.png" alt="hero-one-img">
+                    <div class="shaps-hero"><img src="/assets/img/shaps-1.png" alt="dots-shaps" class="shaps-1"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section> --}}
 
 
 
@@ -119,10 +123,10 @@
                     <div class="intelligent">
 
                         <h2>
-                            Какво представлява LASO?
+                            Как работи LASO?
                         </h2>
 
-                        <img src="https://placehold.co/589x658" alt="Какво представлява LASO">
+                        <img src="/assets/img/welcome/intelligent.png" alt="Какво представлява LASO">
 
                         <img src="/assets/img/dots-shaps.png" alt="LASO" class="dots-shaps">
 
@@ -137,7 +141,7 @@
 
                     <div class="intelligent-text">
 
-                        <p>
+                        {{-- <p>
                             Представете си услуга, която работи като всеки друг месечен
                             абонамент, който вече имате — телефон, телевизия,
                             стрийминг платформа. Само че вместо забавление,
@@ -154,32 +158,29 @@
                             без да се налага сами да учите Meta Ads, да следите резултати
                             или да правите оптимизации.
                             <br><br>
-                        </p>
+                        </p> --}}
 
 
                         <div class="row">
 
                             <div class="col-md-6">
 
-                                <i>
-                                    <img src="/assets/img/intelligent-icon-1.png" alt="Lead generation реклами">
-                                </i>
+                               <i class="fa-regular fa-id-card"></i>
 
                                 <a href="#pricing">
                                     <h4>
-                                        Фиксиран месечен абонамент
+                                        Фиксиран месечен или годишен абонамент
                                     </h4>
                                 </a>
 
                                 <p>
-                                    Без скрити такси и без неприятни изненади
-                                    в края на месеца.
+                                    Без скрити такси и без неприятни изненади.
                                 </p>
 
                             </div>
 
 
-                            <div class="col-md-6">
+                            <div class="col-md-6" id="how-it-works">
 
                                 <i class="two">
                                     <img src="/assets/img/intelligent-icon-2.png" alt="Meta реклама">
@@ -232,7 +233,7 @@
 
 
     {{-- SIMPLE PROCESS --}}
-    <section class="gap no-top" id="how-it-works">
+    <section class="gap no-top">
 
         <div class="container">
 
@@ -245,7 +246,7 @@
                 </h6>
 
                 <h2>
-                    Започнете само в няколко лесни стъпки
+                    Рекламата в няколко лесни стъпки
                 </h2>
 
             </div>
@@ -360,12 +361,7 @@
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
-                                Салони за красота
-                            </li>
-
-                            <li>
-                                <img src="/assets/img/check.png" alt="check">
-                                Медицински кабинети
+                                Здравни услуги
                             </li>
 
                             <li>
@@ -380,7 +376,13 @@
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
-                                Фитнеси
+                                Строителни услуги
+                            </li>
+
+
+                            <li>
+                                <img src="/assets/img/check.png" alt="check">
+                                Фитнес треньори
                             </li>
 
                             <li>
@@ -395,7 +397,7 @@
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
-                                И много други бизнеси в сферата на услугите
+                                Специализирани услуги в различни сфери
                             </li>
 
                         </ul>
@@ -536,9 +538,7 @@
                 <div class="col-lg-4">
 
                     <div class="solutions-img">
-
-                        <img src="https://placehold.co/423x356" alt="LASO клиентски профил">
-
+                        <img src="/assets/img/solutions.png" alt="LASO клиентски профил">
                     </div>
 
 
@@ -654,6 +654,7 @@
 
 
     {{-- FAQ --}}
+    {{-- FAQ --}}
     <section class="gap">
 
         <div class="container">
@@ -715,34 +716,7 @@
 
                     <div class="accordion two">
 
-                        <div class="accordion-item">
-
-                            <a href="javascript:void(0)" class="heading">
-
-                                <div class="icon"></div>
-
-                                <div class="title">
-                                    Какво точно представлява LASO?
-                                </div>
-
-                            </a>
-
-
-                            <div class="content">
-
-                                <p>
-                                    LASO е абонаментна услуга за управление на
-                                    <strong>lead generation реклами</strong> в Meta —
-                                    реклами, създадени с една единствена цел:
-                                    да генерират реални запитвания от потенциални
-                                    клиенти за вашия бизнес.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-
+                        {{-- FACEBOOK PAGE --}}
                         <div class="accordion-item active">
 
                             <a href="javascript:void(0)" class="heading">
@@ -750,7 +724,7 @@
                                 <div class="icon"></div>
 
                                 <div class="title">
-                                    Колко струва услугата?
+                                    Имам ли нужда от Facebook страница?
                                 </div>
 
                             </a>
@@ -759,13 +733,7 @@
                             <div class="content" style="display: block;">
 
                                 <p>
-                                    Представете си абонамент за реклама,
-                                    който не струва много повече от месечния
-                                    ви абонамент за телефон или телевизия.
-
-                                    LASO работи на фиксиран месечен абонамент,
-                                    така че предварително знаете каква сума
-                                    плащате — без скрити такси и без изненади.
+                                    Да. Необходима е Facebook страница.
                                 </p>
 
                             </div>
@@ -773,6 +741,7 @@
                         </div>
 
 
+                        {{-- META BUSINESS MANAGER --}}
                         <div class="accordion-item">
 
                             <a href="javascript:void(0)" class="heading">
@@ -780,7 +749,7 @@
                                 <div class="icon"></div>
 
                                 <div class="title">
-                                    LASO подходящ ли е за моя бизнес?
+                                    Имам ли нужда от Meta Business Manager?
                                 </div>
 
                             </a>
@@ -789,17 +758,8 @@
                             <div class="content">
 
                                 <p>
-                                    LASO е създаден специално за малкия бизнес
-                                    в сферата на услугите — салони за красота,
-                                    медицински кабинети, автосервизи,
-                                    недвижими имоти, фитнеси,
-                                    образователни услуги, домашни услуги
-                                    и много други.
-
-                                    Ако запитването от потенциален клиент
-                                    е една от първите стъпки към продажба
-                                    във вашия бизнес, LASO може да бъде
-                                    подходящо решение за вас.
+                                    Да, но ако нямаш такъв, наш представител ще ти помогне да го създадеш по време на
+                                    onboarding процеса.
                                 </p>
 
                             </div>
@@ -807,6 +767,7 @@
                         </div>
 
 
+                        {{-- AFTER PAYMENT --}}
                         <div class="accordion-item">
 
                             <a href="javascript:void(0)" class="heading">
@@ -814,7 +775,7 @@
                                 <div class="icon"></div>
 
                                 <div class="title">
-                                    Трябва ли аз да разбирам от Meta Ads?
+                                    Какво се случва след плащането?
                                 </div>
 
                             </a>
@@ -823,12 +784,25 @@
                             <div class="content">
 
                                 <p>
-                                    Не. Именно това е идеята на LASO.
+                                    Получаваш известие на имейла си за закупения абонамент и достъп до своя LASO профил.
+                                </p>
 
-                                    Вие предоставяте необходимата информация,
-                                    рекламни материали и достъп до Meta активите си,
-                                    а ние се грижим за създаването,
-                                    управлението и оптимизацията на рекламата.
+                                <p>
+                                    Наш представител ще се свърже с теб, за да получи необходимите достъпи до Facebook
+                                    страницата и да ти помогне да създадеш Meta Business Manager, ако нямаш такъв.
+                                </p>
+
+                                <p>
+                                    Това обикновено се извършва чрез кратка онлайн среща.
+                                </p>
+
+                                <p>
+                                    След това получаваш достъп до своя LASO профил, където предоставяш необходимата
+                                    информация за твоя бизнес и рекламните материали.
+                                </p>
+
+                                <p>
+                                    Оттам нататък LASO подготвя рекламата.
                                 </p>
 
                             </div>
@@ -836,6 +810,7 @@
                         </div>
 
 
+                        {{-- AD START --}}
                         <div class="accordion-item">
 
                             <a href="javascript:void(0)" class="heading">
@@ -843,7 +818,7 @@
                                 <div class="icon"></div>
 
                                 <div class="title">
-                                    Гарантира ли LASO определен брой продажби?
+                                    Кога стартира рекламата?
                                 </div>
 
                             </a>
@@ -852,15 +827,8 @@
                             <div class="content">
 
                                 <p>
-                                    Не. LASO не е гаранция за определен брой продажби.
-
-                                    Нашата задача е да създаваме и оптимизираме
-                                    lead generation реклами, чиято цел е да
-                                    генерират качествени запитвания от потенциални клиенти.
-
-                                    Дали едно запитване ще се превърне в продажба
-                                    зависи и от вашата оферта, обслужване,
-                                    цена и начина, по който комуникирате с клиента.
+                                    До <strong>7 работни дни</strong>, след като всички необходими материали и достъпи
+                                    са налични.
                                 </p>
 
                             </div>
@@ -868,6 +836,7 @@
                         </div>
 
 
+                        {{-- CANCEL SUBSCRIPTION --}}
                         <div class="accordion-item">
 
                             <a href="javascript:void(0)" class="heading">
@@ -875,7 +844,7 @@
                                 <div class="icon"></div>
 
                                 <div class="title">
-                                    Има ли дългосрочен договор?
+                                    Мога ли да прекратя абонамента?
                                 </div>
 
                             </a>
@@ -884,13 +853,84 @@
                             <div class="content">
 
                                 <p>
-                                    LASO е създаден като удобна месечна
-                                    абонаментна услуга.
+                                    Да.
+                                </p>
 
-                                    Плащате фиксирана месечна сума,
-                                    без скрити такси и без необходимост
-                                    да се обвързвате с традиционен
-                                    дългосрочен договор с рекламна агенция.
+                                <p>
+                                    <strong>
+                                        Няма дългосрочен договор. Можеш да прекратиш абонамента си по всяко време.
+                                    </strong>
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        {{-- GUARANTEED CLIENTS --}}
+                        <div class="accordion-item">
+
+                            <a href="javascript:void(0)" class="heading">
+
+                                <div class="icon"></div>
+
+                                <div class="title">
+                                    Гарантирате ли определен брой клиенти или продажби?
+                                </div>
+
+                            </a>
+
+
+                            <div class="content">
+
+                                <p>
+                                    Не.
+                                </p>
+
+                                <p>
+                                    LASO е създаден да генерира <strong>запитвания от потенциални клиенти</strong>, но
+                                    броят запитвания, продажбите и приходите зависят от множество фактори.
+                                </p>
+
+                                <p>
+                                    Нашата работа е да създаваме, управляваме и оптимизираме рекламата възможно
+                                    най-добре.
+                                </p>
+
+                                <p>
+                                    Зад модела на LASO стои стратегия, която работи успешно за множество бизнеси в
+                                    сферата на услугите, когато бизнесът има реално търсене и пазар.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        {{-- LASO PRICE --}}
+                        <div class="accordion-item">
+
+                            <a href="javascript:void(0)" class="heading">
+
+                                <div class="icon"></div>
+
+                                <div class="title">
+                                    Колко струва LASO?
+                                </div>
+
+                            </a>
+
+
+                            <div class="content">
+
+                                <p>
+                                    LASO работи на месечен или годишен абонамент.
+                                </p>
+
+                                <p>
+                                    <a href="{{ route('pricing') }}">
+                                        Виж актуалните планове.
+                                    </a>
                                 </p>
 
                             </div>
@@ -906,6 +946,7 @@
         </div>
 
     </section>
+    {{-- FAQ END --}}
     {{-- FAQ END --}}
 
 
@@ -1270,7 +1311,7 @@
 
 
     {{-- TESTIMONIALS / TRUST --}}
-    <div class="gap no-top">
+    {{-- <div class="gap no-top">
 
         <div class="container">
 
@@ -1326,35 +1367,35 @@
 
         </div>
 
-    </div>
+    </div> --}}
     {{-- TESTIMONIALS / TRUST END --}}
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            new Splide('#laso-process-slider', {
-                type: 'loop',
-                perPage: 4,
-                perMove: 1,
-                gap: '20px',
-                pagination: true,
-                arrows: true,
-                autoplay: true,
-                interval: 4000,
-                pauseOnHover: true,
-                pauseOnFocus: true,
-                breakpoints: {
-                    1199: {
-                        perPage: 3,
-                    },
-                    991: {
-                        perPage: 2,
-                    },
-                    575: {
-                        perPage: 1,
-                    },
-                },
-            }).mount();
-        });
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     new Splide('#laso-process-slider', {
+        //         type: 'loop',
+        //         perPage: 4,
+        //         perMove: 1,
+        //         gap: '20px',
+        //         pagination: true,
+        //         arrows: true,
+        //         autoplay: true,
+        //         interval: 4000,
+        //         pauseOnHover: true,
+        //         pauseOnFocus: true,
+        //         breakpoints: {
+        //             1199: {
+        //                 perPage: 3,
+        //             },
+        //             991: {
+        //                 perPage: 2,
+        //             },
+        //             575: {
+        //                 perPage: 1,
+        //             },
+        //         },
+        //     }).mount();
+        // });
     </script>
 
 </x-frontend>

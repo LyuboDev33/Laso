@@ -22,13 +22,13 @@
                             <h2>Забравена парола</h2>
 
                             <p class="pt-lg-3 pt-md-2">
-                                Въведете имейл адреса, с който сте се регистрирали.
+                                Въведете имейл адреса, с който сте се регистрирали. <br>
                                 Ще получите линк за възстановяване на вашата парола.
                             </p>
                         </div>
 
                         @if (session('status'))
-                            <div class="alert alert-success mb-4">
+                            <div class="alert alert-success mb-4 inputPwd">
                                 {{ session('status') }}
                             </div>
                         @endif
@@ -36,13 +36,15 @@
                         <form class="content-form" method="POST" action="{{ route('password.email') }}">
                             @csrf
 
-                            <input id="email"
+                            <input
+                                class="inputPwd"
+                                id="email"
                                 type="email"
                                 name="email" value="{{ old('email') }}"
                                 placeholder="Имейл адрес" required>
 
                             @error('email')
-                                <div class="text-danger mb-3">
+                                <div class="text-danger mb-3 inputPwd">
                                     {{ $message }}
                                 </div>
                             @enderror

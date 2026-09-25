@@ -67,255 +67,252 @@
                 </p>
             </div>
 
-            <div class="table-responsive">
+            @forelse ($users as $user)
 
-                <table class="table align-middle leads-admin-table">
+                <details class="lead-user-box shadow-sm rounded-3 mb-4 overflow-hidden">
 
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Име</th>
-                            <th>Имейл</th>
-                            <th>Добави Facebook Form ID</th>
-                            <th></th>
-                        </tr>
-                    </thead>
+                    {{-- Clickable user header --}}
+                    <summary class="lead-user-summary">
 
-                    <tbody>
+                        <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 w-100">
 
-                        @forelse ($users as $user)
+                            <div class="d-flex align-items-center gap-3">
 
-                            <tr>
-                                <td>#{{ $user->id }}</td>
+                                <div class="lead-user-avatar">
+                                    {{ strtoupper(substr($user->name, 0, 1)) }}
+                                </div>
 
-                                <td>
-                                    <strong>{{ $user->name }}</strong>
-                                </td>
+                                <div>
+                                    <h4 class="mb-1">
+                                        {{ $user->name }}
+                                    </h4>
 
-                                <td>
-                                    {{ $user->email }}
-                                </td>
+                                    <div class="text-muted small">
+                                        {{ $user->email }}
+                                    </div>
+                                </div>
 
-                                <td>
-                                    <form method="POST" action="{{ route('leads.add.formId', $user) }}" id="add-form-{{ $user->id }}">
-                                        @csrf
+                            </div>
 
-                                        <input
-                                            type="text"
-                                            name="form_id"
-                                            class="form-control"
-                                            placeholder="Въведете Facebook Form ID"
-                                            autocomplete="off"
-                                        >
-                                    </form>
-                                </td>
+                            <div class="d-flex align-items-center gap-2">
 
-                                <td>
-                                    <button type="submit" form="add-form-{{ $user->id }}" class="btn btn-primary rounded-pill">
-                                        Добави Form ID
-                                    </button>
-                                </td>
-                            </tr>
+                                <span class="badge rounded-pill bg-primary px-3 py-2">
+                                    {{ $user->leads->count() }} лийда
+                                </span>
 
-                            <tr>
-                                <td colspan="5">
+                                <span class="badge rounded-pill bg-dark px-3 py-2 formCount">
+                                    {{ $user->facebookForms->count() }} Form ID
+                                </span>
 
-                                    <div class="py-2">
+                                <span class="lead-user-chevron">
+                                    <i class="fa-solid fa-chevron-down"></i>
+                                </span>
 
-                                        <strong class="d-block mb-3">
-                                            Запазени Facebook Form ID
-                                        </strong>
+                            </div>
 
-                                        @forelse ($user->facebookForms as $facebookForm)
+                        </div>
 
-                                            <div class="d-flex align-items-center gap-2 mb-2">
+                    </summary>
 
-                                                <form method="POST" action="{{ route('leads.update.formId', $facebookForm) }}" class="d-flex align-items-center gap-2 flex-grow-1">
-                                                    @csrf
-                                                    @method('PATCH')
+                    {{-- User content --}}
+                    <div class="lead-user-content">
 
-                                                    <input
-                                                        type="text"
-                                                        name="form_id"
-                                                        class="form-control"
-                                                        value="{{ $facebookForm->form_id }}"
-                                                        autocomplete="off"
-                                                    >
+                        <div class="row">
 
-                                                    <button type="submit" class="btn btn-success">
-                                                        <i class="fa-solid fa-floppy-disk"></i>
-                                                        Обнови
-                                                    </button>
-                                                </form>
+                            <div class="col-12">
 
-                                                <form method="POST" action="{{ route('leads.delete.formId', $facebookForm) }}">
-                                                    @csrf
-                                                    @method('DELETE')
+                                {{-- Top controls --}}
+                                <div class="lead-toolbar">
 
-                                                    <button type="submit" class="btn btn-danger">
-                                                        <i class="fa-solid fa-trash"></i>
-                                                        Изтрий
-                                                    </button>
-                                                </form>
+                                    <div>
 
-                                            </div>
+                                        <h5 class="mb-1">
+                                            <i class="fa-solid fa-users me-2"></i>
+                                            Лийдове
+                                        </h5>
 
-                                        @empty
-
-                                            <div class="alert alert-light mb-0">
-                                                Няма добавени Facebook Form ID-та.
-                                            </div>
-
-                                        @endforelse
+                                        <div class="text-muted small">
+                                            Всички Facebook лийдове на {{ $user->name }}
+                                        </div>
 
                                     </div>
 
-                                </td>
-                            </tr>
+                                    <div class="d-flex flex-wrap align-items-center gap-2">
 
-                            <tr>
-                                <td colspan="5">
+                                        {{-- Form filter --}}
+                                        <select class="form-select lead-filter-select"
+                                            data-user-id="{{ $user->id }}">
+                                            <option value="">
+                                                Всички форми
+                                            </option>
 
-                                    <details class="w-100">
+                                            @foreach ($user->facebookForms as $facebookForm)
+                                                <option value="{{ $facebookForm->form_id }}">
+                                                    {{ $facebookForm->form_id }}
+                                                </option>
+                                            @endforeach
 
-                                        <summary class="d-flex align-items-center justify-content-between py-3" style="cursor: pointer;">
+                                        </select>
+
+                                        {{-- Add Form ID --}}
+                                        <form method="POST" action="{{ route('leads.add.formId', $user) }}"
+                                            class="d-flex align-items-center gap-2 add-form-id-form">
+                                            @csrf
+
+                                            <input type="text" name="form_id" class="form-control lead-form-input"
+                                                placeholder="Facebook Form ID" autocomplete="off">
+
+                                            <button type="submit" class="btn btn-primary rounded-pill text-nowrap">
+                                                <i class="fa-solid fa-plus me-1"></i>
+                                                Добави
+                                            </button>
+
+                                        </form>
+
+                                    </div>
+
+                                </div>
+
+                                {{-- Saved form IDs --}}
+                                <div class="lead-saved-forms {{ $user->facebookForms->isEmpty() ? 'd-none' : '' }}"
+                                    data-user-id="{{ $user->id }}">
+
+                                    <span class="lead-saved-title">
+                                        Form ID:
+                                    </span>
+
+                                    @foreach ($user->facebookForms as $facebookForm)
+                                        @include('admin.Leads.partials.form-chip', [
+                                            'facebookForm' => $facebookForm,
+                                        ])
+                                    @endforeach
+
+                                </div>
+
+
+                                {{-- Leads table --}}
+                                @if ($user->leads->isNotEmpty())
+                                    <div class="table-responsive lead-table-wrapper">
+
+                                        <table class="table align-middle mb-0 lead-table">
+
+                                            <thead>
+                                                <tr>
+                                                    <th>Видяни</th>
+                                                    <th>Име</th>
+                                                    <th>Имейл</th>
+                                                    <th>Телефон</th>
+                                                    <th>Form ID</th>
+                                                    <th>Въпроси</th>
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody>
+
+                                                @foreach ($user->leads as $lead)
+                                                    <tr data-form-id="{{ $lead->leadForm?->form_id }}"
+                                                        data-user-id="{{ $user->id }}">
+
+                                                        <td>
+                                                            <input type="checkbox" class="lead-seen-checkbox"
+                                                                disabled
+                                                                value="{{ $lead->id }}"
+                                                                data-url="{{ route('leads.update.seen', $lead->id) }}"
+                                                                {{ $lead->is_seen ? 'checked' : '' }}>
+                                                        </td>
+                                                        <td>
+                                                            <strong>
+                                                                {{ $lead->full_name ?? '-' }}
+                                                            </strong>
+                                                        </td>
+
+                                                        <td>
+                                                            {{ $lead->email ?? '-' }}
+                                                        </td>
+
+                                                        <td>
+                                                            {{ $lead->phone ?? '-' }}
+                                                        </td>
+
+                                                        <td>
+                                                            <span class="lead-form-badge">
+                                                                {{ $lead->leadForm?->form_id ?? '-' }}
+                                                            </span>
+                                                        </td>
+
+                                                        <td class="lead-questions-cell">
+
+                                                            @if (!empty($lead->questions))
+                                                                @foreach ($lead->questions as $question => $answer)
+                                                                    <div class="lead-question-item">
+
+                                                                        <strong>
+                                                                            {{ ucfirst(str_replace('_', ' ', $question)) }}
+                                                                        </strong>
+
+                                                                        <span>
+                                                                            {{ is_array($answer)
+                                                                                ? ucfirst(str_replace('_', ' ', implode(', ', $answer)))
+                                                                                : ucfirst(str_replace('_', ' ', $answer)) }}
+                                                                        </span>
+
+                                                                    </div>
+                                                                @endforeach
+                                                            @else
+                                                                <span class="text-muted">
+                                                                    Няма допълнителни въпроси
+                                                                </span>
+                                                            @endif
+
+                                                        </td>
+
+                                                    </tr>
+                                                @endforeach
+
+                                            </tbody>
+
+                                        </table>
+
+                                    </div>
+                                @else
+                                    <div class="lead-empty-state">
+
+                                        <i class="fa-solid fa-inbox"></i>
+
+                                        <div>
+
                                             <strong>
-                                                <i class="fa-solid fa-users me-2"></i>
-                                                Лийдове на {{ $user->name }}
+                                                Все още няма лийдове
                                             </strong>
 
-                                            <span class="badge bg-primary rounded-pill">
-                                                {{ $user->leads->count() }}
-                                            </span>
-                                        </summary>
-
-                                        <div class="pt-3 pb-4">
-
-                                            @if ($user->leads->isNotEmpty())
-
-                                                <div class="table-responsive">
-
-                                                    <table class="table table-bordered align-middle mb-0">
-
-                                                        <thead>
-                                                            <tr>
-                                                                <th>#</th>
-                                                                <th>Име</th>
-                                                                <th>Имейл</th>
-                                                                <th>Телефон</th>
-                                                                <th>Form ID</th>
-                                                                <th>Ad ID</th>
-                                                                <th>Въпроси</th>
-                                                                <th>Дата</th>
-                                                            </tr>
-                                                        </thead>
-
-                                                        <tbody>
-
-                                                            @foreach ($user->leads as $lead)
-
-                                                                <tr>
-                                                                    <td>
-                                                                        #{{ $lead->id }}
-                                                                    </td>
-
-                                                                    <td>
-                                                                        <strong>
-                                                                            {{ $lead->full_name ?? '-' }}
-                                                                        </strong>
-                                                                    </td>
-
-                                                                    <td>
-                                                                        {{ $lead->email ?? '-' }}
-                                                                    </td>
-
-                                                                    <td>
-                                                                        {{ $lead->phone ?? '-' }}
-                                                                    </td>
-
-                                                                    <td>
-                                                                        {{ $lead->facebook_form_id }}
-                                                                    </td>
-
-                                                                    <td>
-                                                                        {{ $lead->facebook_ad_id ?? '-' }}
-                                                                    </td>
-
-                                                                    <td>
-
-                                                                        @if (!empty($lead->questions))
-
-                                                                            @foreach ($lead->questions as $question => $answer)
-
-                                                                                <div class="mb-2">
-                                                                                    <strong>
-                                                                                        {{ str_replace('_', ' ', $question) }}
-                                                                                    </strong>
-
-                                                                                    <div>
-                                                                                        {{ is_array($answer) ? implode(', ', $answer) : $answer }}
-                                                                                    </div>
-                                                                                </div>
-
-                                                                            @endforeach
-
-                                                                        @else
-
-                                                                            <span class="text-muted">
-                                                                                Няма допълнителни въпроси
-                                                                            </span>
-
-                                                                        @endif
-
-                                                                    </td>
-
-                                                                    <td>
-                                                                        {{ $lead->facebook_created_at?->format('d.m.Y H:i') ?? '-' }}
-                                                                    </td>
-                                                                </tr>
-
-                                                            @endforeach
-
-                                                        </tbody>
-
-                                                    </table>
-
-                                                </div>
-
-                                            @else
-
-                                                <div class="alert alert-info mb-0">
-                                                    Все още няма интегрирани лийдове за този потребител.
-                                                </div>
-
-                                            @endif
+                                            <p class="mb-0">
+                                                След интеграция лийдовете ще се появят тук.
+                                            </p>
 
                                         </div>
 
-                                    </details>
-
-                                </td>
-                            </tr>
-
-                        @empty
-
-                            <tr>
-                                <td colspan="5" class="text-center py-4">
-
-                                    <div class="alert alert-info mb-0">
-                                        Все още няма регистрирани потребители.
                                     </div>
+                                @endif
 
-                                </td>
-                            </tr>
+                            </div>
 
-                        @endforelse
+                        </div>
 
-                    </tbody>
+                    </div>
 
-                </table>
+                </details>
 
-            </div>
+                <hr>
+
+            @empty
+
+                <div class="alert alert-info">
+                    Все още няма регистрирани потребители.
+                </div>
+
+            @endforelse
+
 
             @if ($users->hasPages())
                 <div class="mt-4">
@@ -326,5 +323,268 @@
         </section>
 
     </div>
+
+
+    <div class="modal fade" id="deleteFacebookFormModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-delete-modal">
+
+                <div class="modal-body p-4 p-md-5 text-center">
+
+                    <div class="delete-modal-icon mb-4">
+                        <i class="fa-solid fa-trash-can"></i>
+                    </div>
+
+                    <h4 class="mb-3">
+                        Изтриване на Form ID
+                    </h4>
+
+                    <p class="text-muted mb-4">
+                        Сигурни ли сте, че искате да изтриете това Form ID?
+                    </p>
+
+                    <div class="delete-form-preview mb-4">
+                        <span class="text-muted small d-block mb-1">
+                            Form ID
+                        </span>
+
+                        <strong id="deleteFacebookFormValue"></strong>
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-2">
+
+                        <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">
+                            Отказ
+                        </button>
+
+                        <button type="button" class="btn btn-danger rounded-pill px-4" id="confirmDeleteFacebookForm">
+                            <i class="fa-solid fa-trash-can me-2"></i>
+                            Изтрий
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            insertFacebookFormId();
+            deleteFacebookFormId();
+            filterFacebookLeads();
+            updateLeadSeenStatus();
+
+        });
+
+
+        function insertFacebookFormId() {
+            $(document).on('submit', '.add-form-id-form', function(e) {
+                e.preventDefault();
+
+                const form = $(this);
+                const userBox = form.closest('.lead-user-content');
+                const container = userBox.find('.lead-saved-forms');
+                const input = form.find('input[name="form_id"]');
+                const button = form.find('button[type="submit"]');
+
+                button.prop('disabled', true);
+
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'POST',
+                    data: form.serialize(),
+
+                    success: function(response) {
+                        container.removeClass('d-none');
+                        container.append(response.html);
+
+                        let chipCount = container.find('.lead-form-chip').length;
+
+                        container
+                            .closest('.lead-user-box')
+                            .find('.formCount')
+                            .text(chipCount + ' Form ID');
+
+                        input.val('');
+                    },
+
+                    error: function(xhr) {
+                        if (xhr.status === 422) {
+                            alert(
+                                xhr.responseJSON.errors?.form_id?.[0] ??
+                                'Невалиден Form ID.'
+                            );
+
+                            return;
+                        }
+
+                        alert('Възникна грешка при добавянето.');
+                    },
+
+                    complete: function() {
+                        button.prop('disabled', false);
+                    }
+                });
+            });
+        }
+
+
+        function deleteFacebookFormId() {
+
+            let formToDelete = null;
+            let chipToDelete = null;
+            let containerToUpdate = null;
+
+            const modalElement = document.getElementById('deleteFacebookFormModal');
+            const deleteModal = new bootstrap.Modal(modalElement);
+
+            $(document).on('submit', '.delete-form-id-form', function(e) {
+                e.preventDefault();
+
+                formToDelete = $(this);
+                chipToDelete = formToDelete.closest('.lead-form-chip');
+                containerToUpdate = formToDelete.closest('.lead-saved-forms');
+
+                const formIdValue = chipToDelete
+                    .find('span')
+                    .first()
+                    .text()
+                    .trim();
+
+                $('#deleteFacebookFormValue').text(formIdValue);
+
+                deleteModal.show();
+            });
+
+
+            $('#confirmDeleteFacebookForm').on('click', function() {
+
+                if (!formToDelete) {
+                    return;
+                }
+
+                const confirmButton = $(this);
+
+                confirmButton.prop('disabled', true);
+
+                $.ajax({
+                    url: formToDelete.attr('action'),
+                    type: 'POST',
+                    data: formToDelete.serialize(),
+
+                    success: function(response) {
+
+                        chipToDelete.remove();
+
+                        const chipCount = containerToUpdate
+                            .find('.lead-form-chip')
+                            .length;
+
+                        containerToUpdate
+                            .closest('.lead-user-box')
+                            .find('.formCount')
+                            .text(chipCount + ' Form ID');
+
+                        if (chipCount === 0) {
+                            containerToUpdate.addClass('d-none');
+                        }
+
+                        deleteModal.hide();
+
+                        formToDelete = null;
+                        chipToDelete = null;
+                        containerToUpdate = null;
+                    },
+
+                    error: function(xhr) {
+                        console.log(xhr.responseJSON);
+
+                        alert('Възникна грешка при изтриването.');
+                    },
+
+                    complete: function() {
+                        confirmButton.prop('disabled', false);
+                    }
+                });
+            });
+        }
+
+        function filterFacebookLeads() {
+
+            const filters = document.querySelectorAll('.lead-filter-select');
+
+            filters.forEach(filter => {
+
+                filter.addEventListener('change', function() {
+
+                    const selectedFormId = this.value;
+                    const userId = this.dataset.userId;
+
+                    const leads = document.querySelectorAll(
+                        `.lead-table tbody tr[data-user-id="${userId}"]`
+                    );
+
+                    leads.forEach(lead => {
+
+                        const leadFormId = lead.dataset.formId;
+
+
+                        if (selectedFormId === '' || leadFormId === selectedFormId) {
+                            lead.style.display = '';
+                        } else {
+                            lead.style.display = 'none';
+                        }
+
+                    });
+
+                });
+
+            });
+
+        }
+
+        function updateLeadSeenStatus() {
+
+            $(document).on('change', '.lead-seen-checkbox', function() {
+
+                const checkbox = $(this);
+
+                const leadId = checkbox.val();
+                const url = checkbox.data('url');
+                const isSeen = checkbox.is(':checked') ? 1 : 0;
+
+                checkbox.prop('disabled', true);
+
+                $.ajax({
+                    url: url,
+                    type: 'PATCH',
+
+                    data: {
+                        _token: $('meta[name="csrf-token"]').attr('content'),
+                        is_seen: isSeen
+                    },
+
+                    success: function(response) {
+                        console.log(response);
+                    },
+
+                    error: function(xhr) {
+                        console.log(xhr);
+
+                        checkbox.prop('checked', !checkbox.is(':checked'));
+                    },
+
+                    complete: function() {
+                        checkbox.prop('disabled', false);
+                    }
+                });
+
+            });
+
+        }
+    </script>
 
 </x-backend>

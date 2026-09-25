@@ -125,114 +125,224 @@
                         <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-lg-6">
-                    <form class="content-form" role="form" id="contact-form" method="post">
-                        <input type="text" name="Complete Name" placeholder="Complete Name" required="">
-                        <input type="text" name="Email Address" placeholder="Email Address" required="">
-                        <input type="text" name="Phone No" placeholder="Phone No" required="">
-                        <textarea placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn">Send Message</button>
-                    </form>
-                </div>
+
             </div>
-          
+
         </div>
     </section>
+
     <section class="gap no-top">
         <div class="container">
+
             <div class="heading">
-                <h6>frequently asked questions</h6>
-                <h2>If you want to know anything, inquire us</h2>
+                <h6>ЧЕСТО ЗАДАВАНИ ВЪПРОСИ</h6>
+
+                <h2>
+                    Всичко, което трябва да знаете за LASO
+                </h2>
             </div>
+
             <div class="faqs-pages">
                 <div class="accordion two">
+
+                    {{-- FACEBOOK PAGE --}}
                     <div class="accordion-item active">
+
                         <a href="javascript:void(0)" class="heading">
                             <div class="icon"></div>
-                            <div class="title">Which cryptocurrency is offered here?</div>
+
+                            <div class="title">
+                                Имам ли нужда от Facebook страница?
+                            </div>
                         </a>
 
                         <div class="content" style="display: block;">
-                            <p>Lorem Ipsum estibulum blandit libero at mauris condime ntumma erisque in mauris ut
-                                malesuada. Ute littellus, luctus estibulum bla ero at mauris condimmanec. Lorem Ipsum
-                                estibulum blandit libero at mauris condime ntumma erisque in mauris ut malesuada. Ute
-                                littellus, luctus estibulum bla ero at mauris condimmanec.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-                            <div class="title">Are cryptocurrency apps safe?</div>
-                        </a>
 
-                        <div class="content" style="display: none;">
-                            <p>Lorem Ipsum estibulum blandit libero at mauris condime ntumma erisque in mauris ut
-                                malesuada. Ute littellus, luctus estibulum bla ero at mauris condimmanec. Lorem Ipsum
-                                estibulum blandit libero at mauris condime ntumma erisque in mauris ut malesuada. Ute
-                                littellus, luctus estibulum bla ero at mauris condimmanec.
+                            <p>
+                                Да. Необходима е Facebook страница.
                             </p>
+
+                        
+
                         </div>
+
                     </div>
+
+                    {{-- META BUSINESS MANAGER --}}
                     <div class="accordion-item">
+
                         <a href="javascript:void(0)" class="heading">
                             <div class="icon"></div>
-                            <div class="title">What is the daily limit for crypto app?</div>
+
+                            <div class="title">
+                                Имам ли нужда от Meta Business Manager?
+                            </div>
                         </a>
 
                         <div class="content">
-                            <p>Lorem Ipsum estibulum blandit libero at mauris condime ntumma erisque in mauris ut
-                                malesuada. Ute littellus, luctus estibulum bla ero at mauris condimmanec. Lorem Ipsum
-                                estibulum blandit libero at mauris condime ntumma erisque in mauris ut malesuada. Ute
-                                littellus, luctus estibulum bla ero at mauris condimmanec.
+
+                            <p>
+                                Да, но ако нямаш такъв, наш представител ще ти помогне да го създадеш по време на
+                                onboarding процеса.
                             </p>
+
                         </div>
+
                     </div>
+
+                    {{-- AFTER PAYMENT --}}
                     <div class="accordion-item">
+
                         <a href="javascript:void(0)" class="heading">
                             <div class="icon"></div>
-                            <div class="title">Should I be familiar with the technical details to work with you?</div>
+
+                            <div class="title">
+                                Какво се случва след плащането?
+                            </div>
                         </a>
 
                         <div class="content">
-                            <p>Lorem Ipsum estibulum blandit libero at mauris condime ntumma erisque in mauris ut
-                                malesuada. Ute littellus, luctus estibulum bla ero at mauris condimmanec. Lorem Ipsum
-                                estibulum blandit libero at mauris condime ntumma erisque in mauris ut malesuada. Ute
-                                littellus, luctus estibulum bla ero at mauris condimmanec.
+
+                            <p>
+                                Получаваш известие на имейла си за закупения абонамент и достъп до своя LASO профил.
                             </p>
+
+                            <p>
+                                Наш представител ще се свърже с теб, за да получи необходимите достъпи до Facebook
+                                страницата и да ти помогне да създадеш Meta Business Manager, ако нямаш такъв.
+                            </p>
+
+                            <p>
+                                Това обикновено се извършва чрез кратка онлайн среща.
+                            </p>
+
+                            <p>
+                                След това получаваш достъп до своя LASO профил, където предоставяш необходимата
+                                информация за твоя бизнес и рекламните материали.
+                            </p>
+
+                            <p>
+                                Оттам нататък LASO подготвя рекламата.
+                            </p>
+
                         </div>
+
                     </div>
+
+                    {{-- AD START --}}
                     <div class="accordion-item">
+
                         <a href="javascript:void(0)" class="heading">
                             <div class="icon"></div>
-                            <div class="title">What information do you need from me to start work?</div>
+
+                            <div class="title">
+                                Кога стартира рекламата?
+                            </div>
                         </a>
 
                         <div class="content">
-                            <p>Lorem Ipsum estibulum blandit libero at mauris condime ntumma erisque in mauris ut
-                                malesuada. Ute littellus, luctus estibulum bla ero at mauris condimmanec. Lorem Ipsum
-                                estibulum blandit libero at mauris condime ntumma erisque in mauris ut malesuada. Ute
-                                littellus, luctus estibulum bla ero at mauris condimmanec.
+
+                            <p>
+                                До <strong>7 работни дни</strong>, след като всички необходими материали и достъпи са
+                                налични.
                             </p>
+
                         </div>
+
                     </div>
+
+                    {{-- CANCEL SUBSCRIPTION --}}
                     <div class="accordion-item">
+
                         <a href="javascript:void(0)" class="heading">
                             <div class="icon"></div>
-                            <div class="title">Do you provide product support services after the app development is
-                                complete?</div>
+
+                            <div class="title">
+                                Мога ли да прекратя абонамента?
+                            </div>
                         </a>
 
                         <div class="content">
-                            <p>Lorem Ipsum estibulum blandit libero at mauris condime ntumma erisque in mauris ut
-                                malesuada. Ute littellus, luctus estibulum bla ero at mauris condimmanec. Lorem Ipsum
-                                estibulum blandit libero at mauris condime ntumma erisque in mauris ut malesuada. Ute
-                                littellus, luctus estibulum bla ero at mauris condimmanec.
+
+                            <p>
+                                Да.
                             </p>
+
+                            <p>
+                                <strong>
+                                    Няма дългосрочен договор. Можеш да прекратиш абонамента си по всяко време.
+                                </strong>
+                            </p>
+
                         </div>
+
                     </div>
+
+                    {{-- GUARANTEED CLIENTS --}}
+                    <div class="accordion-item">
+
+                        <a href="javascript:void(0)" class="heading">
+                            <div class="icon"></div>
+
+                            <div class="title">
+                                Гарантирате ли определен брой клиенти или продажби?
+                            </div>
+                        </a>
+
+                        <div class="content">
+
+                            <p>
+                                Не.
+                            </p>
+
+                            <p>
+                                LASO е създаден да генерира <strong>запитвания от потенциални клиенти</strong>, но броят
+                                запитвания, продажбите и приходите зависят от множество фактори.
+                            </p>
+
+                            <p>
+                                Нашата работа е да създаваме, управляваме и оптимизираме рекламата възможно най-добре.
+                            </p>
+
+                            <p>
+                                Зад модела на LASO стои стратегия, която работи успешно за множество бизнеси в сферата
+                                на услугите, когато бизнесът има реално търсене и пазар.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    {{-- LASO PRICE --}}
+                    <div class="accordion-item">
+
+                        <a href="javascript:void(0)" class="heading">
+                            <div class="icon"></div>
+
+                            <div class="title">
+                                Колко струва LASO?
+                            </div>
+                        </a>
+
+                        <div class="content">
+
+                            <p>
+                                LASO работи на месечен или годишен абонамент.
+                            </p>
+
+                            <p>
+                                <a href="{{ route('pricing') }}">
+                                    Виж актуалните планове.
+                                </a>
+                            </p>
+
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
+
         </div>
     </section>
 

@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Mail\SendNotificationToAdminMail;
+use App\Mail\SubscriptionPurchasedMail;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Auth\AuthenticationException;
@@ -9,6 +11,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
 
 class StripeService
 {
@@ -18,9 +21,15 @@ class StripeService
      * @var array<string, string>
      */
     private static array $paymentPlans = [
-        'basic' => 'price_1U1qIE0XJPJxSgBO901YgIMJ',
-        'standart' => 'price_1U1rCm0XJPJxSgBO5rUd41mn',
-        'premium' => 'price_1U1rN30XJPJxSgBOzr2SkEE6',
+        'basic_montly' => 'price_1U1rN30XJPJxSgBOzr2SkEE6',
+        'basic_yearly' => 'price_1UFtU50XJPJxSgBO7UXFKk16',
+
+        'growth_monthly' => 'price_1UFtVx0XJPJxSgBOOFabY5hx',
+        'growth_yearly' => 'price_1UFtZ30XJPJxSgBOxhh5pJpO',
+
+        'premium_monthly' => 'price_1UFtbb0XJPJxSgBOaL5jMZhK',
+        'premium_yearly' => 'price_1UFtiq0XJPJxSgBOt2QKvVbz',
+
     ];
 
     /**
@@ -50,6 +59,9 @@ class StripeService
         if ($checkoutSession->payment_status !== 'paid') {
             return redirect()->route('subscription.fail');
         }
+
+        Mail::to(Auth::user()->email)->send(new SubscriptionPurchasedMail());
+        Mail::to('contact@lubodev.com')->send(new SendNotificationToAdminMail(Auth::user()));
 
         return redirect()->route('subscription.index');
     }

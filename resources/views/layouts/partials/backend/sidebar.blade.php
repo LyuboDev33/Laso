@@ -22,7 +22,7 @@
                     <li>
                         <a href="{{ route('leads.index') }}"
                             class="{{ request()->routeIs('leads.index*') ? 'is-active' : '' }}">
-                            <i class="fa-solid fa-user-shield"></i>
+                           <i class="fa-solid fa-arrows-down-to-people"></i>
                             <span>Лиидове</span>
                         </a>
                     </li>
@@ -30,7 +30,8 @@
                     <li>
                         <a href="{{ route('admin.users.index') }}"
                             class="{{ request()->routeIs('admin.users.index*') ||
-                                    request()->routeIs('admin.users.show*') ? 'is-active' : '' }}">
+                             request()->routeIs('admin.users.details.show') ||
+                            request()->routeIs('admin.users.show*') ? 'is-active' : '' }}">
                             <i class="fa-solid fa-user-shield"></i>
                             <span>Всички потребители</span>
                         </a>
@@ -54,6 +55,15 @@
                         <span>Моят профил</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="{{ route('myleads.index') }}"
+                        class="{{ request()->routeIs('myleads.index') ? 'is-active' : '' }}">
+                        <i class="fa-solid fa-arrows-down-to-people"></i>
+                        <span>Моите лиидове</span>
+                    </a>
+                </li>
+
 
                 <li>
                     <a href="{{ route('subscription.index') }}"
