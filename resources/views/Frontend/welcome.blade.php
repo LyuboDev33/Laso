@@ -25,12 +25,14 @@
                         </h1>
 
                         <p>
-Представете си АБОНАМЕНТ за РЕКЛАМА, който струва колкото месечния ви абонамент за телефон и телевизия.
+                            Представете си АБОНАМЕНТ за РЕКЛАМА, който струва колкото месечния ви абонамент за телефон и
+                            телевизия.
 
                             <br><br>
 
-                            LASO е абонаментна услуга за  <strong>
-                              Meta  lead generation реклама</strong>, създадена основно за малкия бизнес в сферата на услугите.
+                            LASO е абонаментна услуга за <strong>
+                                Meta lead generation реклама</strong>, създадена основно за малкия бизнес в сферата на
+                            услугите.
 
                         </p>
 
@@ -43,14 +45,14 @@
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
 
-                        <ul class="star">
+                        {{-- <ul class="star">
 
 
                             <li>
                                 <p>Реклама, насочена към реални запитвания</p>
                             </li>
 
-                        </ul>
+                        </ul> --}}
 
                         <img src="/assets/img/hero-shaps.png" alt="LASO" class="hero-shaps">
 
@@ -72,7 +74,7 @@
                             <img src="/assets/img/welcome/welcome-clients.jpeg" alt="LASO клиенти">
 
                             <h6>
-                                Десетки компании използват услугата
+                                Десетки бизнеси вече използват услугата.
                             </h6>
 
                         </div>
@@ -141,31 +143,23 @@
 
                     <div class="intelligent-text">
 
-                        {{-- <p>
+                        <p>
                             Представете си услуга, която работи като всеки друг месечен
                             абонамент, който вече имате — телефон, телевизия,
                             стрийминг платформа. Само че вместо забавление,
                             тя ви носи нови клиенти.
                             <br><br>
 
-                            LASO създава <strong>lead generation реклами</strong> —
-                            реклами, чиято цел не е просто „показвания“ или „харесвания“,
-                            а реални <strong>запитвания от потенциални клиенти</strong>,
-                            готови да се свържат с вашия бизнес.
-                            <br><br>
 
-                            Плащате фиксирана месечна сума и получавате готов резултат,
-                            без да се налага сами да учите Meta Ads, да следите резултати
-                            или да правите оптимизации.
-                            <br><br>
-                        </p> --}}
+
+                        </p>
 
 
                         <div class="row">
 
                             <div class="col-md-6">
 
-                               <i class="fa-regular fa-id-card"></i>
+                                <i class="fa-regular fa-id-card"></i>
 
                                 <a href="#pricing">
                                     <h4>
@@ -252,9 +246,9 @@
             </div>
 
 
-            <div class="steps-run">
+            <div class="steps-run row">
 
-                <div class="steps shadow">
+                <div class="steps shadow col-4">
 
                     <i>
                         <img src="/assets/img/steps-1.png" alt="Изберете план">
@@ -274,7 +268,7 @@
                 </div>
 
 
-                <div class="steps shadow">
+                <div class="steps shadow col-4">
 
                     <i>
                         <img src="/assets/img/steps-2.png" alt="Създайте профил">
@@ -294,7 +288,7 @@
                 </div>
 
 
-                <div class="steps shadow">
+                <div class="steps shadow col-4">
 
                     <i>
                         <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
@@ -309,6 +303,43 @@
                     <p>
                         Ние създаваме кампанията, следим резултатите
                         и извършваме постоянна оптимизация.
+                    </p>
+
+                </div>
+
+                <div class="steps shadow col-6 mt-4">
+
+                    <i>
+                        <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
+                    </i>
+
+                    <span>4</span>
+
+                    <h4>
+                        Получавате потенциални клиенти
+                    </h4>
+
+                    <p>
+                        Потенциалните клиенти, генерирани чрез рекламата, се появяват директно във вашия LASO профил.
+                    </p>
+
+                </div>
+
+                <div class="steps shadow col-6 mt-4">
+
+                    <i>
+                        <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
+                    </i>
+
+                    <span>5</span>
+
+                    <h4>
+                        Свързвате се с тях
+                    </h4>
+
+                    <p>
+                        Вие поемате контакта с потенциалните клиенти — разказвате им за вашата услуга, отговаряте на
+                        въпросите им и им показвате защо вашият бизнес е правилният избор за тях.
                     </p>
 
                 </div>
@@ -333,7 +364,7 @@
 
                     <div class="img-mobil">
 
-                        <img src="https://placehold.co/591x581" alt="LASO за малкия бизнес">
+                        <img src="/assets/img/welcome/welcome-phones.jpeg" alt="LASO за малкия бизнес">
 
                     </div>
 
@@ -349,40 +380,20 @@
                         </h2>
 
                         <p>
-                            LASO е създаден специално за
-                            <strong>малкия бизнес в сферата на услугите</strong> —
-                            за собственици, при които всяко ново запитване може
-                            да се превърне в клиент, но нямат нито времето,
-                            нито желанието сами да управляват реклама.
-                        </p>
+                            Създаден е предимно за бизнеси в сферата на услугите.
 
+                        </p>
 
                         <ul class="list">
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
-                                Здравни услуги
+                                Здравни и медицински услуги
                             </li>
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
-                                Автосервизи
-                            </li>
-
-                            <li>
-                                <img src="/assets/img/check.png" alt="check">
-                                Недвижими имоти
-                            </li>
-
-                            <li>
-                                <img src="/assets/img/check.png" alt="check">
-                                Строителни услуги
-                            </li>
-
-
-                            <li>
-                                <img src="/assets/img/check.png" alt="check">
-                                Фитнес треньори
+                                Строителни и ремонтни услуги
                             </li>
 
                             <li>
@@ -397,15 +408,30 @@
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
+                                Дигитални услуги
+                            </li>
+
+                            <li>
+                                <img src="/assets/img/check.png" alt="check">
+                                Счетоводни и финансови услуги
+                            </li>
+
+                            <li>
+                                <img src="/assets/img/check.png" alt="check">
+                                Брокерски и имотни услуги
+                            </li>
+
+
+                            <li>
+                                <img src="/assets/img/check.png" alt="check">
                                 Специализирани услуги в различни сфери
                             </li>
 
                         </ul>
 
-
                         <div class="d-sm-flex">
 
-                            <a href="#pricing" class="btn">
+                            <a href="{{ route('pricing') }}" class="btn">
                                 Разгледай плановете
                             </a>
 
@@ -425,7 +451,68 @@
     </section>
     {{-- FOR WHO END --}}
 
-
+<section class="gap no-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="heading two">
+                    <h6>Solutions for all your needs</h6>
+                    <h2>Creating World Class Digital Solutions</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="digital-marketing" style="background-image: url(assets/img/background-p.png);">
+                    <i>
+                        <img src="assets/img/marketing-icon-1.png" alt="marketing-icon">
+                    </i>
+                    <h4>Digital Marketing</h4>
+                    <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit sed do.</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Content Marketing</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Marketing Automation</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Lead Generation</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Search Engine Optimization</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Email Marketing</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="digital-marketing two" style="background-image: url(assets/img/background-p.png);">
+                    <i>
+                        <img src="assets/img/marketing-icon-2.png" alt="marketing-icon">
+                    </i>
+                    <h4>Training &amp; Consulting</h4>
+                    <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit sed do.</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Marketing Hub Training</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Sales Hub Training</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Service Hub Training</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Lead Generation Training</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Business Process Optimisation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="digital-marketing three" style="background-image: url(assets/img/background-p.png);">
+                    <i>
+                        <img src="assets/img/marketing-icon-3.png" alt="marketing-icon">
+                    </i>
+                    <h4>Branding and Video</h4>
+                    <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit sed do.</p>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Digital Brand Books &amp; CI</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Video &amp; Animation</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Infographics &amp; Ebooks</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Interactive brochures</a></li>
+                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Brands Designs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     {{-- WHAT YOU GET --}}
     <section class="gap blog-section" style="background-image: url(/assets/img/background-1.png);">
@@ -653,7 +740,49 @@
 
 
 
-    {{-- FAQ --}}
+    <section class="gap section-business">
+        <div class="container">
+            <h3>Laso</h3>
+            <div class="row align-items-end">
+                <div class="col-lg-6">
+                    <div class="heading two">
+                        <h2>ПЪРВИ ПО РОДА СИ.</h2>
+                    </div>
+                    <div class="better-business">
+                        <p>Рекламата като абонамент.
+                            LASO въвежда абонаментния модел за lead generation реклама в България.
+                            Избираш план.
+                            Плащаш месечно.
+                            Получаваш резултатите в профила си.
+                            Просто. Предвидимо. Без усложнения.</p>
+                        <div class="count-style">
+                            <div class="count-text">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="count" data-number="42">42</h2>
+                                    <sup>k</sup>
+                                </div>
+                                <p>Project has been completed</p>
+                            </div>
+                            <div class="count-text">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="count" data-number="5">5</h2>
+                                    <sup>%</sup>
+                                </div>
+                                <p>Companies success rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="business-img">
+                        <img src="assets/img/business.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     {{-- FAQ --}}
     <section class="gap">
 

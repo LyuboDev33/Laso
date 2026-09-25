@@ -1,4 +1,4 @@
-<footer class="gap no-bottom two" style="background-image: url(/assets/img/footer-2.jpg);">
+<footer class="mt-5 no-bottom two" style="background-image: url(/assets/img/footer-2.jpg);">
 
     <div class="container">
 
@@ -9,9 +9,7 @@
 
         <div class="logo">
 
-            <a href="/">
-                <img src="assets/img/logo.png" alt="LASO">
-            </a>
+            <x-logo width="160"/>
 
             <p>
                 LASO е абонаментна услуга за lead generation реклами в Meta,
@@ -19,7 +17,7 @@
                 Ние се грижим за рекламата, а вие се фокусирате върху бизнеса си.
             </p>
 
-            <img src="https://placehold.co/171x61" alt="LASO клиенти">
+            <img class="rounded-pill" src="/assets/img/welcome/welcome-clients.jpeg" alt="LASO клиенти">
 
             <h6>
                 Реклама, създадена да генерира реални запитвания

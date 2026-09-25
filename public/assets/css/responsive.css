@@ -596,9 +596,9 @@
         width: 100%;
     }
 
-    footer.two .copyrights {
+    /* footer.two .copyrights {
         margin-top: 80px;
-    }
+    } */
 
     .intelligent-text p {
         padding-bottom: 25px;
@@ -2243,9 +2243,9 @@
         width: 100%;
     }
 
-    footer.two .copyrights {
+    /* footer.two .copyrights {
         margin-top: 60px;
-    }
+    } */
 }
 
 @media(max-width: 450px) {
