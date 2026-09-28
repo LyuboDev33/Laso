@@ -8,7 +8,7 @@
 
     @yield('SEO')
 
-      <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon.png?v=<?= time() ?>">
 
 
     <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css?v=<?= time() ?>">

@@ -147,7 +147,47 @@
     </section>
     {{-- ABOUT LASO END --}}
 
-
+   <section class="gap section-business">
+        <div class="container">
+            <h3>Laso</h3>
+            <div class="row align-items-end">
+                <div class="col-lg-6">
+                    <div class="heading two">
+                        <h2>ПЪРВИ ПО РОДА СИ.</h2>
+                    </div>
+                    <div class="better-business">
+                        <p>Рекламата като абонамент.
+                            LASO въвежда абонаментния модел за lead generation реклама в България.
+                            Избираш план.
+                            Плащаш месечно.
+                            Получаваш резултатите в профила си.
+                            Просто. Предвидимо. Без усложнения.</p>
+                        <div class="count-style">
+                            <div class="count-text">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="count" data-number="42">42</h2>
+                                    <sup>k</sup>
+                                </div>
+                                <p>Project has been completed</p>
+                            </div>
+                            <div class="count-text">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="count" data-number="5">5</h2>
+                                    <sup>%</sup>
+                                </div>
+                                <p>Companies success rate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="business-img">
+                        <img src="assets/img/business.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {{-- WHY LASO EXISTS --}}
     <div class="gap section-business">

@@ -251,7 +251,8 @@
                 <div class="steps shadow col-4">
 
                     <i>
-                        <img src="/assets/img/steps-1.png" alt="Изберете план">
+                        <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
+
                     </i>
 
                     <span>1</span>
@@ -291,7 +292,8 @@
                 <div class="steps shadow col-4">
 
                     <i>
-                        <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
+                        <img src="/assets/img/steps/step3.png" class="step3" alt="Стартиране на реклама">
+
                     </i>
 
                     <span>3</span>
@@ -310,7 +312,7 @@
                 <div class="steps shadow col-6 mt-4">
 
                     <i>
-                        <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
+                        <img src="/assets/img/steps/step4.png" alt="Стартиране на реклама">
                     </i>
 
                     <span>4</span>
@@ -328,7 +330,7 @@
                 <div class="steps shadow col-6 mt-4">
 
                     <i>
-                        <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
+                        <img src="/assets/img/steps/step5.png" alt="Стартиране на реклама">
                     </i>
 
                     <span>5</span>
@@ -398,22 +400,12 @@
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
-                                Образователни услуги
-                            </li>
-
-                            <li>
-                                <img src="/assets/img/check.png" alt="check">
                                 Домашни услуги
                             </li>
 
                             <li>
                                 <img src="/assets/img/check.png" alt="check">
                                 Дигитални услуги
-                            </li>
-
-                            <li>
-                                <img src="/assets/img/check.png" alt="check">
-                                Счетоводни и финансови услуги
                             </li>
 
                             <li>
@@ -427,11 +419,16 @@
                                 Специализирани услуги в различни сфери
                             </li>
 
+                                <li>
+                                <img src="/assets/img/check.png" alt="check">
+                                И много други
+                            </li>
+
                         </ul>
 
                         <div class="d-sm-flex">
 
-                            <a href="{{ route('pricing') }}" class="btn">
+                            <a href="{{ route('pricing') }}" class="btn customBtnPricing">
                                 Разгледай плановете
                             </a>
 
@@ -451,69 +448,32 @@
     </section>
     {{-- FOR WHO END --}}
 
-<section class="gap no-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="heading two">
-                    <h6>Solutions for all your needs</h6>
-                    <h2>Creating World Class Digital Solutions</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-4 col-md-6">
-                <div class="digital-marketing" style="background-image: url(assets/img/background-p.png);">
-                    <i>
-                        <img src="assets/img/marketing-icon-1.png" alt="marketing-icon">
-                    </i>
-                    <h4>Digital Marketing</h4>
-                    <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit sed do.</p>
-                    <ul>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Content Marketing</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Marketing Automation</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Lead Generation</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Search Engine Optimization</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Email Marketing</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="digital-marketing two" style="background-image: url(assets/img/background-p.png);">
-                    <i>
-                        <img src="assets/img/marketing-icon-2.png" alt="marketing-icon">
-                    </i>
-                    <h4>Training &amp; Consulting</h4>
-                    <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit sed do.</p>
-                    <ul>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Marketing Hub Training</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Sales Hub Training</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Service Hub Training</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Lead Generation Training</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Business Process Optimisation</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="digital-marketing three" style="background-image: url(assets/img/background-p.png);">
-                    <i>
-                        <img src="assets/img/marketing-icon-3.png" alt="marketing-icon">
-                    </i>
-                    <h4>Branding and Video</h4>
-                    <p>Lorem ipsum dolor sit amet, consectet ur adipiscing elit sed do.</p>
-                    <ul>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Digital Brand Books &amp; CI</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Video &amp; Animation</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Infographics &amp; Ebooks</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Interactive brochures</a></li>
-                        <li><a href="#"><i class="fa-solid fa-caret-right"></i>Brands Designs</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    <section class="gap no-top mt-5">
 
+        <div class="container">
+            <div class="text-center">
+                <h3>КАКВО Е LASO?</h3>
+                <p class="mb-5 mt-3">
+                    Реклама с една ясна цел.
+                    LASO създава и управлява Meta реклами, насочени към генериране на запитвания от потенциални клиенти.
+
+                </p>
+            </div>
+            <div class="row">
+                <div class="video two position-relative">
+                    <a data-fancybox="" href="https://www.youtube.com/watch?v=xKxrkht7CpY">
+                        <i>
+                            <svg width="11" height="17" viewBox="0 0 11 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M11 8.49951L0.5 0.27227L0.5 16.7268L11 8.49951Z" fill="#fff"></path>
+                            </svg>
+                        </i>
+                    </a>
+                    <img src="/assets/img/welcome/video-1.jpg" alt="img">
+                </div>
+            </div>
+        </div>
+    </section>
     {{-- WHAT YOU GET --}}
     <section class="gap blog-section" style="background-image: url(/assets/img/background-1.png);">
 
@@ -571,7 +531,8 @@
                         </i>
 
                         <a href="#">
-                            Lead generation кампании
+                            Meta кампания за потенциални клиенти
+
                         </a>
 
                         <p>
@@ -609,7 +570,7 @@
                         </i>
 
                         <a href="#">
-                            Постоянна оптимизация
+                            Клиентски профил
                         </a>
 
                         <p>
@@ -625,7 +586,7 @@
                 <div class="col-lg-4">
 
                     <div class="solutions-img">
-                        <img src="/assets/img/solutions.png" alt="LASO клиентски профил">
+                        <img src="/assets/img/welcome/welcom-solutions.jpeg" alt="LASO клиентски профил">
                     </div>
 
 
@@ -645,7 +606,7 @@
                         </i>
 
                         <a href="#">
-                            Личен клиентски профил
+                            Имейл съпорт спрямо плана
                         </a>
 
                         <p>
@@ -683,7 +644,8 @@
                         </i>
 
                         <a href="#">
-                            Проследяване в реално време
+                            Месечен или годишен абонамент
+
                         </a>
 
                         <p>
@@ -738,49 +700,18 @@
     </section>
     {{-- WHAT YOU GET END --}}
 
-
-
-    <section class="gap section-business">
-        <div class="container">
-            <h3>Laso</h3>
-            <div class="row align-items-end">
-                <div class="col-lg-6">
-                    <div class="heading two">
-                        <h2>ПЪРВИ ПО РОДА СИ.</h2>
-                    </div>
-                    <div class="better-business">
-                        <p>Рекламата като абонамент.
-                            LASO въвежда абонаментния модел за lead generation реклама в България.
-                            Избираш план.
-                            Плащаш месечно.
-                            Получаваш резултатите в профила си.
-                            Просто. Предвидимо. Без усложнения.</p>
-                        <div class="count-style">
-                            <div class="count-text">
-                                <div class="d-flex justify-content-center">
-                                    <h2 class="count" data-number="42">42</h2>
-                                    <sup>k</sup>
-                                </div>
-                                <p>Project has been completed</p>
-                            </div>
-                            <div class="count-text">
-                                <div class="d-flex justify-content-center">
-                                    <h2 class="count" data-number="5">5</h2>
-                                    <sup>%</sup>
-                                </div>
-                                <p>Companies success rate</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="business-img">
-                        <img src="assets/img/business.png" alt="img">
-                    </div>
-                </div>
+    <section>
+    <div class="container">
+        <div class="own-solutions">
+            <div class="own-solutions-text">
+                <h2>Повече потенциални клиенти за вашия бизнес</h2>
+                <p>Всичко необходимо, за да достигате до нови потенциални клиенти чрез Meta реклама. </p>
+                <a href="{{ route('pricing') }}" class="btn">Започнете с LASO</a>
             </div>
+            <img src="/assets/img/welcome/business-p.png" alt="business">
         </div>
-    </section>
+    </div>
+</section>
 
 
     {{-- FAQ --}}
@@ -832,9 +763,9 @@
 
                     <div class="accordio-img-style">
 
-                        <img src="https://placehold.co/383x414" alt="LASO реклама" class="accordio-img-1">
+                        <img src="/assets/img/welcome/desk-2.jpeg" alt="LASO реклама" class="accordio-img-1">
 
-                        <img src="https://placehold.co/383x414" alt="LASO Meta Ads" class="accordio-img-2">
+                        <img src="/assets/img/welcome/desk-1.jpeg" alt="LASO Meta Ads" class="accordio-img-2">
 
                     </div>
 
@@ -1075,7 +1006,6 @@
         </div>
 
     </section>
-    {{-- FAQ END --}}
     {{-- FAQ END --}}
 
 

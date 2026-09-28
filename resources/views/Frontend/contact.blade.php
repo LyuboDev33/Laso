@@ -54,8 +54,8 @@
                                 </g>
                             </svg>
                         </i>
-                        <h3>Phone No</h3>
-                        <a href="callto:+1-202-555-0144">+1-202-555-0144</a>
+                        <h3>Телефон за връзка </h3>
+                        <a href="callto:+359 889 807 026">+359 889 807 026</a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -86,8 +86,8 @@
                                 c64.418,7.665,102.732,29.77,102.732,47.263C405.998,465.603,341.851,492,256,492z" />
                             </svg>
                         </i>
-                        <h3>Location</h3>
-                        <p>Noorderhaven 24 Friesland, United State</p>
+                        <h3>Локация</h3>
+                        <p>София, България</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -106,244 +106,40 @@
                                 c-3.42-4.227-9.623-4.877-13.844-1.457C363.729,258.329,363.079,264.534,366.5,268.761z" />
                             </svg>
                         </i>
-                        <h3>Email Address</h3>
-                        <a href="mailto:username@domain.com">username@domain.com</a>
+                        <h3>Имейл адрес</h3>
+                        <a href="mailto:contact@lasoads.com">contact@lasoads.com</a>
                     </div>
                 </div>
             </div>
-            <div class="row pt-80 pl-80">
-                <div class="col-lg-6">
-                    <div class="heading two">
-                        <h6>MEET OUR PROFESSIONALS</h6>
-                        <h2>We'd Love to Hear From You!</h2>
-                        <p class="pt-lg-3 pt-md-2">If you need information or support, feel free to contact us</p>
-                    </div>
-                    <h6>Social Networking:</h6>
-                    <ul class="social-icon">
+        <div class="row pt-80 pl-80">
+            <div class="col-lg-6">
+                <div class="heading two">
+                    <h6>MEET OUR PROFESSIONALS</h6>
+                    <h2>We'd Love to Hear From You!</h2>
+                    <p class="pt-lg-3 pt-md-2">If you need information or support, feel free to contact us</p>
+                </div>
+                <h6>Social Networking:</h6>
+                <ul class="social-icon">
                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
-                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
-                </div>
-
             </div>
+            <div class="col-lg-6">
+                {{-- contact@lasoads.com send the form here. --}}
+                <form class="content-form" role="form" id="contact-form" method="post">
+                    <input type="text" name="Complete Name" placeholder="Complete Name" required="">
+                    <input type="text" name="Email Address" placeholder="Email Address" required="">
+                    <input type="text" name="Phone No" placeholder="Phone No" required="">
+                    <textarea placeholder="Your Message" name="msg"></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
 
         </div>
     </section>
 
-    <section class="gap no-top">
-        <div class="container">
 
-            <div class="heading">
-                <h6>ЧЕСТО ЗАДАВАНИ ВЪПРОСИ</h6>
-
-                <h2>
-                    Всичко, което трябва да знаете за LASO
-                </h2>
-            </div>
-
-            <div class="faqs-pages">
-                <div class="accordion two">
-
-                    {{-- FACEBOOK PAGE --}}
-                    <div class="accordion-item active">
-
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-
-                            <div class="title">
-                                Имам ли нужда от Facebook страница?
-                            </div>
-                        </a>
-
-                        <div class="content" style="display: block;">
-
-                            <p>
-                                Да. Необходима е Facebook страница.
-                            </p>
-
-                        
-
-                        </div>
-
-                    </div>
-
-                    {{-- META BUSINESS MANAGER --}}
-                    <div class="accordion-item">
-
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-
-                            <div class="title">
-                                Имам ли нужда от Meta Business Manager?
-                            </div>
-                        </a>
-
-                        <div class="content">
-
-                            <p>
-                                Да, но ако нямаш такъв, наш представител ще ти помогне да го създадеш по време на
-                                onboarding процеса.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    {{-- AFTER PAYMENT --}}
-                    <div class="accordion-item">
-
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-
-                            <div class="title">
-                                Какво се случва след плащането?
-                            </div>
-                        </a>
-
-                        <div class="content">
-
-                            <p>
-                                Получаваш известие на имейла си за закупения абонамент и достъп до своя LASO профил.
-                            </p>
-
-                            <p>
-                                Наш представител ще се свърже с теб, за да получи необходимите достъпи до Facebook
-                                страницата и да ти помогне да създадеш Meta Business Manager, ако нямаш такъв.
-                            </p>
-
-                            <p>
-                                Това обикновено се извършва чрез кратка онлайн среща.
-                            </p>
-
-                            <p>
-                                След това получаваш достъп до своя LASO профил, където предоставяш необходимата
-                                информация за твоя бизнес и рекламните материали.
-                            </p>
-
-                            <p>
-                                Оттам нататък LASO подготвя рекламата.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    {{-- AD START --}}
-                    <div class="accordion-item">
-
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-
-                            <div class="title">
-                                Кога стартира рекламата?
-                            </div>
-                        </a>
-
-                        <div class="content">
-
-                            <p>
-                                До <strong>7 работни дни</strong>, след като всички необходими материали и достъпи са
-                                налични.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    {{-- CANCEL SUBSCRIPTION --}}
-                    <div class="accordion-item">
-
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-
-                            <div class="title">
-                                Мога ли да прекратя абонамента?
-                            </div>
-                        </a>
-
-                        <div class="content">
-
-                            <p>
-                                Да.
-                            </p>
-
-                            <p>
-                                <strong>
-                                    Няма дългосрочен договор. Можеш да прекратиш абонамента си по всяко време.
-                                </strong>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    {{-- GUARANTEED CLIENTS --}}
-                    <div class="accordion-item">
-
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-
-                            <div class="title">
-                                Гарантирате ли определен брой клиенти или продажби?
-                            </div>
-                        </a>
-
-                        <div class="content">
-
-                            <p>
-                                Не.
-                            </p>
-
-                            <p>
-                                LASO е създаден да генерира <strong>запитвания от потенциални клиенти</strong>, но броят
-                                запитвания, продажбите и приходите зависят от множество фактори.
-                            </p>
-
-                            <p>
-                                Нашата работа е да създаваме, управляваме и оптимизираме рекламата възможно най-добре.
-                            </p>
-
-                            <p>
-                                Зад модела на LASO стои стратегия, която работи успешно за множество бизнеси в сферата
-                                на услугите, когато бизнесът има реално търсене и пазар.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                    {{-- LASO PRICE --}}
-                    <div class="accordion-item">
-
-                        <a href="javascript:void(0)" class="heading">
-                            <div class="icon"></div>
-
-                            <div class="title">
-                                Колко струва LASO?
-                            </div>
-                        </a>
-
-                        <div class="content">
-
-                            <p>
-                                LASO работи на месечен или годишен абонамент.
-                            </p>
-
-                            <p>
-                                <a href="{{ route('pricing') }}">
-                                    Виж актуалните планове.
-                                </a>
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-
-        </div>
-    </section>
 
 </x-frontend>

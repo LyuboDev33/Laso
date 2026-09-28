@@ -1514,6 +1514,16 @@ footer img.shaps-1 {
     transform: rotatey(180deg);
 }
 
+.steps img{
+    height: 81px;
+    width: 60px;
+}
+
+.step3 {
+        position: relative;
+    right: -10px;
+}
+
 /* 21. download-app */
 .download-app h2 {
     color: #fff;
@@ -1683,10 +1693,22 @@ a.btn:hover {
     position: absolute;
     right: 0;
     animation: top 5s infinite;
+    height: 383px;
+    width: 413px;
+}
+
+.customBtnPricing {
+    width: 300px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .accordio-img-style img.accordio-img-1 {
     margin-top: 160px;
+    height: 383px;
+    width: 413px;
 }
 
 .accordion.two .accordion-item .heading,
