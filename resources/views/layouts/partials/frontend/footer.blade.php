@@ -17,7 +17,7 @@
                 Ние се грижим за рекламата, а вие се фокусирате върху бизнеса си.
             </p>
 
-            <img class="rounded-pill" src="/assets/img/welcome/welcome-clients.jpeg" alt="LASO клиенти">
+            <img class="rounded-pill welcome-clients" src="/assets/img/welcome/welcome-clients.jpeg" alt="LASO клиенти">
 
             <h6>
                 Реклама, създадена да генерира реални запитвания

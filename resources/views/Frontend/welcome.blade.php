@@ -14,7 +14,7 @@
     {{-- HERO --}}
     <section class="hero-section-two">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center gap-5 gap-sm-0">
 
                 <div class="col-lg-6">
 
@@ -71,7 +71,7 @@
 
                         <div class="use-app">
 
-                            <img src="/assets/img/welcome/welcome-clients.jpeg" alt="LASO клиенти">
+                            <img class="welcome-clients" src="/assets/img/welcome/welcome-clients.jpeg?v=<?php echo time() ?>" alt="LASO клиенти">
 
                             <h6>
                                 Десетки бизнеси вече използват услугата.
@@ -141,7 +141,7 @@
 
                 <div class="col-lg-6">
 
-                    <div class="intelligent-text">
+                    <div class="intelligent-text mt-5 mt-md-0">
 
                         <p>
                             Представете си услуга, която работи като всеки друг месечен
@@ -209,7 +209,7 @@
                                 </i>
                             </a>
 
-                            <img src="https://placehold.co/636x348" alt="Видео представяне на LASO">
+                            <img src="/assets/img/welcome/video.jpg" alt="Видео представяне на LASO">
 
                         </div>
 
@@ -233,7 +233,8 @@
 
             <div class="heading">
 
-                <img src="/assets/img/heading-img.png" alt="Как работи LASO">
+                {{-- <img src="/assets/img/heading-img.png" alt="Как работи LASO"> --}}
+                <x-laso/>
 
                 <h6>
                     ЛЕСЕН ПРОЦЕС
@@ -251,7 +252,7 @@
                 <div class="steps shadow col-4">
 
                     <i>
-                        <img src="/assets/img/steps-3.png" alt="Стартиране на реклама">
+                        <img src="/assets/img/steps/step1.png" alt="Избирате абонаментен план">
 
                     </i>
 
@@ -272,7 +273,7 @@
                 <div class="steps shadow col-4">
 
                     <i>
-                        <img src="/assets/img/steps-2.png" alt="Създайте профил">
+                        <img src="/assets/img/steps/step2.png" alt="Създайте профил">
                     </i>
 
                     <span>2</span>
@@ -481,8 +482,7 @@
 
             <div class="heading">
 
-                <img src="/assets/img/heading-img.png" alt="Какво получавате">
-
+                <x-laso/>
                 <h6>
                     ВСИЧКО НЕОБХОДИМО ЗА ВАШАТА РЕКЛАМА
                 </h6>
@@ -919,7 +919,7 @@
 
 
     {{-- PRICING --}}
-    <section class="gap blog-section" id="pricing" style="background-image: url(/assets/img/background-1.png);">
+    {{-- <section class="gap blog-section" id="pricing" style="background-image: url(/assets/img/background-1.png);">
 
         <div class="container">
 
@@ -1120,7 +1120,7 @@
 
         </div>
 
-    </section>
+    </section> --}}
     {{-- PRICING END --}}
 
 

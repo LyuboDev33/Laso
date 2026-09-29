@@ -1457,11 +1457,13 @@ footer img.shaps-1 {
 
 /* 20. steps */
 .steps {
-    background-color: #fff8e1;
+    background-color: #f9f9f9;
     /* width: 39%; */
     padding: 60px;
     text-align: center;
-    border-radius: 30px;
+    border-radius: 191px;
+    border-bottom-right-radius: 70px;
+    border-top-right-radius: 70px;
     position: relative;
     border: 7px solid #fff;
     margin-left: -55px;
@@ -1515,7 +1517,7 @@ footer img.shaps-1 {
 }
 
 .steps img{
-    height: 81px;
+    height: 91px;
     width: 60px;
 }
 
@@ -2202,6 +2204,10 @@ header.two .bar-menu i {
     -moz-box-shadow: 0px 0px 13px 0px rgba(241, 60, 107, 0.3);
     border-radius: 60px;
     padding-right: 18px;
+}
+
+.welcome-clients {
+    height: 50px;
 }
 
 .use-app h6 {

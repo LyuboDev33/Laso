@@ -135,6 +135,87 @@
         </div>
     </section>
 
+    <section class="gap" style="background-image: url(/assets/img/background-1.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="heading two">
+                    <h6>ФОКУСИРАН ПОДХОД</h6>
+                    <h2>Един модел. Една ясна цел.</h2>
+                </div>
+                <div class="nav two nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true"> Реклама</button>
+                    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Потенциални клиенти</button>
+                    <button class="nav-link" id="v-pills-coffee-tab" data-bs-toggle="pill" data-bs-target="#v-pills-coffee" type="button" role="tab" aria-controls="v-pills-coffee" aria-selected="false">Резултати</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="tab-content" id="v-pills-tabContent" data-aos="fade-up" data-aos-delay="200" data-aos-duration="400">
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="tabs-text">
+                            <i>
+                                <img src="assets/img/marketing-icon-1.png" alt="marketing-icon">
+                            </i>
+                            <h4>Реклама</h4>
+                            <p>Създаваме и управляваме Meta кампании, съобразени с вашия бизнес и избрания план.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="tabs-img img-hover">
+                                <figure>
+                                    <img src="/assets/img/about/tab-imgs.jpg" alt="tabs-img">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="tabs-text">
+                            <i>
+                                <img src="assets/img/marketing-icon-2.png" alt="marketing-icon">
+                            </i>
+                            <h4>Потенциални клиенти</h4>
+                            <p>Насочваме рекламата към хора, които проявяват интерес към вашите услуги или предложения.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="tabs-img img-hover">
+                                <figure>
+                                    <img src="/assets/img/about/tab-imgs.jpg" alt="tabs-img">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="v-pills-coffee" role="tabpanel" aria-labelledby="v-pills-coffee-tab">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="tabs-text">
+                            <i>
+                                <img src="assets/img/marketing-icon-3.png" alt="marketing-icon">
+                            </i>
+                            <h4>Резултати</h4>
+                            <p>Получавате потенциалните клиенти директно във вашия LASO профил и можете да се свържете с тях.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="tabs-img img-hover">
+                                <figure>
+                                    <img src="/assets/img/about/tab-imgs.jpg" alt="tabs-img">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <section class="ads-campaing-section">
         <div class="container">

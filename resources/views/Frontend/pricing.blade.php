@@ -38,11 +38,7 @@
         <div class="container">
 
             <div class="mb-5 text-center">
-
-                <img
-                    src="/assets/img/heading-img.png"
-                    alt="LASO абонаментни планове"
-                >
+     <x-laso/>
 
                 <h6>
                     АБОНАМЕНТНИ ПЛАНОВЕ
@@ -66,86 +62,8 @@
 
             @include('Frontend.partials.pricing-plans')
 
-    
-
-            {{-- TESTIMONIAL --}}
-            <div class="row justify-content-center mt-5">
-
-                <div class="col-lg-9">
-
-                    <div class="mb-5 text-center">
-
-                        <h6>
-                            РЕАЛНИ РЕЗУЛТАТИ
-                        </h6>
-
-                        <h2>
-                            Вижте как LASO работи за реални бизнеси
-                        </h2>
-
-                        <p>
-                            Вижте как бизнеси в сферата на услугите използват LASO,
-                            за да достигат до потенциални клиенти и да получават
-                            реални запитвания чрез Meta реклама.
-                        </p>
-
-                    </div>
 
 
-                    <div class="video position-relative">
-
-                        <a
-                            data-fancybox=""
-                            href="#"
-                        >
-
-                            <i>
-
-                                <svg
-                                    width="11"
-                                    height="17"
-                                    viewBox="0 0 11 17"
-                                    fill="none"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                >
-
-                                    <path
-                                        d="M11 8.49951L0.5 0.27227L0.5 16.7268L11 8.49951Z"
-                                        fill="#fff"
-                                    ></path>
-
-                                </svg>
-
-                            </i>
-
-                        </a>
-
-
-                        <img
-                            src="https://placehold.co/900x500?text=LASO+Видео+Отзив"
-                            alt="Видео отзив от клиент на LASO"
-                            class="w-100"
-                        >
-
-                    </div>
-
-
-                    <div class="text-center mt-4">
-
-                        <h4>
-                            Реални запитвания. Реални бизнеси. Реални резултати.
-                        </h4>
-
-                        <p>
-                            Тук ще бъде добавен видео отзив от клиент на LASO
-                            с конкретен резултат от неговата рекламна кампания.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
 
         </div>
 
