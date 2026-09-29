@@ -87,7 +87,7 @@
                             </svg>
                         </i>
                         <h3>Локация</h3>
-                        <p>София, България</p>
+                        <p>София  <br> България</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -114,11 +114,13 @@
         <div class="row pt-80 pl-80">
             <div class="col-lg-6">
                 <div class="heading two">
-                    <h6>MEET OUR PROFESSIONALS</h6>
-                    <h2>We'd Love to Hear From You!</h2>
-                    <p class="pt-lg-3 pt-md-2">If you need information or support, feel free to contact us</p>
+                    <h6>СВЪРЖЕТЕ СЕ С НАС</h6>
+                    <h2>Ще се радваме да ви чуем!</h2>
+                    <p class="pt-lg-3 pt-md-2">Имате въпрос за LASO, абонаментните планове или начина на работа? Свържете се с
+                        нас и ще ви отговорим възможно най-скоро.
+                    </p>
                 </div>
-                <h6>Social Networking:</h6>
+                <h6>Последвайте ни в социалните мрежи:</h6>
                 <ul class="social-icon">
                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>

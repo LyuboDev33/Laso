@@ -59,6 +59,7 @@
 
     <!-- template js -->
     <script src="/assets/js/custom.js?v=<?= time() ?>"></script>
+
     <!-- bootstrap -->
     <script src="/assets/js/bootstrap.min.js?v=<?= time() ?>"></script>
 
@@ -128,6 +129,9 @@
         }
     </script>
 
+    <div id="progress">
+        <span id="progress-value"><i class="fa-solid fa-up-long"></i></span>
+    </div>
 </body>
 
 </html>

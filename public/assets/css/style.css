@@ -1519,10 +1519,10 @@ footer img.shaps-1 {
     width: 60px;
 }
 
-.step3 {
+/* .step3 {
         position: relative;
     right: -10px;
-}
+} */
 
 /* 21. download-app */
 .download-app h2 {
@@ -1624,6 +1624,14 @@ footer img.shaps-1 {
     -webkit-box-shadow: 12px 12px 0px 0px rgba(230, 230, 230, 0.75);
     -moz-box-shadow: 12px 12px 0px 0px rgba(230, 230, 230, 0.75);
     margin-bottom: 40px;
+}
+
+.solutions img {
+    width: 45px;
+}
+
+.img2 {
+    width: 80px !important;
 }
 
 .solutions:hover,
@@ -3759,8 +3767,36 @@ form.leave textarea::placeholder {
     transform: rotate(43deg);
     right: auto;
     top: -21px;
-    left: 44px;
+    left: 60px;
 }
+
+@media (min-width: 1200px) {
+        .propel-stats {
+    height: 230px;
+    position: relative;
+    right: 55px;
+    }
+
+    .ads-campaing-section {
+    margin-top: 150px;
+}
+
+}
+
+
+@media (min-width: 1400px) {
+    .propel-img.two:before {
+         left: 100px !important;
+    }
+
+}
+
+@media (max-width: 992px) {
+       .ads-campaing-section {
+    margin-top: 100px ;
+}
+}
+
 
 .propel-img.two:after {
     width: 207px;
