@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\API\FacebookLeadsController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\OnlinePaymentsController;
 use App\Http\Controllers\ProfileController;
@@ -17,10 +18,13 @@ Route::get('/',        [FrontEndController::class, 'welcome'])->name('welcome');
 Route::get('/contact', [FrontEndController::class, 'contact'])->name('contact');
 Route::get('/about',   [FrontEndController::class, 'about'])->name('about');
 Route::get('/pricing', [FrontEndController::class, 'pricing'])->name('pricing');
+Route::get('/testimonials', [FrontEndController::class, 'testimonials'])->name('testimonials');
+Route::get('/videos',[FrontEndController::class, 'videos'])->name('videos');
 
 Route::post('/create/{priceId}/{plan}', [OnlinePaymentsController::class, 'createSubscription'])
     ->name('subscription.create');
 
+Route::post('/', [EmailController::class, 'contactForm'])->name('email.contact-form');
 
 Route::middleware('auth')->group(function () {
 

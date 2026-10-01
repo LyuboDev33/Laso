@@ -44,7 +44,7 @@
                 <li>
                     <i class="fa-solid fa-angle-right"></i>
 
-                    <a href="contact.html">
+                    <a href="{{ route('contact') }}">
                         Свържете се с нас
                     </a>
                 </li>
@@ -52,34 +52,12 @@
                 <li>
                     <i class="fa-solid fa-angle-right"></i>
 
-                    <a href="javascript:void(0)">
+                    <a href="{{ route('pricing') }}">
                         Абонаментни планове
                     </a>
                 </li>
 
-                <li>
-                    <i class="fa-solid fa-angle-right"></i>
 
-                    <a href="javascript:void(0)">
-                        Какво получавате
-                    </a>
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-angle-right"></i>
-
-                    <a href="javascript:void(0)">
-                        За кого е подходящ LASO
-                    </a>
-                </li>
-
-                <li>
-                    <i class="fa-solid fa-angle-right"></i>
-
-                    <a href="javascript:void(0)">
-                        Как работи LASO
-                    </a>
-                </li>
 
             </ul>
 
@@ -152,7 +130,7 @@
         <div class="copyrights">
 
             <p>
-                Авторски права © <a href="#">LASO</a> 2026 г. Всички права запазени.
+                Авторски права © LASO 2026 г. Всички права запазени.
             </p>
 
             <ul class="social-icon">
@@ -163,21 +141,17 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-twitter"></i>
-                    </a>
-                </li>
 
-                <li>
-                    <a href="#">
-                        <i class="fa-brands fa-google"></i>
-                    </a>
-                </li>
 
                 <li>
                     <a href="#">
                         <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+
+                  <li>
+                    <a href="#">
+                        <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </li>
 

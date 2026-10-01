@@ -11,60 +11,74 @@
         <div class="header-bar stricked-menu">
             <div class="container d-flex justify-content-between align-items-center">
 
-                <x-logo width="180"  mobileWidth="120"/>
+                <x-logo width="180" mobileWidth="120" />
 
 
-            <nav class="navbar">
-                <ul class="navbar-links">
+                <nav class="navbar">
+                    <ul class="navbar-links">
 
-                    <li class="navbar-dropdown">
-                        <a href="{{ route('welcome') }}">
-                            Начало
+                        <li class="navbar-dropdown">
+                            <a href="{{ route('welcome') }}">
+                                Начало
+                            </a>
+                        </li>
+
+                        <li class="navbar-dropdown">
+                            <a href="{{ route('about') }}">
+                                За нас
+                            </a>
+                        </li>
+
+                        <li class="navbar-dropdown">
+                            <a href="{{ route('pricing') }}">
+                                Абонаменти
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="{{ route('testimonials') }}">
+                                Ревюта
+                            </a>
+                        </li>
+
+                        <li class="navbar-dropdown">
+                            <a href="{{ route('videos') }}">
+                                Видео уроци
+                            </a>
+                        </li>
+
+
+                        <li class="navbar-dropdown">
+                            <a href="{{ route('contact') }}">
+                                Контакти
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <div class="pickup d-flex gap-2 d-none d-lg-block">
+
+                    @auth
+                        <a href="{{ route('dashboard') }}" class="btn">
+                            Админ панел
                         </a>
-                    </li>
-
-                    <li class="navbar-dropdown">
-                        <a href="{{ route('about') }}">
-                            За нас
+                    @else
+                        <a href="{{ route('login') }}" class="btn">
+                            Вход
                         </a>
-                    </li>
 
-                    <li class="navbar-dropdown">
-                        <a href="{{ route('pricing') }}">
-                            Абонаменти
+                        <a href="{{ route('register') }}" class="btn">
+                            Регистрация
                         </a>
-                    </li>
+                    @endauth
 
-                    <li class="navbar-dropdown">
-                        <a href="{{ route('contact') }}">
-                            Контакти
-                        </a>
-                    </li>
+                </div>
 
-                </ul>
-            </nav>
-
-            <div class="pickup d-flex gap-2 d-none d-lg-block">
-
-                @auth
-                    <a href="{{ route('dashboard') }}" class="btn">
-                        Админ панел
-                    </a>
-                @else
-                    <a href="{{ route('login') }}" class="btn">
-                        Вход
-                    </a>
-
-                    <a href="{{ route('register') }}" class="btn">
-                        Регистрация
-                    </a>
-                @endauth
-
-            </div>
-
-            <div class="bar-menu">
-                <i class="fa-solid fa-bars"></i>
-            </div>
+                <div class="bar-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
             </div>
         </div>
 
@@ -72,7 +86,7 @@
             style="display:block;background-image:url('{{ asset('assets/img/background.png') }}');">
 
             <div class="res-log">
-                    <x-logo mobileWidth="150"/>
+                <x-logo mobileWidth="150" />
             </div>
 
             <ul>
@@ -94,6 +108,21 @@
                         Абонаменти
                     </a>
                 </li>
+
+                <li>
+                    <a href="{{ route('testimonials') }}">
+                        Ревюта
+                    </a>
+                </li>
+
+
+                <li class="navbar-dropdown">
+                    <a href="{{ route('videos') }}">
+                        Видео уроци
+                    </a>
+                </li>
+
+
 
                 <li>
                     <a href="{{ route('contact') }}">

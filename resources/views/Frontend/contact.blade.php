@@ -87,7 +87,7 @@
                             </svg>
                         </i>
                         <h3>Локация</h3>
-                        <p>София  <br> България</p>
+                        <p>София <br> България</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
@@ -111,33 +111,47 @@
                     </div>
                 </div>
             </div>
-        <div class="row pt-80 pl-80">
-            <div class="col-lg-6">
-                <div class="heading two">
-                    <h6>СВЪРЖЕТЕ СЕ С НАС</h6>
-                    <h2>Ще се радваме да ви чуем!</h2>
-                    <p class="pt-lg-3 pt-md-2">Имате въпрос за LASO, абонаментните планове или начина на работа? Свържете се с
-                        нас и ще ви отговорим възможно най-скоро.
-                    </p>
-                </div>
-                <h6>Последвайте ни в социалните мрежи:</h6>
-                <ul class="social-icon">
+            <div class="row pt-80 pl-80">
+                <div class="col-lg-6">
+                    <div class="heading two">
+                        <h6>СВЪРЖЕТЕ СЕ С НАС</h6>
+                        <h2>Ще се радваме да ви чуем!</h2>
+                        <p class="pt-lg-3 pt-md-2">Имате въпрос за LASO, абонаментните планове или начина на работа?
+                            Свържете се с
+                            нас и ще ви отговорим възможно най-скоро.
+                        </p>
+                    </div>
+                    <h6>Последвайте ни в социалните мрежи:</h6>
+                    <ul class="social-icon">
                         <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>
+                </div>
+                <div class="col-lg-6">
+                    {{-- contact@lasoads.com send the form here. --}}
+                    <form action="{{ route('email.contact-form') }}" class="content-form" role="form"
+                        id="contact-form" method="post">
+
+                        @csrf
+
+                        <input type="text" name="name" placeholder="Име и фамилия" required>
+                        <input type="email" name="email" placeholder="Имейл адрес" required>
+                        <input type="text" name="phone" placeholder="Телефонен номер" required>
+
+                        <textarea placeholder="Вашето съобщение" name="message" required></textarea>
+
+                        <button type="submit" class="btn">
+                            Изпрати съобщение
+                        </button>
+                    </form>
+                    @if (session('messageSent'))
+                        <div class="alert alert-success rounded-3 mt-3 rounded-pill" role="alert">
+                            {{ session('messageSent') }}
+                        </div>
+                    @endif
+                </div>
             </div>
-            <div class="col-lg-6">
-                {{-- contact@lasoads.com send the form here. --}}
-                <form class="content-form" role="form" id="contact-form" method="post">
-                    <input type="text" name="Complete Name" placeholder="Complete Name" required="">
-                    <input type="text" name="Email Address" placeholder="Email Address" required="">
-                    <input type="text" name="Phone No" placeholder="Phone No" required="">
-                    <textarea placeholder="Your Message" name="msg"></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
-            </div>
-        </div>
 
         </div>
     </section>

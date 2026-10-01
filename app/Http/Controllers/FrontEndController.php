@@ -30,5 +30,15 @@ class FrontEndController extends Controller
         return view('Frontend.pricing');
     }
 
+    /** Show the testimonials route */
+    public function testimonials (){
+        return view('Frontend.testimonials');
+    }
+
+    /** Show the video testimonials */
+    public function videos () {
+        return view('Frontend.videos');
+    }
+
 
 }
