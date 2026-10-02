@@ -142,20 +142,20 @@
 
                     <span>
                         <i class="fa-solid fa-location-dot"></i>
-                        Бургас, България
+                        Соофия, България
                     </span>
 
                     <span>
                         <a href="mailto:info@valenteoptic.bg">
                             <i class="fa-solid fa-envelope"></i>
-                            info@valenteoptic.bg
+                            contact@lasoads.com
                         </a>
                     </span>
 
                     <span>
                         <a href="tel:+359000000000">
                             <i class="fa-solid fa-phone"></i>
-                            +359 000 000 000
+                            +359 889 807 026
                         </a>
                     </span>
 

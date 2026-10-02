@@ -143,7 +143,7 @@
     <div class="row">
 
         <!-- DMD Health -->
-        <div class="col-lg-6 col-md-6 col-12 mb-30">
+        <div class="col-lg-6 col-md-6 col-12 mb-5">
 
             <div class="video position-relative">
 
@@ -163,7 +163,7 @@
             <div class="mt-20">
                 <h4 class="mt-1">Деница Драгомирова</h4>
 
-                <span class="d-block mb-3">
+                <span class="d-block">
                     General Manager
                 </span>
 
@@ -179,7 +179,7 @@
         </div>
 
         <!-- Studio Shift -->
-        <div class="col-lg-6 col-md-6 col-12 mb-30">
+        <div class="col-lg-6 col-md-6 col-12 mb-5">
 
             <div class="video position-relative">
 
@@ -199,7 +199,7 @@
             <div class="mt-20">
                 <h4 class="mt-1">Илия Костадинов</h4>
 
-                <span class="d-block mb-3">
+                <span class="d-block">
                     Собственик, Хиропрактор
                 </span>
 

@@ -10,7 +10,7 @@
             content="LASO, за нас, Meta реклами, lead generation, реклама за малък бизнес, Facebook реклами, генериране на запитвания">
     @endsection
 
-    <section class="mt-5 mb-5">
+    <section class="mt-5 about-us-1">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
@@ -173,7 +173,7 @@
     </section> --}}
 
 
-    <section class=" mt-5 accordion-section">
+    <section class=" mt-5 accordion-section about-us-2">
         <div class="container">
             <div class="heading two">
                 <h2>Повече възможности за малкия бизнес</h2>
@@ -229,7 +229,8 @@
     </section>
 
 
-    <section class="ads-campaing-section">
+    <section class="ads-campaing-section" style="background-image: url(/assets/img/background-1.png); padding-top: 100px;
+    padding-bottom: 100px;">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 align-self-start">

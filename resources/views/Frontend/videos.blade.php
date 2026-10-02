@@ -5,19 +5,15 @@
         <div class="row align-items-end">
             <div class="col-lg-6">
                 <div class="bannr-text">
-                    <h2>our Details</h2>
-                    <p>We create outstanding and world-class digital products, web design, apps, and branding.</p>
-                    <ol class="breadcrumb">
-                          <li class="breadcrumb-item">
-                            <a href="index.html">Home</a>
-                          </li>
-                            <li class="breadcrumb-item active" aria-current="page">our blog</li>
-                        </ol>
+                    <h2>ВИДЕО УРОЦИ</h2>
+                    <p>Всичко необходимо, на едно място.
+Кратки видео инструкции, които ти показват точно какво да направиш.</p>
+
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="bannr-img">
-                    <img src="assets/img/bannr.png" alt="img">
+                    <img src="/assets/img/bannr.png" alt="img">
                 </div>
             </div>
         </div>
@@ -27,7 +23,7 @@
     <section class="gap">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
 
                     <!-- Как да създадеш Facebook страница -->
                     <div class="blog our-blog img-hover">
@@ -37,10 +33,8 @@
                             </figure>
                         </div>
 
-                        <h5>
-                            01
-                            <span>Facebook<br>страница</span>
-                        </h5>
+                        <h5>01<span>Окт 2026</span></h5>
+
 
                         <div class="our-blog-text">
                             <a href="#">
@@ -51,14 +45,10 @@
                                 Научи как да създадеш и подготвиш Facebook страница за своя бизнес стъпка по стъпка.
                             </p>
 
-                            <a href="#" class="theme-color">
-                                <i class="fa-solid fa-play"></i> Гледай
-                            </a>
+
                         </div>
 
-                        <a href="#">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+
                     </div>
 
 
@@ -70,10 +60,7 @@
                             </figure>
                         </div>
 
-                        <h5>
-                            02
-                            <span>Потенциални<br>клиенти</span>
-                        </h5>
+                        <h5>01<span>Окт, 2026</span></h5>
 
                         <div class="our-blog-text">
                             <a href="#">
@@ -85,14 +72,10 @@
                                 правилния начин.
                             </p>
 
-                            <a href="#" class="theme-color">
-                                <i class="fa-solid fa-play"></i> Гледай
-                            </a>
+
                         </div>
 
-                        <a href="#">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        
                     </div>
 
 
@@ -104,10 +87,8 @@
                             </figure>
                         </div>
 
-                        <h5>
-                            03
-                            <span>Потенциални<br>клиенти</span>
-                        </h5>
+                         <h5>02<span>Октомври, 2026</span></h5>
+
 
                         <div class="our-blog-text">
                             <a href="#">
@@ -119,18 +100,14 @@
                                 потенциални клиенти.
                             </p>
 
-                            <a href="#" class="theme-color">
-                                <i class="fa-solid fa-play"></i> Гледай
-                            </a>
+
                         </div>
 
-                        <a href="#">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+
                     </div>
 
                 </div>
-                <div class="col-lg-4">
+                {{-- <div class="col-lg-4">
                     <div class="sidebar">
                         <h3>Recent Posts</h3>
                         <div class="boder"></div>
@@ -207,7 +184,7 @@
                             <button class="btn">Subscribe</button>
                         </form>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

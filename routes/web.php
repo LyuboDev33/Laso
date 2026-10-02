@@ -21,8 +21,6 @@ Route::get('/pricing', [FrontEndController::class, 'pricing'])->name('pricing');
 Route::get('/testimonials', [FrontEndController::class, 'testimonials'])->name('testimonials');
 Route::get('/videos',[FrontEndController::class, 'videos'])->name('videos');
 
-Route::post('/create/{priceId}/{plan}', [OnlinePaymentsController::class, 'createSubscription'])
-    ->name('subscription.create');
 
 Route::post('/', [EmailController::class, 'contactForm'])->name('email.contact-form');
 
@@ -40,6 +38,8 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 
     Route::get('/myleads', [FacebookLeadsController::class, 'myLeads'])->name('myleads.index');
+
+    Route::post('/create/{priceId}/{plan}', [OnlinePaymentsController::class, 'createSubscription'])->name('subscription.create');
 
     /** All Subscription Routing  */
     Route::prefix('/subscription')->group(function () {

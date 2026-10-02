@@ -2325,6 +2325,7 @@
     .client-text {
         padding: 30px 30px;
         border-radius: 60px;
+        margin-top: 75px;
     }
 
     .count-text p {

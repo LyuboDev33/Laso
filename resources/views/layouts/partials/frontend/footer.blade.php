@@ -1,4 +1,4 @@
-<footer class="mt-5 no-bottom two" style="background-image: url(/assets/img/footer-2.jpg);">
+<footer class=" no-bottom two" style="background-image: url(/assets/img/footer-2.jpg);">
 
     <div class="container">
 
