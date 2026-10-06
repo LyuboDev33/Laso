@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin\FacebookToken;
 use App\Models\User;
 use Database\Seeders\RolesSeeder;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -23,6 +24,12 @@ class DatabaseSeeder extends Seeder
             'name' => 'Admin',
             'email' => 'admin@laso.bg',
             'password' => Hash::make('password'),
+            'phone'    => '000'
+        ]);
+
+        FacebookToken::create([
+            'id' => 1,
+            'facebook_token' => 'test',
         ]);
 
         $this->call([

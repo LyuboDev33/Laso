@@ -24,12 +24,28 @@ class StripeService
         'basic_montly' => 'price_1U1rN30XJPJxSgBOzr2SkEE6',
         'basic_yearly' => 'price_1UFtU50XJPJxSgBO7UXFKk16',
 
-        'growth_monthly' => 'price_1UFtVx0XJPJxSgBOOFabY5hx',
+        'growth_monthly' => 'price_1U1rCm0XJPJxSgBO5rUd41mn',
         'growth_yearly' => 'price_1UFtZ30XJPJxSgBOxhh5pJpO',
 
         'premium_monthly' => 'price_1UFtbb0XJPJxSgBOaL5jMZhK',
         'premium_yearly' => 'price_1UFtiq0XJPJxSgBOt2QKvVbz',
 
+    ];
+
+    /**
+     * Maximum number of ads allowed for each plan.
+     *
+     * @var array<string, int>
+     */
+    private static array $planAdLimits = [
+        'basic_montly' => 1,
+        'basic_yearly' => 1,
+
+        'growth_monthly' => 2,
+        'growth_yearly' => 2,
+
+        'premium_monthly' => 4,
+        'premium_yearly' => 4,
     ];
 
     /**
@@ -40,6 +56,24 @@ class StripeService
     private function stripe(): \Stripe\StripeClient
     {
         return new \Stripe\StripeClient(env('STRIPE_SECRET'));
+    }
+
+    /**
+     * Get the maximum number of ads allowed for a plan.
+     */
+    public function getPlanAdLimit(string $plan): int
+    {
+        return self::$planAdLimits[$plan] ?? 0;
+    }
+
+    /**
+     * Get all available subscription plan names.
+     *
+     * @return array<int, string>
+     */
+    public function getPlanNames(): array
+    {
+        return array_keys(self::$paymentPlans);
     }
 
     /**
@@ -61,7 +95,7 @@ class StripeService
         }
 
         Mail::to(Auth::user()->email)->send(new SubscriptionPurchasedMail());
-        Mail::to('contact@lubodev.com')->send(new SendNotificationToAdminMail(Auth::user()));
+        Mail::to('teodor.teodosiev9004@gmail.com')->send(new SendNotificationToAdminMail(Auth::user()));
 
         return redirect()->route('subscription.index');
     }

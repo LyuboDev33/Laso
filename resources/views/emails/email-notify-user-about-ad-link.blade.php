@@ -2,16 +2,19 @@
 <html lang="bg">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>LASO | Качени материали</title>
+    <title>LASO | Вашата реклама е готова</title>
 
     <style>
+
         @media only screen and (max-width: 620px) {
+
             .email-container {
                 width: 100% !important;
             }
@@ -49,12 +52,12 @@
                 padding: 15px 20px !important;
             }
 
-            .user-label {
-                width: 110px !important;
-            }
         }
+
     </style>
+
 </head>
+
 
 <body style="
     margin: 0;
@@ -76,6 +79,7 @@
         ">
 
         <tr>
+
             <td align="center"
                 class="email-wrapper"
                 style="
@@ -97,8 +101,10 @@
                         box-shadow: 0 8px 30px rgba(18, 31, 84, 0.08);
                     ">
 
+
                     {{-- HEADER --}}
                     <tr>
+
                         <td align="center"
                             class="email-header"
                             style="
@@ -110,7 +116,6 @@
                                 class="logo"
                                 style="
                                     display: block;
-
                                     width: auto;
                                     max-width: 100%;
                                     border: 0;
@@ -119,10 +124,13 @@
                                 alt="LASO Logo">
 
                         </td>
+
                     </tr>
+
 
                     {{-- GRADIENT LINE --}}
                     <tr>
+
                         <td style="
                             height: 5px;
                             font-size: 0;
@@ -130,16 +138,22 @@
                             background-color: #ef326f;
                             background-image: linear-gradient(90deg, #ef326f, #fe6c4e);
                         ">
+
                             &nbsp;
+
                         </td>
+
                     </tr>
+
 
                     {{-- CONTENT --}}
                     <tr>
+
                         <td class="email-content"
                             style="
                                 padding: 45px 45px 40px 45px;
                             ">
+
 
                             {{-- BADGE --}}
                             <table border="0"
@@ -149,6 +163,7 @@
                                 style="margin-bottom: 20px;">
 
                                 <tr>
+
                                     <td style="
                                         background-color: #fdeaf0;
                                         color: #ef326f;
@@ -159,11 +174,15 @@
                                         letter-spacing: 1px;
                                         text-transform: uppercase;
                                     ">
-                                        Материалите са готови
+
+                                        Рекламата е готова
+
                                     </td>
+
                                 </tr>
 
                             </table>
+
 
                             {{-- TITLE --}}
                             <h1
@@ -176,8 +195,11 @@
                                     line-height: 39px;
                                     font-weight: 800;
                                 ">
-                                Потребител качи своите материали
+
+                                Вашата реклама е готова!
+
                             </h1>
+
 
                             {{-- MESSAGE --}}
                             <p style="
@@ -186,12 +208,14 @@
                                 font-size: 17px;
                                 line-height: 28px;
                             ">
-                                Потребител
+
+                                Здравейте,
                                 <strong style="color: #121f54;">
                                     {{ $user->name }}
-                                </strong>
-                                попълни необходимата информация и качи своите материали.
+                                </strong>!
+
                             </p>
+
 
                             <p style="
                                 margin: 0 0 30px 0;
@@ -199,9 +223,12 @@
                                 font-size: 15px;
                                 line-height: 25px;
                             ">
-                                Данните на потребителя са готови за преглед в
-                                административния панел на LASO.
+
+                                Линкът за вашата реклама беше качен успешно.
+                                Можете да го прегледате от вашето табло в LASO.
+
                             </p>
+
 
                             {{-- STATUS --}}
                             <table width="100%"
@@ -217,6 +244,7 @@
                                 ">
 
                                 <tr>
+
                                     <td style="padding: 22px;">
 
                                         <table width="100%"
@@ -226,6 +254,7 @@
                                             role="presentation">
 
                                             <tr>
+
                                                 <td
                                                     width="45"
                                                     valign="middle"
@@ -235,8 +264,11 @@
                                                         font-size: 25px;
                                                         font-weight: 700;
                                                     ">
+
                                                     ✓
+
                                                 </td>
+
 
                                                 <td valign="middle">
 
@@ -247,8 +279,11 @@
                                                         line-height: 22px;
                                                         font-weight: 700;
                                                     ">
-                                                        Материалите са качени
+
+                                                        Линкът към рекламата е качен
+
                                                     </p>
+
 
                                                     <p style="
                                                         margin: 0;
@@ -257,20 +292,25 @@
                                                         line-height: 21px;
                                                         font-weight: 700;
                                                     ">
-                                                        Готови за преглед
+
+                                                        Готова за преглед
+
                                                     </p>
 
                                                 </td>
+
                                             </tr>
 
                                         </table>
 
                                     </td>
+
                                 </tr>
 
                             </table>
 
-                            {{-- USER INFORMATION TITLE --}}
+
+                            {{-- AD INFORMATION --}}
                             <h2 style="
                                 margin: 0 0 16px 0;
                                 color: #121f54;
@@ -278,10 +318,12 @@
                                 line-height: 28px;
                                 font-weight: 800;
                             ">
-                                Информация за потребителя
+
+                                Вашата реклама
+
                             </h2>
 
-                            {{-- USER INFORMATION --}}
+
                             <table width="100%"
                                 border="0"
                                 cellspacing="0"
@@ -295,10 +337,11 @@
                                     margin-bottom: 30px;
                                 ">
 
-                                {{-- ID --}}
+
+                                {{-- COMPANY --}}
                                 <tr>
+
                                     <td
-                                        class="user-label"
                                         width="150"
                                         style="
                                             padding: 15px 18px;
@@ -308,7 +351,9 @@
                                             font-size: 14px;
                                             font-weight: 700;
                                         ">
-                                        ID
+
+                                        Компания
+
                                     </td>
 
                                     <td style="
@@ -319,83 +364,17 @@
                                         font-weight: 700;
                                     ">
 
-                                        <a href="{{ url("/admin/users/{$user->id}/details") }}"
-                                            style="
-                                                color: #ef326f;
-                                                text-decoration: none;
-                                            ">
-                                            #{{ $user->id }} - Link
-                                        </a>
+                                        {{ $ad->company_name }}
 
                                     </td>
+
                                 </tr>
 
-                                {{-- NAME --}}
+
+                                {{-- AD ID --}}
                                 <tr>
+
                                     <td
-                                        class="user-label"
-                                        width="150"
-                                        style="
-                                            padding: 15px 18px;
-                                            background-color: #f8f8fa;
-                                            border-bottom: 1px solid #eeeeee;
-                                            color: #777777;
-                                            font-size: 14px;
-                                            font-weight: 700;
-                                        ">
-                                        Име
-                                    </td>
-
-                                    <td style="
-                                        padding: 15px 18px;
-                                        border-bottom: 1px solid #eeeeee;
-                                        color: #121f54;
-                                        font-size: 14px;
-                                        font-weight: 700;
-                                    ">
-                                        {{ $user->name }}
-                                    </td>
-                                </tr>
-
-                                {{-- EMAIL --}}
-                                <tr>
-                                    <td
-                                        class="user-label"
-                                        width="150"
-                                        style="
-                                            padding: 15px 18px;
-                                            background-color: #f8f8fa;
-                                            border-bottom: 1px solid #eeeeee;
-                                            color: #777777;
-                                            font-size: 14px;
-                                            font-weight: 700;
-                                        ">
-                                        Имейл
-                                    </td>
-
-                                    <td style="
-                                        padding: 15px 18px;
-                                        border-bottom: 1px solid #eeeeee;
-                                        color: #121f54;
-                                        font-size: 14px;
-                                        font-weight: 700;
-                                    ">
-
-                                        <a href="mailto:{{ $user->email }}"
-                                            style="
-                                                color: #ef326f;
-                                                text-decoration: none;
-                                            ">
-                                            {{ $user->email }}
-                                        </a>
-
-                                    </td>
-                                </tr>
-
-                                {{-- FACEBOOK PAGE --}}
-                                <tr>
-                                    <td
-                                        class="user-label"
                                         width="150"
                                         style="
                                             padding: 15px 18px;
@@ -404,7 +383,9 @@
                                             font-size: 14px;
                                             font-weight: 700;
                                         ">
-                                        Facebook
+
+                                        Реклама
+
                                     </td>
 
                                     <td style="
@@ -412,30 +393,16 @@
                                         color: #121f54;
                                         font-size: 14px;
                                         font-weight: 700;
-                                        word-break: break-word;
                                     ">
 
-                                        @if ($user->facebook_page)
-
-                                            <a href="{{ $user->facebook_page }}"
-                                                target="_blank"
-                                                style="
-                                                    color: #ef326f;
-                                                    text-decoration: none;
-                                                ">
-                                                {{ $user->facebook_page }}
-                                            </a>
-
-                                        @else
-
-                                            Не е добавена
-
-                                        @endif
+                                        #{{ $ad->id }}
 
                                     </td>
+
                                 </tr>
 
                             </table>
+
 
                             {{-- CTA --}}
                             <table border="0"
@@ -448,6 +415,7 @@
                                 ">
 
                                 <tr>
+
                                     <td
                                         align="center"
                                         style="
@@ -456,7 +424,8 @@
                                             background-image: linear-gradient(90deg, #ef326f, #fe6c4e);
                                         ">
 
-                                        <a href="{{ url("/admin/users/{$user->id}/details") }}"
+                                        <a href="{{ $ad->ad_link }}"
+                                            target="_blank"
                                             class="button"
                                             style="
                                                 display: inline-block;
@@ -468,13 +437,17 @@
                                                 text-decoration: none;
                                                 border-radius: 40px;
                                             ">
-                                            Прегледай материалите
+
+                                            Прегледай рекламата
+
                                         </a>
 
                                     </td>
+
                                 </tr>
 
                             </table>
+
 
                             {{-- INFORMATION --}}
                             <table width="100%"
@@ -489,6 +462,7 @@
                                 ">
 
                                 <tr>
+
                                     <td style="
                                         padding: 20px;
                                         color: #666666;
@@ -496,19 +470,25 @@
                                         line-height: 23px;
                                         text-align: center;
                                     ">
+
                                         Това е автоматично известие от LASO.
-                                        Потребителят е приключил с предоставянето
-                                        на необходимата информация и материали.
+                                        Линкът към вашата реклама вече е достъпен
+                                        и можете да го прегледате по всяко време.
+
                                     </td>
+
                                 </tr>
 
                             </table>
 
                         </td>
+
                     </tr>
+
 
                     {{-- FOOTER --}}
                     <tr>
+
                         <td
                             class="email-footer"
                             align="center"
@@ -524,8 +504,11 @@
                                 line-height: 22px;
                                 font-weight: 700;
                             ">
+
                                 LASO
+
                             </p>
+
 
                             <p style="
                                 margin: 0 0 15px 0;
@@ -533,8 +516,11 @@
                                 font-size: 13px;
                                 line-height: 21px;
                             ">
-                                Административно известие
+
+                                Вашата реклама е готова
+
                             </p>
+
 
                             <p style="
                                 margin: 0;
@@ -542,15 +528,19 @@
                                 font-size: 12px;
                                 line-height: 20px;
                             ">
+
                                 &copy; {{ date('Y') }} LASO. Всички права запазени.
+
                             </p>
 
                         </td>
+
                     </tr>
 
                 </table>
 
             </td>
+
         </tr>
 
     </table>

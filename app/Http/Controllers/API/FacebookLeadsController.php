@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\API\Lead;
+use App\Models\Admin\FacebookToken;
 use App\Models\Admin\LeadForm;
 use App\Models\User;
 use App\Services\FacebookService;
@@ -36,6 +37,7 @@ class FacebookLeadsController extends Controller
 
         return view('admin.Leads.Index', [
             'users' => $users,
+            'token' => FacebookToken::where('id', 1)->first()
         ]);
     }
 
@@ -216,10 +218,8 @@ class FacebookLeadsController extends Controller
                 }
             }
 
-            return back()->with(
-                'success',
-                "{$insertedLeads} Facebook лийда бяха интегрирани успешно."
-            );
+            return back()->with('success', "{$insertedLeads} Facebook лийда бяха интегрирани успешно.");
+
         } catch (\Exception $exception) {
             return back()->with('error', $exception->getMessage());
         }
@@ -245,5 +245,26 @@ class FacebookLeadsController extends Controller
             'success' => true,
             'is_seen' => $lead->is_seen,
         ]);
+    }
+
+    /**
+     * Update the Facebook access token.
+     *
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function updateFacebookToken(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'facebook_token' => ['required', 'string'],
+        ]);
+
+        $token = FacebookToken::where('id', 1)->firstOrFail();
+
+        $token->update([
+            'facebook_token' => $validated['facebook_token'],
+        ]);
+
+        return back()->with('successFacebookToken', 'Facebook токенът беше обновен успешно.');
     }
 }

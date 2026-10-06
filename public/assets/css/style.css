@@ -402,6 +402,7 @@ figure {
     height: 85px;
     border-radius: 50%;
     margin-right: 20px;
+    padding: 15px;
 }
 
 .companie.owl-theme .owl-nav.disabled+.owl-dots {
@@ -2758,6 +2759,7 @@ ul.icon-share {
     background: linear-gradient(90deg, #ef326f, #fe6c4e);
     position: relative;
     transform: translatex(-90px);
+    padding: 15px;
 }
 
 .tabs-text h4 {
@@ -4290,7 +4292,7 @@ input {
 }
 
 input::placeholder {
-    color: #555;
+    color: #5555558d;
 }
 
 form.content-form textarea {
@@ -7496,4 +7498,385 @@ ul.pagination li:hover,
     .user-details-logo {
         max-width: 100%;
     }
+}
+
+    .facebook-integration-box {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+}
+
+.facebook-token-input {
+    height: 52px;
+}
+
+.facebook-action-btn {
+    width: 240px;
+    height: 52px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+@media (max-width: 991.98px) {
+
+    .facebook-integration-box .d-flex {
+        flex-direction: column;
+    }
+
+    .facebook-action-btn {
+        width: 100%;
+    }
+
+    .facebook-integration-box .col-lg-auto {
+        width: 100%;
+    }
+}
+
+#insertLeadsForm {
+    height: 70px;
+}
+
+    .ad-form-card {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.04);
+        }
+
+        .ad-form-label {
+            display: block;
+            margin-bottom: 9px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #252525;
+        }
+
+        .ad-form-control {
+            width: 100%;
+            min-height: 48px;
+            padding: 12px 15px;
+            border: 1px solid #dfe3e8;
+            border-radius: 10px;
+            background: #fff;
+            color: #252525;
+            font-size: 14px;
+            outline: none;
+            transition:
+                border-color .2s ease,
+                box-shadow .2s ease,
+                background .2s ease;
+        }
+
+        textarea.ad-form-control {
+            min-height: 120px;
+            resize: vertical;
+            line-height: 1.6;
+        }
+
+        .ad-form-control::placeholder {
+            color: #9aa1aa;
+        }
+
+        .ad-form-control:hover {
+            border-color: #c5cad1;
+        }
+
+        .ad-form-control:focus {
+            border-color: #777;
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+            background: #fff;
+        }
+
+        .ad-form-error {
+            margin-top: 7px;
+            font-size: 13px;
+            color: #dc3545;
+        }
+
+        .ad-field-description {
+            margin: 8px 0 0;
+            color: #7a7f87;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .ad-form-section-heading {
+            margin: 10px 0 25px;
+            padding-top: 25px;
+            border-top: 1px solid #eceff2;
+        }
+
+        .ad-form-section-heading h4 {
+            margin-bottom: 6px;
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .ad-form-section-heading p {
+            margin: 0;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .ad-upload-box {
+            height: 100%;
+            padding: 20px;
+            border: 1px dashed #ced4da;
+            border-radius: 12px;
+            background: #fafafa;
+            transition:
+                border-color .2s ease,
+                background .2s ease;
+        }
+
+        .ad-upload-box:hover {
+            border-color: #999;
+            background: #f7f7f7;
+        }
+
+        .ad-upload-box p {
+            margin: 12px 0 0;
+            color: #777;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .ad-file-input {
+            display: block;
+            width: 100%;
+            padding: 9px;
+            border: 1px solid #e0e3e7;
+            border-radius: 9px;
+            background: #fff;
+            font-size: 13px;
+        }
+
+        .ad-file-input::file-selector-button {
+            margin-right: 12px;
+            padding: 8px 14px;
+            border: 0;
+            border-radius: 7px;
+            background: #eceff2;
+            color: #333;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background .2s ease;
+        }
+
+        .ad-file-input::file-selector-button:hover {
+            background: #dfe3e7;
+        }
+
+        .ad-info-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 18px 20px;
+            border: 1px solid #d9e7f7;
+            border-radius: 12px;
+            background: #f5f9ff;
+        }
+
+        .ad-info-box > i {
+            margin-top: 3px;
+            font-size: 18px;
+        }
+
+        .ad-info-box strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .ad-info-box p {
+            margin: 0;
+            color: #62676d;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .ad-availability-box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 16px 20px;
+            border: 1px solid #d9e7f7;
+            border-radius: 12px;
+            background: #f5f9ff;
+            font-size: 14px;
+        }
+
+        .ad-limit-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 30px;
+            border: 1px solid #f1d2d5;
+            border-radius: 16px;
+            background: #fff7f7;
+        }
+
+        .ad-limit-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 48px;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #f8d7da;
+            font-size: 20px;
+        }
+
+        .ad-limit-box h4 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .ad-limit-box p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+
+        @media (max-width: 767px) {
+
+            .ad-form-card {
+                padding: 20px;
+            }
+
+            .ad-availability-box {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .ad-limit-box {
+                padding: 20px;
+            }
+
+        }
+
+        .upload-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .25s ease;
+}
+
+.upload-loader.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.upload-loader-content {
+    width: calc(100% - 40px);
+    max-width: 480px;
+
+    padding: 40px 30px;
+
+    background: #fff;
+    border-radius: 18px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+}
+
+.upload-loader-gif {
+    width: 100px;
+    height: 100px;
+
+    object-fit: contain;
+
+    margin-bottom: 20px;
+}
+
+.upload-loader-content h4 {
+    margin-bottom: 10px;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.upload-loader-content p {
+    margin: 0;
+
+    color: #777;
+    font-size: 14px;
+}
+
+/* =========================================
+   DOWNLOADABLE MEDIA
+========================================= */
+
+.downloadable-media {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* =========================================
+   DOWNLOAD BUTTON
+========================================= */
+
+.media-download-btn {
+    position: absolute;
+
+    right: 12px;
+    bottom: 12px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    z-index: 10;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+
+/* =========================================
+   DOWNLOAD ICON
+========================================= */
+
+.media-download-btn i {
+    font-size: 30px;
+    line-height: 1;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.media-download-btn:hover {
+    transform: scale(1.08);
 }

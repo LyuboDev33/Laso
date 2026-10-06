@@ -1,12 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdsController;
 use App\Http\Controllers\API\FacebookLeadsController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\OnlinePaymentsController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\UserDetailsController;
-use App\Models\User;
+use App\Http\Controllers\UserAdsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -49,11 +49,13 @@ Route::middleware('auth')->group(function () {
         Route::get('/fail', [OnlinePaymentsController::class, 'fail'])->name('subscription.fail');
     });
 
-    Route::prefix('/details')->group(function () {
-        Route::get('/', [UserDetailsController::class, 'index'])->name('details.index');
-        Route::post('/create/{user}', [UserDetailsController::class, 'createUserDetails'])->name('user.details.create');
+    /** All ads Routing  */
+    Route::prefix('/ads')->group(function () {
+        Route::get('/', [UserAdsController::class, 'index'])->name('ads.index');
+        Route::get('/create-ad', [UserAdsController::class, 'createAd'])->name('ads.create-ad');
+        Route::get('/{id}', [UserAdsController::class, 'show'])->name('user.ads.show');
+        Route::post('/create/{user}', [UserAdsController::class, 'createUserAd'])->name('user.ads.create');
     });
-
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');

@@ -7,6 +7,7 @@ namespace App\Models;
 use App\Models\Admin\API\Lead;
 use App\Models\Admin\LeadForm;
 use App\Models\Role;
+use App\Models\UserAd;
 use App\Notifications\ResetPasswordNotification;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Attributes\Hidden;
@@ -16,7 +17,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Cashier\Billable;
 
-#[Fillable(['name', 'email', 'password', 'profile_pic', 'facebook_page'])]
+#[Fillable(['name', 'email', 'password', 'profile_pic', 'facebook_page', 'phone'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
@@ -62,6 +63,6 @@ class User extends Authenticatable
     }
 
     public function details() {
-        return $this->hasOne(UserDetail::class);
+        return $this->hasOne(UserAd::class);
     }
 }

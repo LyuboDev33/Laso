@@ -71,7 +71,7 @@
 
 
     <!-- template js -->
-    <script src="/assets/js/custom.js?v=<?= time() ?>"></script>
+    {{-- <script src="/assets/js/custom.js?v=<?= time() ?>"></script> --}}
     <!-- bootstrap -->
     <script src="/assets/js/bootstrap.min.js?v=<?= time() ?>"></script>
 

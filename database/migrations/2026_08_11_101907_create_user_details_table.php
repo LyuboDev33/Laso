@@ -11,24 +11,28 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_details', function (Blueprint $table) {
+        Schema::create('user_ads', function (Blueprint $table) {
             $table->id();
 
             $table->foreignId('user_id')
-                ->unique()
                 ->constrained()
                 ->cascadeOnDelete();
+
+            $table->string('ad_link')->nullable();
 
             $table->string('company_name');
             $table->text('business_description');
             $table->string('website')->nullable();
             $table->string('city');
             $table->string('phone');
+
             $table->text('brand_information')->nullable();
+
             $table->string('logo')->nullable();
             $table->json('images')->nullable();
             $table->json('videos')->nullable();
             $table->string('voice_recording')->nullable();
+
             $table->text('video_ad_requirements')->nullable();
             $table->text('additional_notes')->nullable();
 

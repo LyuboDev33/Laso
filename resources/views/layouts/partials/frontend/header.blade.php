@@ -142,7 +142,7 @@
 
                     <span>
                         <i class="fa-solid fa-location-dot"></i>
-                        Соофия, България
+                        София, България
                     </span>
 
                     <span>

@@ -24,6 +24,57 @@
                     предоставени от потребителя за подготовката на рекламната кампания.
                 </p>
 
+
+                {{-- AD LINK --}}
+                <form
+                    action="{{ route('admin.users.ads.link.update', [
+                        'user' => $user,
+                        'ad' => $details,
+                    ]) }}"
+                    method="POST" class="mt-4">
+
+                    @csrf
+                    @method('PATCH')
+
+
+                    <div class="mb-3">
+
+                        <label for="ad_link" class="form-label">
+                            Линк към готовата реклама
+                        </label>
+
+                        <input type="url" name="ad_link" id="ad_link" class="form-control"
+                            placeholder="https://..." value="{{ old('ad_link', $details->ad_link) }}">
+
+                        @error('ad_link')
+                            <div class="text-danger mt-2">
+                                {{ $message }}
+                            </div>
+                        @enderror
+
+                    </div>
+
+
+                    <button type="submit" class="btn">
+                        <i class="fa-solid fa-link me-2"></i>
+
+                        @if ($details->ad_link)
+                            Обнови линка
+                        @else
+                            Добави линк
+                        @endif
+                    </button>
+
+                </form>
+
+
+                {{-- SUCCESS MESSAGE --}}
+                @if (session('success'))
+                    <div class="alert alert-success mt-3 mb-0">
+                        {{ session('success') }}
+                    </div>
+                @endif
+
             </div>
 
         </div>
@@ -86,8 +137,7 @@
 
                     <p class="user-details-value">
 
-                        <a href="mailto:{{ $user->email }}"
-                            class="user-details-link">
+                        <a href="mailto:{{ $user->email }}" class="user-details-link">
                             {{ $user->email }}
                         </a>
 
@@ -106,18 +156,13 @@
                     <p class="user-details-value">
 
                         @if ($details?->phone)
-
-                            <a href="tel:{{ $details->phone }}"
-                                class="user-details-link">
+                            <a href="tel:{{ $details->phone }}" class="user-details-link">
                                 {{ $details->phone }}
                             </a>
-
                         @else
-
                             <span class="user-details-empty">
                                 Не е добавен
                             </span>
-
                         @endif
 
                     </p>
@@ -135,19 +180,13 @@
                     <p class="user-details-value">
 
                         @if ($user->facebook_page)
-
-                            <a href="{{ $user->facebook_page }}"
-                                target="_blank"
-                                class="user-details-link">
+                            <a href="{{ $user->facebook_page }}" target="_blank" class="user-details-link">
                                 Отвори Facebook страницата
                             </a>
-
                         @else
-
                             <span class="user-details-empty">
                                 Не е добавена
                             </span>
-
                         @endif
 
                     </p>
@@ -163,17 +202,13 @@
                     </p>
 
                     @if ($details)
-
                         <span class="user-details-status completed">
                             ✓ Материалите са изпратени
                         </span>
-
                     @else
-
                         <span class="user-details-status missing">
                             Все още няма материали
                         </span>
-
                     @endif
 
                 </div>
@@ -236,19 +271,13 @@
                         <p class="user-details-value">
 
                             @if ($details?->website)
-
-                                <a href="{{ $details->website }}"
-                                    target="_blank"
-                                    class="user-details-link">
+                                <a href="{{ $details->website }}" target="_blank" class="user-details-link">
                                     {{ $details->website }}
                                 </a>
-
                             @else
-
                                 <span class="user-details-empty">
                                     Не е добавен
                                 </span>
-
                             @endif
 
                         </p>
@@ -342,24 +371,35 @@
                         </p>
 
                         @if ($details?->logo)
+                            <div class="downloadable-media">
 
-                            <a href="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
-                                target="_blank">
+                                {{-- PREVIEW --}}
+                                <a href="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
+                                    target="_blank">
 
-                                <img src="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
-                                    alt="{{ $details->company_name }} Logo"
-                                    class="user-details-logo">
+                                    <img src="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
+                                        alt="{{ $details->company_name }} Logo" class="user-details-logo">
 
-                            </a>
+                                </a>
 
+
+                                {{-- DOWNLOAD --}}
+                                <a href="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
+                                    download="{{ $details->logo }}" class="media-download-btn" title="Изтегли логото">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                </a>
+
+                            </div>
                         @else
-
                             <p class="user-details-value">
+
                                 <span class="user-details-empty">
                                     Няма качено лого
                                 </span>
-                            </p>
 
+                            </p>
                         @endif
 
                     </div>
@@ -377,26 +417,38 @@
                             <div class="user-details-images">
 
                                 @foreach ($details->images as $image)
+                                    <div class="downloadable-media">
 
-                                    <a href="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
-                                        target="_blank">
+                                        {{-- PREVIEW --}}
+                                        <a href="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
+                                            target="_blank">
 
-                                        <img src="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
-                                            alt="Business Image"
-                                            class="user-details-image">
+                                            <img src="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
+                                                alt="Business Image" class="user-details-image">
 
-                                    </a>
+                                        </a>
 
+
+                                        {{-- DOWNLOAD --}}
+                                        <a href="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
+                                            download="{{ $image }}" class="media-download-btn"
+                                            title="Изтегли изображението">
+
+                                            <i class="fa-solid fa-download"></i>
+
+                                        </a>
+
+                                    </div>
                                 @endforeach
 
                             </div>
-
                         @else
-
                             <p class="user-details-value">
+
                                 <span class="user-details-empty">
                                     Няма качени изображения
                                 </span>
+
                             </p>
 
                         @endif
@@ -416,27 +468,38 @@
                             <div class="user-details-videos">
 
                                 @foreach ($details->videos as $video)
+                                    <div class="downloadable-media">
 
-                                    <video controls
-                                        preload="metadata"
-                                        class="user-details-video">
+                                        <video controls preload="metadata" class="user-details-video">
 
-                                        <source src="{{ asset('assets/img/dashboard/business_video/' . $video) }}">
+                                            <source
+                                                src="{{ asset('assets/img/dashboard/business_video/' . $video) }}">
 
-                                        Вашият браузър не поддържа видео.
+                                            Вашият браузър не поддържа видео.
 
-                                    </video>
+                                        </video>
 
+
+                                        {{-- DOWNLOAD --}}
+                                        <a href="{{ asset('assets/img/dashboard/business_video/' . $video) }}"
+                                            download="{{ $video }}" class="media-download-btn"
+                                            title="Изтегли видеото">
+
+                                            <i class="fa-solid fa-download"></i>
+
+                                        </a>
+
+                                    </div>
                                 @endforeach
 
                             </div>
-
                         @else
-
                             <p class="user-details-value">
+
                                 <span class="user-details-empty">
                                     Няма качени видеа
                                 </span>
+
                             </p>
 
                         @endif
@@ -452,33 +515,28 @@
                         </p>
 
                         @if ($details?->voice_recording)
+                            <audio controls preload="metadata" class="user-details-audio">
 
-                            <audio controls
-                                preload="metadata"
-                                class="user-details-audio">
-
-                                <source src="{{ asset('assets/img/dashboard/business_audio/' . $details->voice_recording) }}">
+                                <source
+                                    src="{{ asset('assets/img/dashboard/business_audio/' . $details->voice_recording) }}">
 
                                 Вашият браузър не поддържа аудио.
 
                             </audio>
-
                         @else
-
                             <p class="user-details-value">
+
                                 <span class="user-details-empty">
                                     Няма качен запис на глас
                                 </span>
-                            </p>
 
+                            </p>
                         @endif
 
                     </div>
 
                 </div>
-
             @else
-
                 <div class="alert alert-info">
                     Този потребител все още не е предоставил информация и материали за своя бизнес.
                 </div>
@@ -488,8 +546,7 @@
 
             <div class="mt-5">
 
-                <a href="{{ route('admin.users.index') }}"
-                    class="btn">
+                <a href="{{ route('admin.users.index') }}" class="btn">
                     Назад към потребителите
                 </a>
 

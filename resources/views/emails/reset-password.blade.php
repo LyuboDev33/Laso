@@ -10,7 +10,7 @@
 
     <div style="max-width:600px; margin:0 auto; background:#ffffff; padding:30px; border-radius:8px;">
 
-        <img style="height: 130px !important;" src="{{ $appURL }}/assets/img/Logo_Laso_Color-01.jpg" alt="Laso Logo">
+        <img style="" src="{{ $appURL }}/assets/img/laso-new.png" alt="Laso Logo">
 
         <h2 style="margin-bottom:20px;">Смяна на парола</h2>
 

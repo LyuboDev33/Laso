@@ -19,6 +19,18 @@
 
         <hr>
 
+        @error('facebook_token')
+            <div class="text-danger mt-2">
+                {{ $message }}
+            </div>
+        @enderror
+
+        @if (session('successFacebookToken'))
+            <div class="alert alert-success mt-3 mb-0">
+                {{ session('successFacebookToken') }}
+            </div>
+        @endif
+
         @if (session('success'))
             <div class="alert alert-success w-fit rounded-pill">
                 {{ session('success') }}
@@ -31,24 +43,80 @@
             </div>
         @endif
 
-        <form method="POST" action="{{ route('leads.insert') }}">
-            @csrf
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul class="mb-0">
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
-            @foreach ($users as $user)
-                @foreach ($user->facebookForms as $facebookForm)
-                    <input type="hidden" name="form_ids[{{ $user->id }}][]" value="{{ $facebookForm->form_id }}">
-                @endforeach
-            @endforeach
+        <div class="facebook-integration-box mb-4">
 
-            @if ($users->isNotEmpty())
-                <div class="d-flex justify-content-end mt-4 mb-4">
-                    <button type="submit" class="btn btn-primary rounded-pill px-4">
-                        <i class="fa-brands fa-facebook me-2"></i>
-                        Интегрирай лийдовете
-                    </button>
+            <div class="row g-3 align-items-end">
+
+                {{-- FACEBOOK TOKEN --}}
+                <div class="col-lg">
+
+                    <form method="POST" action="{{ route('admin.facebook-token.update') }}">
+                        @csrf
+                        @method('PATCH')
+
+                        <label for="facebook_token" class="form-label fw-semibold">
+                            Facebook Token
+                        </label>
+
+                        <div class="d-flex gap-3">
+
+                            <input type="text" name="facebook_token" id="facebook_token"
+                                class="form-control facebook-token-input"
+                                value="{{ old('facebook_token', $token?->facebook_token) }}"
+                                placeholder="Въведете Facebook token" required>
+
+                            <button type="submit" class="btn btn-primary rounded-pill facebook-action-btn">
+                                <i class="fa-solid fa-key me-2"></i>
+                                Обнови токена
+                            </button>
+
+                        </div>
+
+                    </form>
+
                 </div>
-            @endif
-        </form>
+
+
+                {{-- INTEGRATE FACEBOOK LEADS --}}
+                @if ($users->isNotEmpty())
+
+                    <div class="col-lg-auto">
+
+                        <form method="POST" id="insertLeadsForm" action="{{ route('leads.insert') }}">
+                            @csrf
+
+                            @foreach ($users as $user)
+                                @foreach ($user->facebookForms as $facebookForm)
+                                    <input type="hidden" name="form_ids[{{ $user->id }}][]"
+                                        value="{{ $facebookForm->form_id }}">
+                                @endforeach
+                            @endforeach
+
+                            <button type="submit" class="btn btn-primary rounded-pill facebook-action-btn">
+                                <i class="fa-brands fa-facebook me-2"></i>
+                                Интегрирай лийдовете
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                @endif
+
+            </div>
+
+        </div>
+
 
         <section class="profile-section mb-5">
 
@@ -215,8 +283,7 @@
                                                         data-user-id="{{ $user->id }}">
 
                                                         <td>
-                                                            <input type="checkbox" class="lead-seen-checkbox"
-                                                                disabled
+                                                            <input type="checkbox" class="lead-seen-checkbox" disabled
                                                                 value="{{ $lead->id }}"
                                                                 data-url="{{ route('leads.update.seen', $lead->id) }}"
                                                                 {{ $lead->is_seen ? 'checked' : '' }}>
@@ -357,7 +424,8 @@
                             Отказ
                         </button>
 
-                        <button type="button" class="btn btn-danger rounded-pill px-4" id="confirmDeleteFacebookForm">
+                        <button type="button" class="btn btn-danger rounded-pill px-4"
+                            id="confirmDeleteFacebookForm">
                             <i class="fa-solid fa-trash-can me-2"></i>
                             Изтрий
                         </button>
@@ -375,7 +443,7 @@
             insertFacebookFormId();
             deleteFacebookFormId();
             filterFacebookLeads();
-            updateLeadSeenStatus();
+            // updateLeadSeenStatus();
 
         });
 
@@ -398,6 +466,13 @@
                     data: form.serialize(),
 
                     success: function(response) {
+
+
+                        if (!response.success) {
+                            return;
+                        }
+
+
                         container.removeClass('d-none');
                         container.append(response.html);
 
@@ -546,45 +621,45 @@
 
         }
 
-        function updateLeadSeenStatus() {
+        // function updateLeadSeenStatus() {
 
-            $(document).on('change', '.lead-seen-checkbox', function() {
+        //     $(document).on('change', '.lead-seen-checkbox', function() {
 
-                const checkbox = $(this);
+        //         const checkbox = $(this);
 
-                const leadId = checkbox.val();
-                const url = checkbox.data('url');
-                const isSeen = checkbox.is(':checked') ? 1 : 0;
+        //         const leadId = checkbox.val();
+        //         const url = checkbox.data('url');
+        //         const isSeen = checkbox.is(':checked') ? 1 : 0;
 
-                checkbox.prop('disabled', true);
+        //         checkbox.prop('disabled', true);
 
-                $.ajax({
-                    url: url,
-                    type: 'PATCH',
+        //         $.ajax({
+        //             url: url,
+        //             type: 'PATCH',
 
-                    data: {
-                        _token: $('meta[name="csrf-token"]').attr('content'),
-                        is_seen: isSeen
-                    },
+        //             data: {
+        //                 _token: $('meta[name="csrf-token"]').attr('content'),
+        //                 is_seen: isSeen
+        //             },
 
-                    success: function(response) {
-                        console.log(response);
-                    },
+        //             success: function(response) {
+        //                 console.log(response);
+        //             },
 
-                    error: function(xhr) {
-                        console.log(xhr);
+        //             error: function(xhr) {
+        //                 console.log(xhr);
 
-                        checkbox.prop('checked', !checkbox.is(':checked'));
-                    },
+        //                 checkbox.prop('checked', !checkbox.is(':checked'));
+        //             },
 
-                    complete: function() {
-                        checkbox.prop('disabled', false);
-                    }
-                });
+        //             complete: function() {
+        //                 checkbox.prop('disabled', false);
+        //             }
+        //         });
 
-            });
+        //     });
 
-        }
+        // }
     </script>
 
 </x-backend>

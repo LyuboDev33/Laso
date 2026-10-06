@@ -61,21 +61,44 @@
                     <form action="{{ route('register') }}" method="post">
                         @csrf
 
-                        {{-- Име --}}
-                        <div class="auth__field">
-                            <label for="formName" class="auth__label">
-                                Име
-                            </label>
+                        <div class="row">
+                            {{-- Име --}}
+                            <div class="col-lg-6 col-12">
+                                <div class="auth__field">
+                                    <label for="formName" class="auth__label">
+                                        Име
+                                    </label>
 
-                            <div class="auth__input-wrapper">
-                                <input type="text" name="name" id="formName" class="auth__input"
-                                    placeholder="Вашето име" value="{{ old('name') }}" autocomplete="name" autofocus
-                                    required>
+                                    <div class="auth__input-wrapper">
+                                        <input type="text" name="name" id="formName" class="auth__input"
+                                            placeholder="Вашето име" value="{{ old('name') }}" autocomplete="name"
+                                            autofocus required>
+                                    </div>
+
+                                    @error('name')
+                                        <p class="auth__error">{{ $message }}</p>
+                                    @enderror
+                                </div>
                             </div>
 
-                            @error('name')
-                                <p class="auth__error">{{ $message }}</p>
-                            @enderror
+                            {{-- Телефон --}}
+                            <div class="col-lg-6 col-12">
+                                <div class="auth__field">
+                                    <label for="formPhone" class="auth__label">
+                                        Телефон
+                                    </label>
+
+                                    <div class="auth__input-wrapper">
+                                        <input type="tel" name="phone" id="formPhone" class="auth__input"
+                                            placeholder="Телефонен номер" value="{{ old('phone') }}" autocomplete="tel"
+                                            required>
+                                    </div>
+
+                                    @error('phone')
+                                        <p class="auth__error">{{ $message }}</p>
+                                    @enderror
+                                </div>
+                            </div>
                         </div>
 
                         {{-- Имейл --}}
@@ -107,7 +130,6 @@
                                     autocomplete="new-password" required>
 
                                 <button type="button" class="auth__input-addon" data-toggle-password="formPassword">
-
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
@@ -130,7 +152,6 @@
 
                                 <button type="button" class="auth__input-addon"
                                     data-toggle-password="formPasswordConfirmation">
-
                                     <i class="fas fa-eye"></i>
                                 </button>
                             </div>
@@ -141,7 +162,7 @@
                         </div>
 
                         <div class="auth__submit">
-                            <button type="submit" class="auth__button">
+                            <button type="submit" class="btn auth__button w-100">
                                 Регистрация
                             </button>
                         </div>
@@ -153,7 +174,6 @@
                                 Влезте оттук
                             </a>
                         </p>
-
                     </form>
 
                 </div>

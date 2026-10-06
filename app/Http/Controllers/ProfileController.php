@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rule;
 use Stripe\StripeClient;
 
@@ -94,13 +96,30 @@ class ProfileController extends Controller
      * Update the authenticated user's Facebook page.
      *
      * @param Request $request
-     * @return RedirectResponse
+     * @return JsonResponse
      */
-    public function updateFacebookPage(Request $request): RedirectResponse
+    public function updateFacebookPage(Request $request): JsonResponse
     {
-        $validated = $request->validate([
-            'facebook_page_url' => ['required', 'url',]
-        ]);
+        $validator = Validator::make(
+            $request->all(),
+            [
+                'facebook_page_url' => ['required', 'url', 'regex:/facebook\.com/i'],
+            ],
+            [
+                'facebook_page_url.required' => 'Това поле е задължително',
+                'facebook_page_url.url' => 'Моля въведете правилен линк',
+                'facebook_page_url.regex' => 'Моля въведете линк на Facebook група',
+            ]
+        );
+
+        if ($validator->fails()) {
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors(),
+            ], 422);
+        }
+
+        $validated = $validator->validated();
 
         $user = Auth::user();
 
@@ -108,10 +127,10 @@ class ProfileController extends Controller
             'facebook_page' => $validated['facebook_page_url'],
         ]);
 
-        return back()->with(
-            'successFacebookUpdate',
-            'Линкът към Facebook страницата беше запазен успешно.'
-        );
+        return response()->json([
+            'success' => true,
+            'message' => 'Линкът към Facebook страницата беше запазен успешно.',
+        ]);
     }
 
     /**

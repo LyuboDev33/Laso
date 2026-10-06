@@ -65,7 +65,7 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="assets/img/marketing-icon-1.png" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section1.png" alt="marketing-icon">
                                     </i>
                                     <h4>Реклама</h4>
                                     <p>Създаваме и управляваме Meta кампании, съобразени с вашия бизнес и избрания план.
@@ -87,7 +87,7 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="assets/img/marketing-icon-2.png" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section-3.png" alt="marketing-icon">
                                     </i>
                                     <h4>Потенциални клиенти</h4>
                                     <p>Насочваме рекламата към хора, които проявяват интерес към вашите услуги или
@@ -109,7 +109,7 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="assets/img/marketing-icon-3.png" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section2.png" alt="marketing-icon">
                                     </i>
                                     <h4>Резултати</h4>
                                     <p>Получавате потенциалните клиенти директно във вашия LASO профил и можете да се
@@ -250,14 +250,14 @@
                             използване.
                         </p>
                         <div class="propel">
-                            <div><i><img src="assets/img/propel-icon-1.png" alt="propel-icon"></i></div>
+                            <div><i><img src="/assets/img/about/propel-icon-1.png" alt="propel-icon"></i></div>
                             <div>
                                 <h5>Без необходимост от големи бюджети</h5>
                                 <p>LASO прави професионалната lead generation реклама достъпна и за малкия бизнес.</p>
                             </div>
                         </div>
                         <div class="propel">
-                            <div><i><img src="assets/img/propel-icon-2.png" alt="propel-icon"></i></div>
+                            <div><i><img src="/assets/img/about/propel-icon-2.png" alt="propel-icon"></i></div>
                             <div>
                                 <h5>Без сложни процеси или дългосрочни ангажименти</h5>
                                 <p>Избираш план, предоставяш необходимата информация и LASO поема рекламата — без сложни процеси и дългосрочен договор.</p>

@@ -110,12 +110,12 @@
                                 class="logo"
                                 style="
                                     display: block;
-                                    height: 130px !important;
+
                                     width: auto;
                                     max-width: 100%;
                                     border: 0;
                                 "
-                                src="{{ asset('assets/img/Logo_Laso_Color-01.jpg') }}"
+                                src="{{ asset('assets/img/laso-new.png') }}"
                                 alt="Laso Logo">
 
                         </td>

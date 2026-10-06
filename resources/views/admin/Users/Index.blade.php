@@ -76,7 +76,7 @@
 
                                 <td>
 
-                                    @if ($user->subscribed('basic') || $user->subscribed('standart') || $user->subscribed('premium'))
+                                    @if ($isSubscribed($user))
                                         <span class="badge bg-success p-2">
                                             Има активен абонамент
                                         </span>
@@ -91,8 +91,9 @@
                                 <td class="text-end d-flex justify-content-end">
 
                                     <div class="d-flex flex-column gap-2 flex-xxl-row">
-                                        <a href="{{ route('admin.users.details.show', $user) }}"
-                                            class="btn-custom-materials">Виж материали</a>
+                                        <a href="{{ route('admin.users.ads', $user) }}" class="btn-custom-materials">
+                                            Виж рекламите
+                                        </a>
 
                                         <a href="{{ route('admin.users.show', $user) }}" class="btn">
                                             Разгледай

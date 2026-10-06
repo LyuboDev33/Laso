@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Admin\FacebookToken;
 use GuzzleHttp\Client;
 use GuzzleHttp\Promise\Utils;
 
@@ -13,9 +14,8 @@ class FacebookService
 
     public function __construct()
     {
-        $this->accessToken = env('FACEBOOK_ACCESS_TOKEN');
+        $this->accessToken = FacebookToken::where('id', 1)->value('facebook_token');
         $this->graphUrl = env('FACEBOOK_GRAPH_URL');
-
         $this->client = new Client([
             'base_uri' => $this->graphUrl,
             'timeout' => 30,

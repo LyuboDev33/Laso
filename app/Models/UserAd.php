@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class UserDetail extends Model
+class UserAd extends Model
 {
     protected $fillable = [
         'user_id',
         'company_name',
+        'ad_link',
         'business_description',
         'website',
         'city',

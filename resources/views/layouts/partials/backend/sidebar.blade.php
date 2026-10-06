@@ -31,6 +31,8 @@
                         <a href="{{ route('admin.users.index') }}"
                             class="{{ request()->routeIs('admin.users.index*') ||
                              request()->routeIs('admin.users.details.show') ||
+                             request()->routeIs('admin.users.details.show') ||
+                             request()->routeIs('admin.users.ads') ||
                             request()->routeIs('admin.users.show*') ? 'is-active' : '' }}">
                             <i class="fa-solid fa-user-shield"></i>
                             <span>Всички потребители</span>
@@ -70,6 +72,16 @@
                         class="{{ request()->routeIs('subscription.index') ? 'is-active' : '' }}">
                         <i class="fa-brands fa-stripe"></i>
                         <span>Абонамент</span>
+                    </a>
+                </li>
+
+                 <li>
+                    <a href="{{ route('ads.index') }}"
+                        class="{{ request()->routeIs('ads.index') ||
+                                  request()->routeIs('ads.create-ad') ||
+                                  request()->routeIs('user.ads.show') ? 'is-active' : '' }}">
+                        <i class="fa-solid fa-rectangle-ad"></i>
+                        <span>Рекламни кампании</span>
                     </a>
                 </li>
 

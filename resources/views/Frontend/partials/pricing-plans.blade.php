@@ -270,7 +270,7 @@
                         @else
                             <form
                                 action="{{ route('subscription.create', [
-                                    'priceId' => 'price_1UFtVx0XJPJxSgBOOFabY5hx',
+                                    'priceId' => 'price_1U1rCm0XJPJxSgBO5rUd41mn',
                                     'plan' => 'growth_monthly',
                                 ]) }}"
                                 method="POST">

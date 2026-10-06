@@ -11,7 +11,7 @@
         <div class="dashboard-header__right">
 
             <div class="dashboard-dropdown">
-                <a href="#" class="dashboard-dropdown__toggle" data-dropdown-toggle>
+                <a class="dashboard-dropdown__toggle" data-dropdown-toggle>
                     <span class="dashboard-dropdown__avatar">
                         <img src="{{ $profilePicture }}"
                              alt="{{ Auth::user()->name }}" />
