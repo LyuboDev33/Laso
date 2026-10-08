@@ -65,7 +65,7 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="/assets/img/about/about-section1.png" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section1.png?v=<?= time() ?>" alt="marketing-icon">
                                     </i>
                                     <h4>Реклама</h4>
                                     <p>Създаваме и управляваме Meta кампании, съобразени с вашия бизнес и избрания план.
@@ -87,7 +87,7 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="/assets/img/about/about-section-3.png" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section-3.png?v=<?= time() ?>" alt="marketing-icon">
                                     </i>
                                     <h4>Потенциални клиенти</h4>
                                     <p>Насочваме рекламата към хора, които проявяват интерес към вашите услуги или
@@ -109,7 +109,7 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="/assets/img/about/about-section2.png" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section2.png?v=<?= time() ?>" alt="marketing-icon">
                                     </i>
                                     <h4>Резултати</h4>
                                     <p>Получавате потенциалните клиенти директно във вашия LASO профил и можете да се

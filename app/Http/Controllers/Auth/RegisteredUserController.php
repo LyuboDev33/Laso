@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\NotifyAdminWelcomeEmail;
 use App\Mail\WelcomeMail;
 use App\Models\User;
 use Illuminate\Auth\Events\Registered;
@@ -51,6 +52,7 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         Mail::to($user->email)->send(new WelcomeMail($user));
+        Mail::to('teodor.teodosiev9004@gmail.com')->send(new NotifyAdminWelcomeEmail($user));
 
         return redirect(route('dashboard', absolute: false));
     }

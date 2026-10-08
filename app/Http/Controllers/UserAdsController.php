@@ -220,7 +220,7 @@ class UserAdsController extends Controller
             ]);
 
 
-            Mail::to('teodor.teodosiev9004@gmail.com')->send(new MaterialsCompletedMail($user));
+            Mail::to('contact@lubodev.com')->send(new MaterialsCompletedMail($user));
         } catch (\Throwable $e) {
 
             report($e);
@@ -229,6 +229,8 @@ class UserAdsController extends Controller
         }
 
 
-        return back()->redirect(route('ads.index'))->with('success', 'Информацията за рекламата беше изпратена успешно.');
+        return redirect()
+            ->route('ads.index')
+            ->with('success', 'Информацията за рекламата беше изпратена успешно.');
     }
 }
