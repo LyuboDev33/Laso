@@ -14,7 +14,7 @@ class FacebookService
 
     public function __construct()
     {
-        $this->accessToken = FacebookToken::where('id', 1)->value('facebook_token');
+        $this->accessToken = FacebookToken::where('id', 1)->value('facebook_token') ?? '';
         $this->graphUrl = env('FACEBOOK_GRAPH_URL');
         $this->client = new Client([
             'base_uri' => $this->graphUrl,
