@@ -20,6 +20,7 @@ Route::get('/about',   [FrontEndController::class, 'about'])->name('about');
 Route::get('/pricing', [FrontEndController::class, 'pricing'])->name('pricing');
 Route::get('/testimonials', [FrontEndController::class, 'testimonials'])->name('testimonials');
 Route::get('/videos',[FrontEndController::class, 'videos'])->name('videos');
+Route::get('/privacy', [FrontEndController::class, 'privacy'])->name('privacy');
 
 
 Route::post('/', [EmailController::class, 'contactForm'])->name('email.contact-form');

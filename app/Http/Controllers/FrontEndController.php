@@ -40,5 +40,9 @@ class FrontEndController extends Controller
         return view('Frontend.videos');
     }
 
+    /** Show the privacy */
+    public function privacy (){
+        return view('Frontend.legal.privacy');
+    }
 
 }
