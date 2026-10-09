@@ -148,7 +148,6 @@
                                                             data-url="{{ route('leads.update.seen', $lead->id) }}"
                                                             {{ $lead->is_seen ? 'checked' : '' }}
                                                         />
-
                                                     </td>
 
                                                     {{-- Name --}}
@@ -172,11 +171,9 @@
 
                                                     {{-- Form ID --}}
                                                     <td>
-
                                                         <span class="lead-form-badge">
                                                             {{ $lead->leadForm?->form_id ?? '-' }}
                                                         </span>
-
                                                     </td>
 
                                                     {{-- Questions --}}
