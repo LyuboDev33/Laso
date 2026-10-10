@@ -119,7 +119,7 @@
                 perMove: 1,
                 gap: '20px',
                 arrows: true,
-                pagination: true,
+                pagination: false,
                 autoplay: false,
                 interval: 5000,
                 pauseOnHover: false,

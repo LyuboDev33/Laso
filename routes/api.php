@@ -19,7 +19,6 @@ Route::middleware(['super_admin', 'auth'])->group(function () {
             Route::patch('/form/{leadForm}', [FacebookLeadsController::class, 'updateFormId'])->name('leads.update.formId');
             Route::delete('/form/{leadForm}', [FacebookLeadsController::class, 'deleteFormId'])->name('leads.delete.formId');
             Route::post('/insert', [FacebookLeadsController::class, 'insertLeads'])->name('leads.insert');
-            Route::patch('/leads/{lead}/seen',[FacebookLeadsController::class, 'updateSeen'])->name('leads.update.seen');
             Route::patch('/admin/facebook-token',[FacebookLeadsController::class, 'updateFacebookToken'])
                     ->name('admin.facebook-token.update');
         });

@@ -457,7 +457,7 @@
 
         <div class="upload-loader-content">
 
-            <img src="{{ asset('/assets/img/dashboard/808.gif') }}" alt="Качване..." class="upload-loader-gif">
+            <img src="/assets/img/808.gif" alt="Качване..." class="upload-loader-gif">
 
             <h4>
                 Вашите данни се качват, моля изчакайте

@@ -25,13 +25,22 @@
                     които сте изпратили за тази реклама.
                 </p>
 
+                @if ($details->ad_link)
+                    <a href="{{ $details->ad_link }}" target="_blank" class="btn">
+                        Линк към рекламата
+                    </a>
+                @else
+                    <p class="alert alert-info w-fit rounded-pill p-2 mt-3">
+                        Вашата реклама в момента се преглежда! Очаквайте линк скоро!
+                    </p>
+                @endif
+
             </div>
 
         </div>
 
 
         <hr>
-
 
         <section class="profile-section mb-5">
 
@@ -102,10 +111,7 @@
 
                     <p class="user-details-value">
 
-                        <a
-                            href="tel:{{ $details->phone }}"
-                            class="user-details-link"
-                        >
+                        <a href="tel:{{ $details->phone }}" class="user-details-link">
                             {{ $details->phone }}
                         </a>
 
@@ -124,22 +130,14 @@
                     <p class="user-details-value">
 
                         @if ($details->website)
-
-                            <a
-                                href="{{ $details->website }}"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="user-details-link"
-                            >
+                            <a href="{{ $details->website }}" target="_blank" rel="noopener noreferrer"
+                                class="user-details-link">
                                 {{ $details->website }}
                             </a>
-
                         @else
-
                             <span class="user-details-empty">
                                 Не е добавен
                             </span>
-
                         @endif
 
                     </p>
@@ -248,22 +246,13 @@
                     </p>
 
                     @if ($details->logo)
+                        <a href="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}" target="_blank">
 
-                        <a
-                            href="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
-                            target="_blank"
-                        >
-
-                            <img
-                                src="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
-                                alt="{{ $details->company_name }} Logo"
-                                class="user-details-logo"
-                            >
+                            <img src="{{ asset('assets/img/dashboard/business_logo/' . $details->logo) }}"
+                                alt="{{ $details->company_name }} Logo" class="user-details-logo">
 
                         </a>
-
                     @else
-
                         <p class="user-details-value">
 
                             <span class="user-details-empty">
@@ -271,7 +260,6 @@
                             </span>
 
                         </p>
-
                     @endif
 
                 </div>
@@ -289,26 +277,17 @@
                         <div class="user-details-images">
 
                             @foreach ($details->images as $image)
+                                <a href="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
+                                    target="_blank">
 
-                                <a
-                                    href="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
-                                    target="_blank"
-                                >
-
-                                    <img
-                                        src="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
-                                        alt="Business Image"
-                                        class="user-details-image"
-                                    >
+                                    <img src="{{ asset('assets/img/dashboard/business_images/' . $image) }}"
+                                        alt="Business Image" class="user-details-image">
 
                                 </a>
-
                             @endforeach
 
                         </div>
-
                     @else
-
                         <p class="user-details-value">
 
                             <span class="user-details-empty">
@@ -334,27 +313,17 @@
                         <div class="user-details-videos">
 
                             @foreach ($details->videos as $video)
+                                <video controls preload="metadata" class="user-details-video">
 
-                                <video
-                                    controls
-                                    preload="metadata"
-                                    class="user-details-video"
-                                >
-
-                                    <source
-                                        src="{{ asset('assets/img/dashboard/business_video/' . $video) }}"
-                                    >
+                                    <source src="{{ asset('assets/img/dashboard/business_video/' . $video) }}">
 
                                     Вашият браузър не поддържа видео.
 
                                 </video>
-
                             @endforeach
 
                         </div>
-
                     @else
-
                         <p class="user-details-value">
 
                             <span class="user-details-empty">
@@ -376,23 +345,15 @@
                     </p>
 
                     @if ($details->voice_recording)
-
-                        <audio
-                            controls
-                            preload="metadata"
-                            class="user-details-audio"
-                        >
+                        <audio controls preload="metadata" class="user-details-audio">
 
                             <source
-                                src="{{ asset('assets/img/dashboard/business_audio/' . $details->voice_recording) }}"
-                            >
+                                src="{{ asset('assets/img/dashboard/business_audio/' . $details->voice_recording) }}">
 
                             Вашият браузър не поддържа аудио.
 
                         </audio>
-
                     @else
-
                         <p class="user-details-value">
 
                             <span class="user-details-empty">
@@ -400,7 +361,6 @@
                             </span>
 
                         </p>
-
                     @endif
 
                 </div>
@@ -411,10 +371,7 @@
             {{-- BACK --}}
             <div class="mt-5">
 
-                <a
-                    href="{{ route('ads.index') }}"
-                    class="btn"
-                >
+                <a href="{{ route('ads.index') }}" class="btn">
                     <i class="fa-solid fa-arrow-left me-2"></i>
                     Назад към рекламите
                 </a>

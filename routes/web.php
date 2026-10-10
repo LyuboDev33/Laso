@@ -39,6 +39,7 @@ Route::middleware('auth')->group(function () {
     })->name('dashboard');
 
     Route::get('/myleads', [FacebookLeadsController::class, 'myLeads'])->name('myleads.index');
+    Route::patch('/leads/{lead}/seen',[FacebookLeadsController::class, 'updateSeen'])->name('leads.update.seen');
 
     Route::post('/create/{priceId}/{plan}', [OnlinePaymentsController::class, 'createSubscription'])->name('subscription.create');
 

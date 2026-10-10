@@ -83,107 +83,127 @@
         </div>
 
         <div class="mobile-nav hmburger-menu" id="mobile-nav"
-            style="display:block;background-image:url('{{ asset('assets/img/background.png') }}');">
+    style="display:block;background-image:url('{{ asset('assets/img/background.png') }}');">
 
-            <div class="res-log">
-                <x-logo mobileWidth="150" />
-            </div>
+    <div class="res-log w-fit">
+        <x-logo mobileWidth="150" />
+    </div>
 
-            <ul>
+    <ul>
 
-                <li>
-                    <a href="{{ route('welcome') }}">
-                        Начало
-                    </a>
-                </li>
+        <li>
+            <a href="{{ route('welcome') }}">
+                Начало
+            </a>
+        </li>
 
-                <li>
-                    <a href="{{ route('about') }}">
-                        За нас
-                    </a>
-                </li>
+        <li>
+            <a href="{{ route('about') }}">
+                За нас
+            </a>
+        </li>
 
-                <li>
-                    <a href="{{ route('pricing') }}">
-                        Абонаменти
-                    </a>
-                </li>
+        <li>
+            <a href="{{ route('pricing') }}">
+                Абонаменти
+            </a>
+        </li>
 
-                <li>
-                    <a href="{{ route('testimonials') }}">
-                        Ревюта
-                    </a>
-                </li>
+        <li>
+            <a href="{{ route('testimonials') }}">
+                Ревюта
+            </a>
+        </li>
 
+        <li class="navbar-dropdown">
+            <a href="{{ route('videos') }}">
+                Видео уроци
+            </a>
+        </li>
 
-                <li class="navbar-dropdown">
-                    <a href="{{ route('videos') }}">
-                        Видео уроци
-                    </a>
-                </li>
+        <li>
+            <a href="{{ route('contact') }}">
+                Контакти
+            </a>
+        </li>
 
+    </ul>
 
+    {{-- Mobile Authentication Buttons --}}
+    <div class="mobile-auth-buttons d-flex flex-column gap-3 my-4">
 
-                <li>
-                    <a href="{{ route('contact') }}">
-                        Контакти
-                    </a>
-                </li>
+        @if (Auth::check())
 
-            </ul>
+            <a href="{{ route('dashboard') }}" class="btn">
+                Админ панел
+            </a>
 
-            <div class="menu-sidebar-single-widget">
+        @else
 
-                <h5 class="menu-sidebar-title">
-                    Контакти
-                </h5>
+            <a href="{{ route('login') }}" class="btn">
+                Вход
+            </a>
 
-                <div class="header-contact-info">
+            <a href="{{ route('register') }}" class="btn">
+                Регистрация
+            </a>
 
-                    <span>
-                        <i class="fa-solid fa-location-dot"></i>
-                        София, България
-                    </span>
+        @endif
 
-                    <span>
-                        <a href="mailto:info@valenteoptic.bg">
-                            <i class="fa-solid fa-envelope"></i>
-                            contact@lasoads.com
-                        </a>
-                    </span>
+    </div>
 
-                    <span>
-                        <a href="tel:+359000000000">
-                            <i class="fa-solid fa-phone"></i>
-                            +359 889 807 026
-                        </a>
-                    </span>
+    <div class="menu-sidebar-single-widget">
 
-                </div>
+        <h5 class="menu-sidebar-title">
+            Контакти
+        </h5>
 
-                <div class="social-profile">
+        <div class="header-contact-info">
 
-                    <a href="#">
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
+            <span>
+                <i class="fa-solid fa-location-dot"></i>
+                София, България
+            </span>
 
-                    <a href="#">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
+            <span>
+                <a href="mailto:info@valenteoptic.bg">
+                    <i class="fa-solid fa-envelope"></i>
+                    contact@lasoads.com
+                </a>
+            </span>
 
-                    <a href="#">
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
+            <span>
+                <a href="tel:+359000000000">
+                    <i class="fa-solid fa-phone"></i>
+                    +359 889 807 026
+                </a>
+            </span>
 
-                </div>
+        </div>
 
-            </div>
+        <div class="social-profile">
 
-            <a href="javascript:void(0)" id="res-cross">
-                <i class="fa-regular fa-circle-xmark"></i>
+            <a href="#">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-brands fa-linkedin-in"></i>
             </a>
 
         </div>
+
+    </div>
+
+    <a href="javascript:void(0)" id="res-cross">
+        <i class="fa-regular fa-circle-xmark"></i>
+    </a>
+
+</div>
 
     </div>
 </header>

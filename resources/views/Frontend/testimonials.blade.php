@@ -50,12 +50,15 @@
                                         <p>
                                             LASO ни помогна да достигаме по-прецизно до хора с реален интерес към нашите
                                             спектакли и да превръщаме този интерес в реални резултати и продажба на
-                                            билети. Особено ценен за нас е подходът, ориентиран към конкретен ефект
-                                            върху публиката, а не просто към видимост.
+                                            билети.
                                         </p>
 
-                                        <h4>Боян Иванов, Директор</h4>
-                                        <span>Драматичен театър „Сава Огнянов“ – Русе</span>
+                                        <div class="d-flex flex-column gap-2 align-items-center">
+                                            <h4>Боян Иванов, Директор</h4>
+                                            <span>Драматичен театър „Сава Огнянов“ – Русе</span>
+                                            <a class="btn w-fit" target="_blank" href="/assets/pdfs/pismopodkrepa.pdf">Виж
+                                                файл</a>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -144,7 +147,7 @@
         <div class="row">
 
             <!-- DMD Health -->
-            <div class="col-lg-4 col-md-6 col-12 mb-5">
+            <div class="col-lg-6 col-md-6 col-12 mb-5">
 
                 <div class="video position-relative">
 
@@ -176,7 +179,7 @@
             </div>
 
             <!-- Studio Shift -->
-            <div class="col-lg-4 col-md-6 col-12 mb-5">
+            <div class="col-lg-6 col-md-6 col-12 mb-5">
 
                 <div class="video position-relative">
 
@@ -207,11 +210,11 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6 col-12 mb-5">
+            <div class="col-lg-6 col-md-6 col-12 mb-5">
 
                 <div class="video position-relative">
 
-                    <a data-fancybox="" href="https://player.vimeo.com/video/1232024925?h=9a33613716">
+                    <a data-fancybox="" href="https://player.vimeo.com/video/1233698096?h=8445de499b">
                         <i>
                             <svg width="11" height="17" viewBox="0 0 11 17" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -244,36 +247,6 @@
     </section>
 
 
-    <script>
-        function initializeTestimonialSplide() {
-            const testimonialSplide = document.getElementById('testimonialSplide');
 
-            if (!testimonialSplide) {
-                return;
-            }
-
-            if (typeof Splide === 'undefined') {
-                return;
-            }
-
-            new Splide(testimonialSplide, {
-                type: 'loop',
-                perPage: 1,
-                perMove: 1,
-                gap: '20px',
-                arrows: true,
-                pagination: true,
-                autoplay: false,
-                interval: 5000,
-                pauseOnHover: false,
-                pauseOnFocus: false,
-                speed: 800
-            }).mount();
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            initializeTestimonialSplide();
-        });
-    </script>
 
 </x-frontend>

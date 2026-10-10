@@ -1,24 +1,24 @@
 <x-frontend>
 
-    <section class="bannr" >
-    <div class="container">
-        <div class="row align-items-end">
-            <div class="col-lg-6">
-                <div class="bannr-text">
-                    <h2>ВИДЕО УРОЦИ</h2>
-                    <p>Всичко необходимо, на едно място.
-Кратки видео инструкции, които ти показват точно какво да направиш.</p>
+    <section class="bannr" style="background-image: url(/assets/img/background-1.png);">
+        <div class="container">
+            <div class="row align-items-end heading two">
+                <div class="col-lg-6">
+                    <div class="bannr-text">
+                        <h2 class="text-theme">ВИДЕО УРОЦИ</h2>
+                        <p class="text-black">Всичко необходимо, на едно място.
+                            Кратки видео инструкции, които ти показват точно какво да направиш.</p>
 
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="bannr-img">
-                    <img src="/assets/img/bannr.png" alt="img">
-                </div>
+                {{-- <div class="col-lg-6">
+                    <div class="bannr-img">
+                        <img src="/assets/img/bannr.png" alt="img">
+                    </div>
+                </div> --}}
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section class="gap">
         <div class="container">
@@ -75,7 +75,7 @@
 
                         </div>
 
-                        
+
                     </div>
 
 
@@ -87,7 +87,7 @@
                             </figure>
                         </div>
 
-                         <h5>02<span>Октомври, 2026</span></h5>
+                        <h5>02<span>Октомври, 2026</span></h5>
 
 
                         <div class="our-blog-text">

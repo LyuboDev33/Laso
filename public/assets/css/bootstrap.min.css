@@ -8213,6 +8213,12 @@ fieldset:disabled .btn {
     margin-top: 3rem !important
 }
 
+@media (max-width: 568px)  {
+    .mt-sm-100 {
+        margin-top: 100px;
+    }
+}
+
 .mt-auto {
     margin-top: auto !important
 }
@@ -8267,6 +8273,10 @@ fieldset:disabled .btn {
 
 .mb-5 {
     margin-bottom: 3rem !important
+}
+
+.pb-200 {
+    padding-bottom: 200px;
 }
 
 .mb-auto {
@@ -8645,6 +8655,10 @@ fieldset:disabled .btn {
 .text-black {
     --bs-text-opacity: 1;
     color: rgba(var(--bs-black-rgb), var(--bs-text-opacity)) !important
+}
+
+.text-theme {
+    color: #f0346e !important;
 }
 
 .text-white {

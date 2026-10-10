@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('facebook_tokens', function (Blueprint $table) {
             $table->id();
-            $table->string('facebook_token');
+            $table->string('facebook_token', 1024);
             $table->timestamps();
         });
     }

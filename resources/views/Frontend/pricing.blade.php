@@ -31,18 +31,13 @@
 
 
     <section
-        class="pt-5 pb-5"
+        class="pt-5 pb-200"
         style="background-image: url(/assets/img/background-1.png);"
     >
 
         <div class="container">
 
-    
-
             @include('Frontend.partials.pricing-plans')
-
-
-
 
         </div>
 

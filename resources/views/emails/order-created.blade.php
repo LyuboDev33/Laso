@@ -398,7 +398,7 @@
                                             background-image: linear-gradient(90deg, #ef326f, #fe6c4e);
                                         ">
 
-                                        <a href="{{ url('/') }}" class="button"
+                                        <a href="{{ url('/ads') }}" class="button"
                                             style="
                                             display: inline-block;
                                             padding: 16px 34px;
@@ -409,7 +409,7 @@
                                             text-decoration: none;
                                             border-radius: 40px;
                                         ">
-                                            Влез в LASO
+                                            Създай своята реклама
                                         </a>
 
                                     </td>
