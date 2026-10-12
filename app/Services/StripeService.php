@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Laravel\Cashier\Subscription;
 
 class StripeService
 {
@@ -242,6 +243,22 @@ class StripeService
                 . $endsAt->format('d.m.Y')
                 : null,
         ];
+    }
+
+
+    /**
+     * Get the info if a user has cancelled his subscription
+     *
+     * @param User $user
+     * @return Subscription
+     */
+    public function getRelevantSubscription(User $user): ?Subscription
+    {
+        $subscriptions = $user->subscriptions;
+
+        return  $subscriptions->first(fn(Subscription $subscription) => $subscription->onGracePeriod()) ??
+                $subscriptions->first(fn(Subscription $subscription) => $subscription->active()) ??
+                $subscriptions->first( fn(Subscription $subscription) => $subscription->ended());
     }
 
     /**

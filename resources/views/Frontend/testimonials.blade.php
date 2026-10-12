@@ -25,7 +25,7 @@
         </div>
     </section>
 
-    <section class=" client-reviews">
+    <section class=" client-reviews pb-100">
         <div class="container">
             <div class="client">
                 <div class="client-text">
@@ -73,57 +73,14 @@
                                         </ul>
 
                                         <p>
-                                            Impression is a great agency to work with and they are always quick to
-                                            respond to our queries. I truly feel like they are an extension of our in
-                                            house team and I'm excited about our partnership.
+                                            Благодаря на LASO за професионалната работа! Постигнахме целта си – увеличаване на производството чрез привличане на нови клиенти на едро.  Доверих им се и не съжалявам
                                         </p>
 
-                                        <h4>Thomas Walimes</h4>
-                                        <span>Marketing Manager</span>
+                                        <h4>Мирослава Кръстева</h4>
+                                        <span>Собственик на Bear’s Delight</span>
                                     </div>
                                 </div>
 
-                                <div class="splide__slide">
-                                    <div class="item">
-                                        <ul class="star">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-
-                                        <p>
-                                            Impression is a great agency to work with and they are always quick to
-                                            respond to our queries. I truly feel like they are an extension of our in
-                                            house team and I'm excited about our partnership.
-                                        </p>
-
-                                        <h4>Thomas Walimes</h4>
-                                        <span>Marketing Manager</span>
-                                    </div>
-                                </div>
-
-                                <div class="splide__slide">
-                                    <div class="item">
-                                        <ul class="star">
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                            <li><i class="fa-solid fa-star"></i></li>
-                                        </ul>
-
-                                        <p>
-                                            Impression is a great agency to work with and they are always quick to
-                                            respond to our queries. I truly feel like they are an extension of our in
-                                            house team and I'm excited about our partnership.
-                                        </p>
-
-                                        <h4>Thomas Walimes</h4>
-                                        <span>Marketing Manager</span>
-                                    </div>
-                                </div>
 
                             </div>
                         </div>
@@ -132,16 +89,16 @@
             </div>
         </div>
 
-        <img src="assets/img/quote-1.jpg" class="quote-1" alt="img">
-        <img src="assets/img/quote-2.jpg" class="quote-2" alt="img">
-        <img src="assets/img/quote-3.jpg" class="quote-3" alt="img">
-        <img src="assets/img/quote-5.jpg" class="quote-4" alt="img">
-        <img src="assets/img/quote-4.jpg" class="quote-5" alt="img">
+        <img src="/assets/img/testimonials/test-1.png" class="quote-1" alt="img">
+        <img src="/assets/img/testimonials/test-2.jpeg" class="quote-2" alt="img">
+        <img src="/assets/img/testimonials/test-3.jpeg" class="quote-3" alt="img">
+        <img src="/assets/img/testimonials/test-4.jpeg" class="quote-4" alt="img">
+        <img src="/assets/img/testimonials/test-5.jpeg" class="quote-5" alt="img">
     </section>
 
 
 
-    <section class="container pb-80" id="see-reviews">
+    <section class="container pb-200" id="see-reviews">
 
 
         <div class="row">
@@ -160,7 +117,7 @@
                         </i>
                     </a>
 
-                    <img src="/assets/img/welcome/video.jpg" alt="Деница Драгомирова - DMD Health">
+                    <img src="/assets/img/testimonials/denitsa.jpeg" alt="Деница Драгомирова - DMD Health">
 
                 </div>
 
@@ -192,7 +149,7 @@
                         </i>
                     </a>
 
-                    <img src="/assets/img/welcome/video.jpg" alt="Илия Костадинов - Studio Shift">
+                    <img src="/assets/img/testimonials/iliya-kostadinov.jpeg" alt="Илия Костадинов - Studio Shift">
 
                 </div>
 
@@ -223,7 +180,7 @@
                         </i>
                     </a>
 
-                    <img src="/assets/img/welcome/video.jpg" alt="Деница Драгомирова - DMD Health">
+                    <img src="/assets/img/testimonials/miroslava-matsureva.jpeg" alt="Деница Драгомирова - DMD Health">
 
                 </div>
 
@@ -234,7 +191,7 @@
                         Психолог и психотерапевт
                     </span>
 
-                    <a class="btn" target="_blank" href="https://www.facebook.com/profile.php?id=61554797821753">
+                    <a class="btn" target="_blank" href="https://www.facebook.com/profile.php?id=100085768324562">
                         Виж Albeta Integra
                     </a>
                 </div>

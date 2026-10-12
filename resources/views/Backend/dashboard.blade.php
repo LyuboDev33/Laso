@@ -34,20 +34,12 @@
             {{-- BEFORE PAYMENT / ONBOARDING REQUIREMENTS --}}
             <section class="profile-section mb-2">
 
-                <div class="heading two mb-4">
+                <div class="heading two">
 
                     <h6>
                         ПРЕДИ ДА ЗАКУПИТЕ АБОНАМЕНТ
                     </h6>
 
-                    <h2>
-                        Необходима информация преди плащане
-                    </h2>
-
-                    <p class="pt-lg-3 pt-md-2">
-                        За да можем да подготвим и управляваме вашата Meta рекламна кампания,
-                        е необходимо да разполагате с Facebook страница и Meta Business Manager.
-                    </p>
 
                 </div>
 
@@ -162,23 +154,7 @@
             {{-- PRICING --}}
             <section class="profile-section mb-5">
 
-                <div class="heading two mb-5">
-
-                    <h6>
-                        АБОНАМЕНТНИ ПЛАНОВЕ
-                    </h6>
-
-                    <h2>
-                        Изберете подходящ план
-                    </h2>
-
-                    <p class="pt-lg-3 pt-md-2">
-                        Изберете абонаментния план, който най-добре отговаря на нуждите
-                        на вашия бизнес. След успешно плащане ще продължите към процеса
-                        по онбординг и подготовка на рекламната кампания.
-                    </p>
-
-                </div>
+                <div class="heading two mb-5"> </div>
 
 
                 @include('Frontend.partials.pricing-plans')

@@ -1,7 +1,7 @@
 <x-backend>
 
     @section('SEO')
-        <title>Моите лийдове</title>
+        <title>Моите Потенциални клиенти</title>
     @endsection
 
     <div class="profile-page">
@@ -11,11 +11,11 @@
                 <h6>FACEBOOK LEADS</h6>
 
                 <h2>
-                    Моите лийдове
+                    Моите Потенциални клиенти
                 </h2>
 
                 <p class="pt-lg-3 pt-md-2">
-                    Оттук можете да преглеждате вашите Facebook лийдове
+                    Оттук можете да преглеждате вашите Facebook Потенциални клиенти
                     и да отбелязвате кои от тях са видяни.
                 </p>
             </div>
@@ -32,11 +32,11 @@
                 </h6>
 
                 <h2>
-                    Лийдове
+                    Потенциални клиенти
                 </h2>
 
                 <p class="pt-lg-3 pt-md-2">
-                    Общо лийдове:
+                    Общо Потенциални клиенти:
                     <strong>{{ $leads->total() }}</strong>
                 </p>
 
@@ -61,11 +61,11 @@
 
                                     <h5 class="mb-1 mt-3">
                                         <i class="fa-solid fa-users me-2"></i>
-                                        Лийдове
+                                        Потенциални клиенти
                                     </h5>
 
                                     <div class="text-muted small">
-                                        Всички ваши Facebook лийдове
+                                        Всички ваши Facebook Потенциални клиенти
                                     </div>
 
                                 </div>
@@ -228,11 +228,11 @@
                                     <div>
 
                                         <strong>
-                                            Все още няма лийдове
+                                            Все още няма Потенциални клиенти
                                         </strong>
 
                                         <p class="mb-0">
-                                            След интеграция лийдовете ще се появят тук.
+                                            След интеграция Потенциални клиентите ще се появят тук.
                                         </p>
 
                                     </div>
@@ -282,7 +282,7 @@
 
                 $.ajax({
                     url: url,
-                    type: 'PATCH',
+                    type: 'POST',
 
                     data: {
                         _token: $('meta[name="csrf-token"]').attr('content'),

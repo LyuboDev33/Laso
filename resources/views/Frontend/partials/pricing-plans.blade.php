@@ -533,7 +533,7 @@
 
 
             {{-- GROWTH --}}
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 mt-sm-100">
 
                 <div class="pricing-two pricing-two--recommended h-100 position-relative"
                     style="background-image: url(/assets/img/background-p.png);">
@@ -669,7 +669,7 @@
 
 
             {{-- PREMIUM --}}
-            <div class="col-lg-4 col-md-6 mb-4">
+            <div class="col-lg-4 col-md-6 mb-4 mt-sm-100">
 
                 <div class="pricing-two h-100" style="background-image: url(/assets/img/background-p.png);">
 

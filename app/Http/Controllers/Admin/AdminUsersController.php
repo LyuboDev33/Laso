@@ -25,15 +25,35 @@ class AdminUsersController extends Controller
     /**
      * Show all users.
      *
+     * @param Request $request
      * @return \Illuminate\View\View
      */
-    public function index(): View
+    public function index(Request $request): View
     {
-        $users = User::orderBy('id', 'desc')
-            ->paginate(15);
+        $validated = $request->validate([
+            'ended_date' => ['nullable', 'date_format:Y-m-d'],
+        ]);
+
+        $endedDate = $validated['ended_date'] ?? null;
+
+        $users = User::query()
+            ->with('subscriptions')
+            ->when($endedDate, function ($query) use ($endedDate) {
+                $query->whereHas('subscriptions', function ($subscriptionQuery) use ($endedDate) {
+                    $subscriptionQuery
+                        ->whereDate('ends_at', $endedDate)
+                        ->where('ends_at', '<=', now());
+                });
+            })
+            ->orderByDesc('id')
+            ->paginate(15)
+            ->withQueryString();
 
         return view('admin.Users.Index', [
             'users' => $users,
+            'endedDate' => $endedDate,
+            'getRelevantSubscription' => fn(User $user) =>
+            $this->stripeService->getRelevantSubscription($user),
         ]);
     }
 
@@ -46,8 +66,7 @@ class AdminUsersController extends Controller
      */
     public function show(User $user): View
     {
-        $subscription = $this->stripeService
-            ->subscriptionInformation($user);
+        $subscription = $this->stripeService->subscriptionInformation($user);
 
         return view('admin.Users.Show', [
             'user' => $user,

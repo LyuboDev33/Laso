@@ -773,6 +773,7 @@ img.quote-1 {
     left: 23%;
     top: 18%;
     animation: 7s infinite animation01;
+    width: 60px;
 }
 
 img.quote-2 {
@@ -791,11 +792,13 @@ img.quote-4 {
     right: 16%;
     top: 35%;
     animation: 7s infinite animation02;
+    width: 60px;
 }
 
 img.quote-5 {
     right: 20%;
     top: 68%;
+    width: 60px;
 }
 
 /* 09. accordio-img */
@@ -3379,21 +3382,21 @@ ol.breadcrumb li a {
 
 @media (min-width: 992px) {
     .splide__arrow--next {
-        right: -3.5em !important;
+        right: -4.5em !important;
     }
 
     .splide__arrow--prev {
-        left: -3.5em !important;
+        left: -4.5em !important;
     }
 }
 
 @media (max-width: 992px) {
     .splide__arrow--next {
-        right: -1.5em !important;
+        right: -2.5em !important;
     }
 
     .splide__arrow--prev {
-        left: -1.5em !important;
+        left: -2.5em !important;
     }
     .splide__arrow  {
         top: 57% !important;

@@ -193,7 +193,7 @@
                                     font-size: 17px;
                                     line-height: 28px;
                                 ">
-                                Добре дошъл в <strong style="color: #121f54;">LASO</strong>!
+                                Добре дошъл/а в <strong style="color: #121f54;">LASO</strong>!
                                 Твоят профил беше създаден успешно и вече можеш да използваш
                                 платформата.
                             </p>

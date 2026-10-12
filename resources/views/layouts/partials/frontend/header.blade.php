@@ -62,7 +62,7 @@
 
                     @auth
                         <a href="{{ route('dashboard') }}" class="btn">
-                            Админ панел
+                            Моят профил
                         </a>
                     @else
                         <a href="{{ route('login') }}" class="btn">
@@ -135,7 +135,7 @@
         @if (Auth::check())
 
             <a href="{{ route('dashboard') }}" class="btn">
-                Админ панел
+                Моят профил
             </a>
 
         @else

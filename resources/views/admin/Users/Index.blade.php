@@ -32,6 +32,31 @@
             </div>
         @endif
 
+        <form method="GET" action="{{ route('admin.users.index') }}" class="row g-3 mb-4 align-items-end">
+
+            <div class="col-md-4">
+                <label for="ended_date" class="form-label">
+                    Дата на изтичане на абонамента
+                </label>
+
+                <input type="date" id="ended_date" name="ended_date" class="form-control"
+                    value="{{ $endedDate ?? '' }}">
+            </div>
+
+            <div class="col-md-auto">
+                <button type="submit" class="btn btn-primary">
+                    Филтрирай
+                </button>
+            </div>
+
+            <div class="col-md-auto">
+                <a href="{{ route('admin.users.index') }}" class="btn btn-outline-secondary">
+                    Изчисти филтъра
+                </a>
+            </div>
+
+        </form>
+
         <section class="profile-section mb-5">
 
             <div class="heading two mb-4">
@@ -74,19 +99,44 @@
                                     {{ $user->email }}
                                 </td>
 
-                                <td>
 
-                                    @if ($isSubscribed($user))
+
+                                <td>
+                                    @php
+                                        $subscription = $getRelevantSubscription($user);
+                                    @endphp
+
+                                    @if ($subscription?->onGracePeriod())
+                                        <span class="badge bg-warning text-dark p-2 w-fit">
+                                            Абонаментът се прекратява
+                                        </span>
+
+                                        <div class="small text-muted mt-1">
+                                            Активен до:
+                                            {{ $subscription->ends_at->format('d.m.Y') }}
+                                        </div>
+                                    @elseif ($subscription?->active())
                                         <span class="badge bg-success p-2">
                                             Има активен абонамент
                                         </span>
+                                    @elseif ($subscription?->ended())
+                                        <span class="badge bg-danger p-2 mb-0 w-fit">
+                                            Прекратен абонамент
+                                        </span>
+
+                                        @if ($subscription->ends_at)
+                                            <div class="small text-muted mt-1">
+                                                Изтекъл на:
+                                                {{ $subscription->ends_at->format('d.m.Y') }}
+                                            </div>
+                                        @endif
                                     @else
                                         <span class="badge bg-secondary p-2">
                                             Няма активен абонамент
                                         </span>
                                     @endif
-
                                 </td>
+
 
                                 <td class="text-end d-flex justify-content-end">
 
@@ -109,7 +159,7 @@
                             <tr>
                                 <td colspan="5" class="text-center py-4">
                                     <div class="alert alert-info mb-0">
-                                        Все още няма регистрирани потребители.
+                                        Няма намерени потребители.
                                     </div>
                                 </td>
                             </tr>

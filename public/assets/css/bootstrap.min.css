@@ -8275,6 +8275,10 @@ fieldset:disabled .btn {
     margin-bottom: 3rem !important
 }
 
+.pb-100 {
+    padding-bottom: 100px !important;
+}
+
 .pb-200 {
     padding-bottom: 200px;
 }

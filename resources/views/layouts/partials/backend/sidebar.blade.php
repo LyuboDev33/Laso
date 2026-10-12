@@ -62,7 +62,7 @@
                     <a href="{{ route('myleads.index') }}"
                         class="{{ request()->routeIs('myleads.index') ? 'is-active' : '' }}">
                         <i class="fa-solid fa-arrows-down-to-people"></i>
-                        <span>Моите лиидове</span>
+                        <span>Потенциални клиенти</span>
                     </a>
                 </li>
 
