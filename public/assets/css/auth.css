@@ -122,7 +122,7 @@ body {
 /* ===== Password Toggle ===== */
 .auth__input-addon {
     position: absolute;
-    top: 50%;
+    top: 33%;
     right: 10px;
     z-index: 2;
     display: flex;

@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AdsController;
 use App\Http\Controllers\API\FacebookLeadsController;
+use App\Http\Controllers\SupportTicketController;
 use App\Http\Controllers\EmailController;
 use App\Http\Controllers\FrontEndController;
 use App\Http\Controllers\OnlinePaymentsController;
@@ -38,9 +38,17 @@ Route::middleware('auth')->group(function () {
         ]);
     })->name('dashboard');
 
+    /** All support tickets routes */
+   Route::prefix('/support-tickets')->group(function () {
+        Route::get('/',                [SupportTicketController::class, 'index'])->name('support-ticket.index');
+        Route::get('/create',          [SupportTicketController::class, 'create'])->name('support-tickets.create');
+        Route::post('/',               [SupportTicketController::class, 'store'])->name('support-tickets.store');
+        Route::get('/{supportTicket}', [SupportTicketController::class, 'show'])->name('support-tickets.show');
+    });
+
+    /** All leads contorller */
     Route::get('/myleads', [FacebookLeadsController::class, 'myLeads'])->name('myleads.index');
     Route::post('/leads/{lead}/seen',[FacebookLeadsController::class, 'updateSeen'])->name('leads.update.seen');
-
     Route::post('/create/{priceId}/{plan}', [OnlinePaymentsController::class, 'createSubscription'])->name('subscription.create');
 
     /** All Subscription Routing  */

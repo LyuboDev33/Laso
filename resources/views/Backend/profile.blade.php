@@ -116,7 +116,7 @@
 
                             </div>
 
-                            <div class="col-lg-6">
+                            {{-- <div class="col-lg-6">
 
                                 <label for="email">
                                     Имейл адрес
@@ -131,7 +131,7 @@
                                     </div>
                                 @enderror
 
-                            </div>
+                            </div> --}}
 
                             <div class="col-lg-12">
 
@@ -262,24 +262,27 @@
              DELETE ACCOUNT
         ============================================================ --}}
         <hr>
-        <section class="profile-section profile-section--danger">
 
-            <div class="heading two mb-4">
-                <h6>ОПАСНА ЗОНА</h6>
-                <h2>Изтриване на акаунта</h2>
+        @if (!$isSubscribed)
+            <section class="profile-section profile-section--danger">
 
-                <p class="pt-lg-3 pt-md-2">
-                    След изтриване на акаунта всички свързани с него данни
-                    могат да бъдат премахнати без възможност за възстановяване.
-                </p>
-            </div>
+                <div class="heading two mb-4">
+                    <h6>ОПАСНА ЗОНА</h6>
+                    <h2>Изтриване на акаунта</h2>
 
-            <button type="button" class="btn bg-danger border-danger" data-bs-toggle="modal"
-                data-bs-target="#deleteAccountModal">
-                Изтрий акаунта
-            </button>
+                    <p class="pt-lg-3 pt-md-2">
+                        След изтриване на акаунта всички свързани с него данни
+                        могат да бъдат премахнати без възможност за възстановяване.
+                    </p>
+                </div>
 
-        </section>
+                <button type="button" class="btn bg-danger border-danger" data-bs-toggle="modal"
+                    data-bs-target="#deleteAccountModal">
+                    Изтрий акаунта
+                </button>
+
+            </section>
+        @endif
 
     </div>
 

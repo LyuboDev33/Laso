@@ -117,6 +117,8 @@ p {
     margin: 0;
     padding: 0;
     font-family: "Sofia Sans", sans-serif;
+    /* caret-color: transparent !important; */
+
 }
 
 a,
@@ -7615,13 +7617,170 @@ ul.pagination li:hover,
 }
 
 .facebook-action-btn {
-    width: 240px;
+    /* width: 240px; */
     height: 52px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
 }
+
+
+/* Input wrapper */
+.auth__input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Form inputs */
+.auth__input-wrapper input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Extra space for the eye icon */
+.auth__password-input {
+    padding-right: 55px !important;
+}
+
+/* Eye button */
+.auth__input-addon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 30px;
+
+    padding: 0;
+    margin: 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: #777;
+    font-size: 17px;
+
+    cursor: pointer;
+    z-index: 2;
+
+    transition: color 0.2s ease;
+}
+
+/* Hover effect */
+.auth__input-addon:hover {
+    color: #222;
+}
+
+/* Keyboard accessibility */
+.auth__input-addon:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Eye icon */
+.auth__input-addon i {
+    pointer-events: none;
+}
+
+
+/* Resource container */
+.material-item {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* Delete button */
+.material-delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+
+    background: #dc3545;
+    color: #fff;
+
+    font-size: 14px;
+    cursor: pointer;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.material-delete-btn:hover {
+    background: #b02a37;
+    transform: scale(1.08);
+}
+
+.material-delete-btn:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Keep audio controls responsive */
+.material-item--audio {
+    width: min(100%, 550px);
+}
+
+.material-item--audio audio {
+    display: block;
+    width: 100%;
+}
+
+/* Reserve space for the delete button on audio */
+.material-item--audio {
+    padding-top: 45px;
+}
+
+/* Modal */
+.custom-delete-modal {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.delete-modal-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 75px;
+    height: 75px;
+
+    margin: 0 auto;
+    border-radius: 50%;
+
+    background: #fce8ea;
+    color: #dc3545;
+    font-size: 28px;
+}
+
+.delete-form-preview {
+    padding: 15px;
+    border-radius: 12px;
+    background: #f8f9fa;
+    overflow-wrap: anywhere;
+}
+
 
 @media (max-width: 991.98px) {
 

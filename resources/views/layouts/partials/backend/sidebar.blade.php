@@ -27,6 +27,15 @@
                         </a>
                     </li>
 
+                     <li>
+                        <a href="{{ route('admin.support-tickets.index') }}"
+                            class="{{ request()->routeIs('admin.support-tickets.index') ||
+                                      request()->routeIs('admin.support-tickets.show') ? 'is-active' : '' }}">
+                           <i class="fa-solid fa-ticket"></i>
+                            <span>Support тикети админ</span>
+                        </a>
+                    </li>
+
                     <li>
                         <a href="{{ route('admin.users.index') }}"
                             class="{{ request()->routeIs('admin.users.index*') ||
@@ -41,6 +50,13 @@
                     <hr>
                 @endif
 
+
+                <li>
+                    <a class="btn justify-content-center text-white mb-4" href="/">
+                        Към начална страница
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                    </a>
+                </li>
 
 
                 <li>
@@ -82,6 +98,18 @@
                                   request()->routeIs('user.ads.show') ? 'is-active' : '' }}">
                         <i class="fa-solid fa-rectangle-ad"></i>
                         <span>Рекламни кампании</span>
+                    </a>
+                </li>
+
+                 <li>
+                    <a href="{{ route('support-ticket.index') }}"
+                        class="{{
+                                  request()->routeIs('support-ticket.index') ||
+                                  request()->routeIs('support-tickets.create') ||
+                                  request()->routeIs('support-tickets.store') ||
+                                  request()->routeIs('support-tickets.show') ? 'is-active' : '' }}">
+                        <i class="fa-solid fa-ticket"></i>
+                        <span>Support тикети</span>
                     </a>
                 </li>
 

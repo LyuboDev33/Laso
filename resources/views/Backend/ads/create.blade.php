@@ -311,7 +311,7 @@
 
                                     <label for="videos" class="ad-form-label">
                                         <i class="fa-solid fa-video me-2"></i>
-                                        Видеа
+                                        Видео материали
                                     </label>
 
                                     <input id="videos" class="ad-file-input" type="file" name="videos[]"

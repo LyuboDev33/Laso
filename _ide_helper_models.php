@@ -128,9 +128,33 @@ namespace App\Models{
 namespace App\Models{
 /**
  * @property int $id
+ * @property int $user_id
+ * @property string $title
+ * @property string $description
+ * @property string $image
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket whereImage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|SupportTicket whereUserId($value)
+ */
+	class SupportTicket extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * @property int $id
  * @property string $name
  * @property string $email
  * @property string|null $profile_pic
+ * @property string $phone
  * @property string|null $facebook_page
  * @property \Illuminate\Support\Carbon|null $email_verified_at
  * @property string $password
@@ -141,6 +165,7 @@ namespace App\Models{
  * @property string|null $pm_type
  * @property string|null $pm_last_four
  * @property string|null $trial_ends_at
+ * @property-read \App\Models\UserAd|null $details
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Admin\LeadForm> $facebookForms
  * @property-read int|null $facebook_forms_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Admin\API\Lead> $leads
@@ -164,6 +189,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereName($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User wherePmLastFour($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User wherePmType($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereProfilePic($value)
@@ -177,9 +203,43 @@ namespace App\Models{
 
 namespace App\Models{
 /**
+ * @property int $id
+ * @property int $user_id
+ * @property string|null $ad_link
+ * @property string $company_name
+ * @property string $business_description
+ * @property string|null $website
+ * @property string $city
+ * @property string $phone
+ * @property string|null $brand_information
+ * @property string|null $logo
+ * @property array<array-key, mixed>|null $images
+ * @property array<array-key, mixed>|null $videos
+ * @property string|null $voice_recording
+ * @property string|null $video_ad_requirements
+ * @property string|null $additional_notes
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereAdLink($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereAdditionalNotes($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereBrandInformation($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereBusinessDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereCity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereCompanyName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereImages($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereLogo($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereVideoAdRequirements($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereVideos($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereVoiceRecording($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|UserAd whereWebsite($value)
  */
 	class UserAd extends \Eloquent {}
 }

@@ -30,6 +30,13 @@
 
     <link rel="manifest" href="/assets/images/favicons/site.webmanifest?v=<?php echo time(); ?>" />
 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+          <!-- jQuery -->
+    <script src="/assets/js/jquery-3.6.0.min.js?v=<?= time() ?>"></script>
+
     {{-- CSS --}}
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css?v=<?php echo time(); ?>" />
     <link rel="stylesheet" href="/assets/css/font-awesome-all.css?v=<?php echo time(); ?>" />
@@ -190,6 +197,9 @@
 
         </div>
     </div>
+
+
+    <script src="/assets/js/custom.js?v=<?= time() ?>"></script>
 
 </body>
 

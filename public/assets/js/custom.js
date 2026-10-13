@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
     initializeAccordion($);
     initializeNavbarMenu($);
     initializeFullscreenMenu($);
-
+   togglePassword();
 
     $(window).on('scroll', addStickyToHeader);
 
@@ -105,11 +105,13 @@ function initializeMobileNavigation($) {
 let calcScrollValue = () => {
     let scrollProgress = document.getElementById("progress");
 
+    if(!scrollProgress) return
+
     let pos = document.documentElement.scrollTop;
     let calcHeight =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-        
+
     let scrollValue = Math.round((pos * 100) / calcHeight);
     if (pos > 100) {
         scrollProgress.style.display = "grid";
@@ -334,4 +336,44 @@ function animateElement(element) {
             }
         }
     );
+}
+
+function togglePassword () {
+    const passwordButtons = document.querySelectorAll('[data-toggle-password]');
+
+    if(passwordButtons.length < 1) { return }
+
+    passwordButtons.forEach(function (button) {
+
+        button.addEventListener('click', function () {
+
+            const inputId = button.getAttribute('data-toggle-password');
+            const passwordInput = document.getElementById(inputId);
+            const icon = button.querySelector('i');
+
+            if (!passwordInput || !icon) {
+                return;
+            }
+
+            const isPasswordHidden = passwordInput.type === 'password';
+
+            // Toggle input type
+            passwordInput.type = isPasswordHidden ? 'text' : 'password';
+
+            // Toggle Font Awesome icons
+            icon.classList.toggle('fa-eye', !isPasswordHidden);
+            icon.classList.toggle('fa-eye-slash', isPasswordHidden);
+
+            // Accessibility
+            button.setAttribute('aria-pressed', String(isPasswordHidden));
+
+            button.setAttribute(
+                'aria-label',
+                isPasswordHidden ? 'Скрий паролата' : 'Покажи паролата'
+            );
+
+        });
+
+    });
+
 }
