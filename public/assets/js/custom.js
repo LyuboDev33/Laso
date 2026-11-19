@@ -24,11 +24,40 @@ jQuery(document).ready(function ($) {
     initializeAccordion($);
     initializeNavbarMenu($);
     initializeFullscreenMenu($);
-   togglePassword();
+    togglePassword();
+    cookies();
+
 
     $(window).on('scroll', addStickyToHeader);
 
 });
+
+/** Show cookies */
+function cookies() {
+    const cookieBox = document.querySelector(".cookies__modal");
+    const acceptButton = document.querySelector("#acceptBtn");
+    // const declineButton = document.querySelector("#declineBtn");
+
+    if (document.cookie.includes("cookieBy=Laso") ||
+        document.cookie.includes("cookieDeclined=true")) {
+        return;
+    }
+
+    cookieBox.classList.add("show");
+
+    acceptButton.addEventListener("click", () => {
+        cookieBox.classList.remove("show");
+        document.cookie = "cookieBy=Laso; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
+        window.location.reload();
+    });
+
+    // declineButton.addEventListener("click", () => {
+    //     cookieBox.classList.remove("show");
+    //     document.cookie = "cookieDeclined=true; max-age=" + 60 * 60 * 24 * 30 + "; path=/";
+    //     window.location.reload();
+    // });
+}
+
 
 /**
  * Show / Hide password

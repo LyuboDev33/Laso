@@ -185,6 +185,9 @@ class SupportTicketController extends Controller
                     'description' => $validated['description'],
                     'image' => $filename,
                 ]);
+
+                
+
             });
         } catch (\Throwable $e) {
 

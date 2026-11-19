@@ -35,6 +35,8 @@ return new class extends Migration
 
             $table->timestamp('facebook_created_at')->nullable();
 
+            $table->timestamp('notified_at')->nullable();
+
             $table->timestamps();
 
             $table->index(['user_id', 'facebook_created_at']);

@@ -57,6 +57,28 @@
     @include('layouts.partials.frontend.footer')
 
 
+    <!-- Cookies Modal -->
+    <div class="cookies__modal shadow">
+
+        <img class="cookies" src="{{ asset('/assets/img/cookie.webp') }}" alt="Бисквитки">
+
+        <div>
+            <p>
+                <strong>Laso</strong> използва бисквитки за по-добро и
+                персонализирано потребителско изживяване.
+            </p>
+
+            <div class="d-flex gap-4 justify-content-center mt-30">
+                <button id="acceptBtn" type="button">
+                    Добре, разбрах
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+
+
     <!-- template js -->
     <script src="/assets/js/custom.js?v=<?= time() ?>"></script>
 

@@ -1,14 +1,57 @@
 <x-frontend>
 
-    @section('SEO')
-        <title>LASO | Lead Generation реклама за малкия бизнес</title>
 
-        <meta name="description"
-            content="LASO е абонаментна услуга за lead generation реклами в Meta, създадена специално за малкия бизнес в сферата на услугите. Получавайте реални запитвания от потенциални клиенти срещу предвидима месечна цена.">
+@section('SEO')
+    <!-- Primary SEO -->
+    <title>LASO | Meta и Facebook реклама за малкия бизнес</title>
 
-        <meta name="keywords"
-            content="LASO, Meta реклама, lead generation, Facebook реклама, Instagram реклама, реклама за малък бизнес, генериране на запитвания, Meta Ads">
-    @endsection
+    <meta name="description"
+        content="LASO предлага Meta и Facebook реклама за малкия бизнес с включен рекламен бюджет, рекламни материали и управление. Привличайте потенциални клиенти с абонамент.">
+
+    <meta name="keywords"
+        content="LASO, Meta реклама, Facebook реклама, Instagram реклама, Meta Ads, Facebook Ads, lead generation, генериране на запитвания, реклама за малък бизнес, абонаментна реклама, управление на реклами, реклама за услуги">
+
+    <meta name="robots" content="index, follow, max-image-preview:large">
+
+    <link rel="canonical" href="{{ url()->current() }}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="bg_BG">
+    <meta property="og:site_name" content="LASO">
+
+    <meta property="og:title"
+        content="LASO | Meta и Facebook реклама за малкия бизнес">
+
+    <meta property="og:description"
+        content="Рекламата не трябва да бъде сложна. LASO предлага абонаментна Meta реклама с включен бюджет, рекламни материали и управление на кампаниите. Всичко необходимо, за да привличате нови потенциални клиенти.">
+
+    <meta property="og:url" content="{{ url()->current() }}">
+
+    <meta property="og:image" content="{{ asset('assets/images/seo.jpg') }}">
+    <meta property="og:image:secure_url" content="{{ asset('assets/images/seo.jpg') }}">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt"
+        content="LASO – Meta и Facebook реклама за малкия бизнес">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+
+    <meta name="twitter:title"
+        content="LASO | Meta и Facebook реклама за малкия бизнес">
+
+    <meta name="twitter:description"
+        content="Привличайте потенциални клиенти с LASO. Абонаментна Meta реклама с включен рекламен бюджет, рекламни материали и професионално управление.">
+
+    <meta name="twitter:image" content="{{ asset('assets/images/seo.jpg') }}">
+    <meta name="twitter:image:alt"
+        content="LASO – Абонаментна Meta реклама за малкия бизнес">
+
+
+@endsection
+
 
 
     {{-- HERO --}}
@@ -24,17 +67,17 @@
                             Рекламата не трябва да бъде сложна.
                         </h1>
 
-                        <p>
-                            Представете си АБОНАМЕНТ за РЕКЛАМА, който струва колкото месечния ви абонамент за телефон и
-                            телевизия.
-
-                            <br><br>
-
-                            LASO е абонаментна услуга за <strong>
-                                Meta lead generation реклама</strong>, създадена основно за малкия бизнес в сферата на
-                            услугите.
+                        <p class="mb-2">
+                            Представете си АБОНАМЕНТ за РЕКЛАМА на цена, сравнима с месечните ви разходи за телефон, интернет и телевизия.
 
                         </p>
+
+                        <p class="mb-2">
+                           LASO е абонаментна услуга за Meta реклама, създадена за малкия бизнес в сферата на услугите - с включен рекламен бюджет, рекламни материали и управление на кампаниите.                      Всичко необходимо, за да привличате нови клиенти.
+
+                        </p>
+
+
 
                         {{-- <a href="#pricing" class="btn">
                             Започни

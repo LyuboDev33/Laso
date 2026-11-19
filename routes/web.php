@@ -9,9 +9,16 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserAdsController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Services\FacebookService; 
 
 Route::fallback(function () {
     return view('errors.404');
+});
+
+Route::get('/test-lead-notifications', function (
+    FacebookService $service
+) {
+    return response()->json($service->notifyNewLeads());
 });
 
 Route::get('/',        [FrontEndController::class, 'welcome'])->name('welcome');
@@ -21,22 +28,16 @@ Route::get('/pricing', [FrontEndController::class, 'pricing'])->name('pricing');
 Route::get('/testimonials', [FrontEndController::class, 'testimonials'])->name('testimonials');
 Route::get('/videos',[FrontEndController::class, 'videos'])->name('videos');
 Route::get('/privacy', [FrontEndController::class, 'privacy'])->name('privacy');
+Route::get('/terms-and-conditions', [FrontEndController::class, 'terms'])->name('terms');
+Route::get('/cookie-policy', [FrontEndController::class, 'cookies'])->name('cookies');
+Route::get('/processing-personal-data', [FrontEndController::class, 'processing'])->name('processing');
 
 
 Route::post('/', [EmailController::class, 'contactForm'])->name('email.contact-form');
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/dashboard', function () {
-        $user = Auth::user()->load('details');
-
-        $details = $user->load('details');
-
-        return view('Backend.dashboard', [
-            'user' => $user,
-            'details' => $details,
-        ]);
-    })->name('dashboard');
+    Route::get('/dashboard', function () { return view('Backend.dashboard'); })->name('dashboard');
 
     /** All support tickets routes */
    Route::prefix('/support-tickets')->group(function () {

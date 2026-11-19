@@ -31,7 +31,7 @@ class FacebookLeadsController extends Controller
         $users = User::with([
             'facebookForms',
             'leads' => function ($query) {
-                $query->orderBy('facebook_created_at', 'desc');
+                $query->with('leadForm')->orderBy('facebook_created_at', 'desc');
             },
         ])->orderBy('id', 'desc')->paginate(15);
 
@@ -121,6 +121,14 @@ class FacebookLeadsController extends Controller
             'success' => true,
             'message' => 'Facebook Form ID беше изтрит успешно.',
         ]);
+    }
+
+    /**
+     * Notify users who have new leads.
+     */
+    public function notifyNewLeads(): void
+    {
+        $this->facebookLeadsService->notifyNewLeads();
     }
 
     /**
@@ -219,7 +227,6 @@ class FacebookLeadsController extends Controller
             }
 
             return back()->with('success', "{$insertedLeads} Facebook лийда бяха интегрирани успешно.");
-
         } catch (\Exception $exception) {
             return back()->with('error', $exception->getMessage());
         }

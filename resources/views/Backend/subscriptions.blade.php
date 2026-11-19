@@ -5,7 +5,7 @@
         <title>Профил</title>
     @endsection
 
-  
+
     <div class="profile-page">
 
         <div>
@@ -19,6 +19,10 @@
                 <p class="pt-lg-3 pt-md-2">
                     Тук можете да прегледате информацията за текущия си абонаментен план и неговия статус.
                 </p>
+                <a class="btn justify-content-center text-white mt-3" href="{{ route('ads.create-ad') }}">
+                        Създай първата си реклама
+                        <i class="fa-solid fa-circle-arrow-right"></i>
+                    </a>
             </div>
         </div>
 

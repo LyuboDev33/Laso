@@ -78,7 +78,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             initializeFancybox();
-            initializeLenis();
+            // initializeLenis();
             initDashboardDropdown();
             initSidebarToggle();
         });

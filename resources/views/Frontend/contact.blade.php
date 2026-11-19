@@ -1,15 +1,50 @@
 <x-frontend>
 
-    @section('SEO')
-        <title>Контакти | Valente Optic</title>
-        <meta name="description"
-            content="Свържете се с Valente Optic — посетете ни в Бургас (ж.к. Изгрев, бл. 110) или Равда (ул. Македония 20). Професионални оптични решения и индивидуално отношение.">
-        <meta name="keywords" content="контакти, Valente Optic, оптика Бургас, оптика Равда, ул. Македония 20, ж.к. Изгрев">
-        <meta property="og:title" content="Контакти | Valente Optic">
-        <meta property="og:description" content="Заповядайте в нашите оптики в Бургас и Равда или ни пишете онлайн.">
-        <meta property="og:type" content="website">
-    @endsection
 
+    @section('SEO')
+        <!-- Primary SEO -->
+        <title>Контакти | Свържете се с LASO – Meta реклама</title>
+
+        <meta name="description"
+            content="Свържете се с LASO за въпроси относно Meta и Facebook реклама, абонаментни планове и услуги. Пишете ни на contact@lasoads.com или използвайте формата за контакт.">
+
+        <meta name="keywords"
+            content="LASO, LASO контакти, връзка с LASO, Meta реклама, Facebook реклама, Instagram реклама, Meta Ads, абонаментни планове, реклама за малък бизнес, lead generation, рекламни услуги, контакт LASO, LASO София">
+
+        <meta name="robots" content="index, follow, max-image-preview:large">
+
+        <link rel="canonical" href="{{ url()->current() }}">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="bg_BG">
+        <meta property="og:site_name" content="LASO">
+
+        <meta property="og:title" content="Контакти | Свържете се с LASO – Meta реклама">
+
+        <meta property="og:description"
+            content="Имате въпрос за LASO, нашите абонаментни планове или Meta рекламните услуги? Свържете се с нас по телефон, имейл или чрез формата за контакт. Ще се радваме да ви помогнем.">
+
+        <meta property="og:url" content="{{ url()->current() }}">
+
+        <meta property="og:image" content="{{ asset('assets/images/seo.jpg') }}">
+        <meta property="og:image:secure_url" content="{{ asset('assets/images/seo.jpg') }}">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="LASO – Контакти и връзка с нашия екип">
+
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta name="twitter:title" content="Контакти | Свържете се с LASO">
+
+        <meta name="twitter:description"
+            content="Свържете се с екипа на LASO за въпроси относно Meta реклама, абонаментни планове и управление на рекламни кампании.">
+
+        <meta name="twitter:image" content="{{ asset('assets/images/seo.jpg') }}">
+        <meta name="twitter:image:alt" content="LASO – Свържете се с нас">
+    @endsection
 
     {{-- <section class="bannr" style="background-image: url(assets/img/hero-three.jpg);">
         <div class="container">
@@ -123,7 +158,8 @@
                     </div>
                     <h6>Последвайте ни в социалните мрежи:</h6>
                     <ul class="social-icon">
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/profile.php?id=61593871927255"><i
+                                    class="fa-brands fa-facebook-f"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
                         <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
                     </ul>

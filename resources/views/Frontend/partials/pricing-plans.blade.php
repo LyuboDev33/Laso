@@ -60,7 +60,7 @@
                         </h5>
 
                         <h4>
-                            €65<sub>/месец</sub>
+                            €75<sub>/месец</sub>
                         </h4>
 
                     </div>
@@ -178,12 +178,12 @@
                             GROWTH
                         </h5>
 
-                        <div class="pricing-old-price">
+                        {{-- <div class="pricing-old-price">
                             €149 / месец
-                        </div>
+                        </div> --}}
 
                         <h4>
-                            €129<sub>/месец</sub>
+                            €159<sub>/месец</sub>
                         </h4>
 
                     </div>
@@ -295,7 +295,7 @@
                         </h5>
 
                         <h4>
-                            €229<sub>/месец</sub>
+                            €279<sub>/месец</sub>
                         </h4>
 
                     </div>
@@ -416,12 +416,12 @@
                         </h5>
 
                         <h4>
-                            €699<sub>/година</sub>
+                            €799<sub>/година</sub>
                         </h4>
 
                         <small class="d-block mt-1">
                             <em class="text-white">
-                                Спестявате €81 при годишно плащане
+                                Спестявате €101 при годишно плащане
                             </em>
                         </small>
 
@@ -549,14 +549,17 @@
                             GROWTH
                         </h5>
 
+                            <div class="pricing-old-price">
+                            €1908 / година
+                        </div>
 
                         <h4>
-                            €1,399<sub>/година</sub>
+                            €1,699<sub>/година</sub>
                         </h4>
 
                         <small class="d-block mt-1">
                             <em class="text-white">
-                                Спестявате €149 при годишно плащане
+                                Спестявате €209 при годишно плащане
                             </em>
                         </small>
 
@@ -680,7 +683,7 @@
                         </h5>
 
                         <h4>
-                            €2,399<sub>/година</sub>
+                            €2,999<sub>/година</sub>
                         </h4>
 
                         <small class="d-block mt-1">
@@ -803,36 +806,3 @@
     {{-- YEARLY END --}}
 
 </div>
-
-
-{{-- BENEFITS --}}
-{{-- <div class="row justify-content-center mt-5">
-
-    <div class="col-lg-12">
-
-        <ul class="list d-flex justify-content-center align-items-center flex-wrap gap-4">
-
-            <li>
-                <img src="/assets/img/check.png" alt="check">
-
-                Рекламният бюджет е включен в плана
-            </li>
-
-            <li>
-                <img src="/assets/img/check.png" alt="check">
-
-                Месечно или годишно плащане
-            </li>
-
-            <li>
-                <img src="/assets/img/check.png" alt="check">
-
-                Възможност за прекратяване по всяко време
-            </li>
-
-        </ul>
-
-    </div>
-
-</div> --}}
-{{-- BENEFITS END --}}

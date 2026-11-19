@@ -25,7 +25,7 @@
                             </p>
                         </div>
 
-                        <form class="content-form" method="POST" action="{{ route('password.update') }}">
+                        <form class="content-form" method="POST" action="{{ route('password.store') }}">
                             @csrf
                             @method('PUT')
 

@@ -24,13 +24,21 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(StripeService $stripeService): void
     {
-        View::composer('*', function ($view) use ($stripeService) {
-            $view->with('isAdmin', $this->isAdmin());
-            $view->with('profilePicture', $this->profilePicture());
-            $view->with(
-                'isSubscribed',
-                fn(User $user) => $this->isSubscribed($user, $stripeService)
-            );
+        $isAdmin = null;
+        $profilePicture = null;
+
+        View::composer('*', function ($view) use ($stripeService, &$isAdmin, &$profilePicture) {
+            if ($isAdmin === null) {
+                $isAdmin = $this->isAdmin();
+            }
+
+            if ($profilePicture === null) {
+                $profilePicture = $this->profilePicture();
+            }
+
+            $view->with('isAdmin', $isAdmin);
+            $view->with('profilePicture', $profilePicture);
+            $view->with('isSubscribed', fn(User $user) => $this->isSubscribed($user, $stripeService));
         });
     }
 
@@ -43,16 +51,12 @@ class AppServiceProvider extends ServiceProvider
     {
         $user = Auth::user();
 
-        if (! $user) {
+        if (!$user) {
             return false;
         }
 
-        return $user->roles()
-            ->where('role_name', Role::SUPER_ADMIN)
-            ->exists();
+        return $user->roles()->where('role_name', Role::SUPER_ADMIN)->exists();
     }
-
-
 
     /**
      * Check if user has uploaded a Profile Picture

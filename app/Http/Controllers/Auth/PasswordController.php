@@ -38,6 +38,8 @@ class PasswordController extends Controller
             ]
         );
 
+dd($validator->errors()->toArray());
+
         if ($validator->fails()) {
             return back()
                 ->withErrors($validator, 'updatePassword')
@@ -50,9 +52,6 @@ class PasswordController extends Controller
             'password' => Hash::make($validated['password']),
         ]);
 
-        return back()->with(
-            'successPasswordChange',
-            'Паролата беше променена успешно!'
-        );
+        return back()->with('successPasswordChange', 'Паролата беше променена успешно!');
     }
 }

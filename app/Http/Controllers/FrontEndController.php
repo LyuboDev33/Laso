@@ -45,4 +45,19 @@ class FrontEndController extends Controller
         return view('Frontend.legal.privacy');
     }
 
+    /** Show the cookies */
+    public function cookies (){
+        return view('Frontend.legal.cookies');
+    }
+
+    /** Show the terms */
+    public function terms (){
+        return view('Frontend.legal.terms-and-conditions');
+    }
+
+    /** Show the processing */
+    public function processing () {
+        return view('Frontend.legal.processing-personal-data');
+    }
+
 }

@@ -1,13 +1,49 @@
 <x-frontend>
 
+
     @section('SEO')
-        <title>За нас | LASO</title>
+        <!-- Primary SEO -->
+        <title>За нас | LASO – Достъпна Meta реклама за малкия бизнес</title>
 
         <meta name="description"
-            content="Научете повече за LASO — абонаментна услуга за управление на lead generation реклами в Meta, създадена за малкия бизнес в сферата на услугите.">
+            content="Научете повече за LASO и нашата мисия да направим Meta и Facebook рекламата достъпна за малкия бизнес. Професионално управление с лесен абонамент.">
 
         <meta name="keywords"
-            content="LASO, за нас, Meta реклами, lead generation, реклама за малък бизнес, Facebook реклами, генериране на запитвания">
+            content="LASO, за LASO, за нас, Meta реклама, Facebook реклама, Instagram реклама, Meta Ads, lead generation, реклама за малък бизнес, абонаментна реклама, дигитален маркетинг, генериране на запитвания, управление на реклами">
+
+        <meta name="robots" content="index, follow, max-image-preview:large">
+
+        <link rel="canonical" href="{{ url()->current() }}">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="bg_BG">
+        <meta property="og:site_name" content="LASO">
+
+        <meta property="og:title" content="За нас | LASO – Достъпна Meta реклама за малкия бизнес">
+
+        <meta property="og:description"
+            content="Вярваме, че рекламата не трябва да бъде привилегия. Открийте как LASO помага на малкия бизнес да достига до потенциални клиенти чрез достъпна и лесна за използване Meta реклама.">
+
+        <meta property="og:url" content="{{ url()->current() }}">
+
+        <meta property="og:image" content="{{ asset('assets/images/seo.jpg') }}">
+        <meta property="og:image:secure_url" content="{{ asset('assets/images/seo.jpg') }}">
+        <meta property="og:image:type" content="image/jpeg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:alt" content="LASO – Професионална Meta реклама, достъпна за малкия бизнес">
+
+        <!-- Twitter / X -->
+        <meta name="twitter:card" content="summary_large_image">
+
+        <meta name="twitter:title" content="За нас | LASO – Достъпна Meta реклама за малкия бизнес">
+
+        <meta name="twitter:description"
+            content="LASO е създаден с мисията да направи професионалната Meta реклама по-достъпна за малкия бизнес. Един модел, една ясна цел – повече възможности за развитие.">
+
+        <meta name="twitter:image" content="{{ asset('assets/images/seo.jpg') }}">
+        <meta name="twitter:image:alt" content="LASO – Повече възможности за малкия бизнес">
     @endsection
 
     <section class="mt-5 about-us-1">
@@ -65,7 +101,8 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="/assets/img/about/about-section1.png?v=<?= time() ?>" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section1.png?v=<?= time() ?>"
+                                            alt="marketing-icon">
                                     </i>
                                     <h4>Реклама</h4>
                                     <p>Създаваме и управляваме Meta кампании, съобразени с вашия бизнес и избрания план.
@@ -87,7 +124,8 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="/assets/img/about/about-section-3.png?v=<?= time() ?>" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section-3.png?v=<?= time() ?>"
+                                            alt="marketing-icon">
                                     </i>
                                     <h4>Потенциални клиенти</h4>
                                     <p>Насочваме рекламата към хора, които проявяват интерес към вашите услуги или
@@ -109,7 +147,8 @@
                             <div class="col-lg-5">
                                 <div class="tabs-text">
                                     <i>
-                                        <img src="/assets/img/about/about-section2.png?v=<?= time() ?>" alt="marketing-icon">
+                                        <img src="/assets/img/about/about-section2.png?v=<?= time() ?>"
+                                            alt="marketing-icon">
                                     </i>
                                     <h4>Резултати</h4>
                                     <p>Получавате потенциалните клиенти директно във вашия LASO профил и можете да се
@@ -229,7 +268,8 @@
     </section>
 
 
-    <section class="ads-campaing-section" style="background-image: url(/assets/img/background-1.png); padding-top: 100px;
+    <section class="ads-campaing-section"
+        style="background-image: url(/assets/img/background-1.png); padding-top: 100px;
     padding-bottom: 100px;">
         <div class="container">
             <div class="row align-items-center">
@@ -260,7 +300,8 @@
                             <div><i><img src="/assets/img/about/propel-icon-2.png" alt="propel-icon"></i></div>
                             <div>
                                 <h5>Без сложни процеси или дългосрочни ангажименти</h5>
-                                <p>Избираш план, предоставяш необходимата информация и LASO поема рекламата — без сложни процеси и дългосрочен договор.</p>
+                                <p>Избираш план, предоставяш необходимата информация и LASO поема рекламата — без сложни
+                                    процеси и дългосрочен договор.</p>
                             </div>
                         </div>
                     </div>

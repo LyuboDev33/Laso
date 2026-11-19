@@ -1189,7 +1189,7 @@
     .pl-80 {
         padding: 0;
     }
-/* 
+/*
     form.content-form input[type="text"] {
         margin-bottom: 10px;
     } */
@@ -1931,7 +1931,7 @@
     }
 
     img.hero-shaps {
-        left: 35%;
+        /* left: 0; */
         top: 87%;
     }
 

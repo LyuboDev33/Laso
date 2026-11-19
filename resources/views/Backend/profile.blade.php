@@ -263,7 +263,7 @@
         ============================================================ --}}
         <hr>
 
-        @if (!$isSubscribed)
+        @if (!$isSubscribed(Auth::user()))
             <section class="profile-section profile-section--danger">
 
                 <div class="heading two mb-4">
